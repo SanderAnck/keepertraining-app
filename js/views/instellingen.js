@@ -1,7 +1,7 @@
 // Scherm "Instellingen": geluid, zonlichtmodus, weergave, standaardparameters, back-up/herstel, opslag en versie.
 import state, { saveSettings } from '../state.js';
 import { html, toast, confirmSheet, sheet, unlockAudio, signal, flash } from '../ui.js';
-import { setTop, applyAppearance } from '../app.js';
+import { setTop, applyAppearance, checkForUpdate } from '../app.js';
 import { exportBackup, importBackupFile } from '../backup.js';
 import { paramsForm, bindParams } from './params.js';
 import { paramsChips } from './common.js';
@@ -80,10 +80,12 @@ export async function render(main) {
       bindParams(d, state.settings.defaults, (p) => saveSettings({ defaults: p }));
     }
     if (b.dataset.act === 'update') {
-      const reg = await navigator.serviceWorker?.getRegistration();
-      if (!reg) { toast('Geen service worker actief'); return; }
-      await reg.update().catch(() => {});
-      if (!reg.waiting && !reg.installing) toast(`Je hebt de nieuwste versie (${self.KEEPER_VERSION})`);
+      if (!('serviceWorker' in navigator)) { toast('Updates worden niet ondersteund in deze browser'); return; }
+      toast('Zoeken naar update…');
+      const remote = await checkForUpdate();
+      if (!remote) toast('Geen verbinding, probeer later opnieuw');
+      else if (remote === self.KEEPER_VERSION) toast(`Je hebt de nieuwste versie (${self.KEEPER_VERSION})`);
+      else toast(`Versie ${remote} wordt geladen, even geduld…`);
     }
   };
 }

@@ -9,6 +9,12 @@ toestel (IndexedDB).
 
 Huidige versie: zie `js/version.js` (fase 1 = `0.1.x`).
 
+## Nieuw in 0.3.1
+
+- Updates worden betrouwbaar gevonden: de app vraagt bij openen, bij terugkeren en elke 30 minuten de
+  versie rechtstreeks aan de server (zonder cache) en laadt bij een nieuwe versie de service worker
+  opnieuw. "Zoek naar update" in Instellingen doet hetzelfde en zegt wat er gebeurt.
+
 ## Nieuw in 0.3.0
 
 - Bibliotheek uitgebreid naar **115 oefeningen**, met 10 tot 13 per hoofdthema en per thema 11 tot
@@ -120,7 +126,8 @@ Seedoefeningen aanpassen: bewerk `tools/build-exercises.mjs` en voer `node tools
 GitHub Pages draait vanaf de `main`-branch, map `/` (root); `.nojekyll` staat in de root. Elke push
 naar `main` staat meteen live. Bij elke wijziging:
 
-1. verhoog `self.KEEPER_VERSION` in `js/version.js`;
+1. verhoog `self.KEEPER_VERSION` in `js/version.js` én het versiecommentaar bovenaan `sw.js` (zodat de
+   browser een gewijzigde service worker ziet; de test controleert dit);
 2. voeg nieuwe bestanden toe aan de precache-lijst in `sw.js` (de test `tests/precache.test.js` controleert dit);
 3. `node --test tests/` moet slagen.
 

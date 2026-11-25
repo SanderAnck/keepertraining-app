@@ -1,4 +1,5 @@
 // Service worker: precachet de volledige app-shell (cachenaam bevat de versie), serveert offline en wacht op "vernieuwen".
+// Versie van dit bestand: 0.3.1 (moet gelijk zijn aan js/version.js, zodat de browser elke update ziet).
 importScripts('js/version.js');
 
 const CACHE = 'keepercoach-' + self.KEEPER_VERSION;
@@ -63,6 +64,8 @@ self.addEventListener('fetch', (event) => {
   if (req.method !== 'GET') return;
   const url = new URL(req.url);
   if (url.origin !== self.location.origin) return;
+  // Versiecontrole vanuit de app: altijd naar het netwerk, nooit uit de cache.
+  if (url.searchParams.has('check')) { event.respondWith(fetch(req, { cache: 'no-store' })); return; }
   if (req.mode === 'navigate') {
     event.respondWith(caches.match('index.html', { cacheName: CACHE }).then((r) => r || fetch(req)));
     return;

@@ -76,7 +76,9 @@ function registerSW() {
     wantsReload = false;
     location.reload();
   });
-  navigator.serviceWorker.register('sw.js').then((reg) => {
+  const swUrl = (v) => 'sw.js?v=' + encodeURIComponent(v);
+  navigator.serviceWorker.register(swUrl(self.KEEPER_VERSION), { updateViaCache: 'none' }).then((reg) => {
+    swReg = reg;
     const offer = (worker) => {
       if (!worker || !navigator.serviceWorker.controller) return;
       toast('Nieuwe versie beschikbaar, tik om te vernieuwen', {
@@ -89,10 +91,33 @@ function registerSW() {
       const w = reg.installing;
       w && w.addEventListener('statechange', () => { if (w.state === 'installed') offer(w); });
     });
-    const check = () => reg.update().catch(() => {});
-    document.addEventListener('visibilitychange', () => { if (document.visibilityState === 'visible') check(); });
-    setInterval(check, 30 * 60 * 1000);
+    document.addEventListener('visibilitychange', () => { if (document.visibilityState === 'visible') checkForUpdate(); });
+    setInterval(checkForUpdate, 30 * 60 * 1000);
+    checkForUpdate();
   }).catch((e) => console.warn('Service worker niet geregistreerd', e));
+}
+
+let swReg = null;
+// Vraagt de versie rechtstreeks aan de server (zonder cache). Is die nieuwer, dan registreren we de
+// service worker met een nieuwe URL, zodat de browser hem zeker opnieuw ophaalt (Safari mist dat anders).
+// Geeft de serverversie terug, of null als de server niet bereikbaar is.
+export async function checkForUpdate() {
+  if (!('serviceWorker' in navigator)) return null;
+  const reg = swReg || await navigator.serviceWorker.getRegistration();
+  let remote = null;
+  try {
+    const res = await fetch('js/version.js?check=' + Date.now(), { cache: 'no-store' });
+    const m = res.ok && (await res.text()).match(/KEEPER_VERSION\s*=\s*'([^']+)'/);
+    remote = m ? m[1] : null;
+  } catch { /* offline */ }
+  try {
+    if (remote && remote !== self.KEEPER_VERSION) {
+      swReg = await navigator.serviceWorker.register('sw.js?v=' + encodeURIComponent(remote), { updateViaCache: 'none' });
+    } else if (reg) {
+      await reg.update();
+    }
+  } catch { /* offline of geen toegang */ }
+  return remote;
 }
 
 async function boot() {

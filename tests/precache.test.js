@@ -29,3 +29,10 @@ test('versienummer staat op één plaats', () => {
   assert.match(v, /self\.KEEPER_VERSION = '\d+\.\d+\.\d+';/);
   assert.ok(sw.includes("importScripts('js/version.js')"));
 });
+
+test('sw.js vermeldt dezelfde versie als js/version.js (anders ziet Safari de update niet)', () => {
+  const v = readFileSync(join(root, 'js/version.js'), 'utf8').match(/'([^']+)'/)[1];
+  const m = sw.match(/Versie van dit bestand: ([\d.]+)/);
+  assert.ok(m, 'versiecommentaar ontbreekt in sw.js');
+  assert.equal(m[1], v);
+});
