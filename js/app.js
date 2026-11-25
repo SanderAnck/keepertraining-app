@@ -24,6 +24,9 @@ const routes = [
 ];
 
 let cleanup = null;
+let currentPath = null;
+/** Vorige route (bv. '/training/abc'), om vanuit een oefening terug te keren naar de training. */
+export let previousPath = null;
 
 /** Topbalk invullen. opts: { back: '#/route', actions: Safe html } */
 export function setTop(title, opts = {}) {
@@ -39,6 +42,9 @@ async function route() {
   const path = (location.hash || '#/trainingen').slice(1) || '/trainingen';
   const match = routes.map(([re, view, tab]) => ({ m: path.match(re), view, tab })).find((r) => r.m);
   if (!match) { location.replace('#/trainingen'); return; }
+  // Open sheets sluiten (zonder hun onClose), anders blijft het venster over het nieuwe scherm hangen.
+  document.querySelectorAll('dialog').forEach((d) => d.remove());
+  if (path !== currentPath) { previousPath = currentPath; currentPath = path; }
   if (cleanup) { try { cleanup(); } catch (e) { console.error(e); } cleanup = null; }
   document.body.classList.toggle('in-field', match.view === field);
   document.querySelectorAll('.tabbar a').forEach((a) => {

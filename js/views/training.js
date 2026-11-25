@@ -20,7 +20,7 @@ let main = null;
 
 async function commit(next, { rerender = true } = {}) {
   session = await saveSession(next);
-  if (rerender) draw();
+  if (rerender && location.hash === '#/training/' + session.id) draw();
 }
 
 export async function render(root, [id]) {

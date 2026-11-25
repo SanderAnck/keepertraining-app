@@ -1,7 +1,7 @@
 // Scherm "Oefening": detail met diagram en legende, favoriet, dupliceren, toevoegen aan training, en het bewerkformulier.
 import state, { getExercise, saveExercise, deleteExercise, toggleFavorite, isSeed, saveSession } from '../state.js';
 import { html, raw, themeChip, toast, confirmSheet, sheet, fmtDate } from '../ui.js';
-import { setTop } from '../app.js';
+import { setTop, previousPath } from '../app.js';
 import { THEMES, AGE_GROUPS, LEVELS, INTENSITIES, MATERIALS, BLOCK_TYPES, FIELD_TYPES, AGE, LEVEL, INTENSITY, MATERIAL, labelOf } from '../logic/constants.js';
 import { duplicateExercise } from '../logic/library.js';
 import { createItem, addItem, isoDate } from '../logic/session.js';
@@ -18,9 +18,14 @@ export async function render(main, [id, mode]) {
   return renderDetail(main, ex);
 }
 
+let backFromDetail = '#/oefeningen';
 function renderDetail(main, ex) {
   const fav = (state.settings.favorites || []).includes(ex.id);
-  setTop('Oefening', { back: '#/oefeningen' });
+  // Kom je vanuit een training, dan brengt de terugknop je daar weer naartoe.
+  const fromTraining = previousPath && previousPath.startsWith('/training/');
+  if (fromTraining) backFromDetail = '#' + previousPath;
+  else if (!previousPath || previousPath === '/oefeningen') backFromDetail = '#/oefeningen';
+  setTop('Oefening', { back: backFromDetail });
   const list = (arr, m) => (arr || []).map((x) => labelOf(Object.values(m), x)).join(', ');
   main.innerHTML = html`
     <article class="ex-detail">

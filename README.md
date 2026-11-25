@@ -9,6 +9,11 @@ toestel (IndexedDB).
 
 Huidige versie: zie `js/version.js` (fase 1 = `0.1.x`).
 
+## Nieuw in 0.3.2
+
+- "Oefening bekijken" vanuit een training opent de oefening weer (het venster bleef erover hangen).
+  De terugknop brengt je dan terug naar de training.
+
 ## Nieuw in 0.3.1
 
 - Updates worden betrouwbaar gevonden: de app vraagt bij openen, bij terugkeren en elke 30 minuten de
