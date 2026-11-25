@@ -9,6 +9,20 @@ toestel (IndexedDB).
 
 Huidige versie: zie `js/version.js` (fase 1 = `0.1.x`).
 
+## Nieuw in 0.2.0
+
+- **Stel training voor**: op basis van de parameters stelt de app een volledige training samen
+  (opwarming met mobiliteit, balgewenning en lichte valvorm; 1–3 kernblokken van eenvoudig naar
+  complex rond het hoofddoel en de extra thema's; afsluiting). Regels: enkel passende oefeningen,
+  duiklimiet per leeftijd, totale duur binnen ±5 min van de beschikbare tijd, geen twee explosieve
+  oefeningen na elkaar. Bij een nieuwe training opent het parameterscherm meteen met deze knop.
+- Elk voorstel blijft volledig aanpasbaar. Per oefening: **↻ Andere oefening** (alternatief in
+  hetzelfde blok en thema, in de opwarming met dezelfde rol) en **Vastzetten**. "Nieuw voorstel"
+  behoudt vastgezette oefeningen. Oefeningen die je zelf toevoegt of aanpast worden automatisch
+  vastgezet. Na een voorstel kun je het ongedaan maken via de melding.
+- Logica in `js/logic/generator.js`, getest in `tests/generator.test.js` (180 combinaties van parameters).
+- Extra seedoefening voor de opwarming: "Valvormen in duo vanuit stand".
+
 ## Wat zit erin (fase 1)
 
 - **Trainingen**: overzicht met de training van vandaag bovenaan en een grote knop "Start training"
@@ -20,7 +34,7 @@ Huidige versie: zie `js/version.js` (fase 1 = `0.1.x`).
   ondergrond. Bij elke wijziging worden ongeschikte oefeningen rood gemarkeerd (leeftijd, te
   intensief, materiaal, keepers, trainers), krijgt elke oefening een voorgestelde variant
   (makkelijker/basis/moeilijker) en worden duur, belasting en aantal duiken herberekend.
-- **Oefeningenbibliotheek**: 35 startoefeningen over alle tien thema's, elk met uitleg,
+- **Oefeningenbibliotheek**: 36 startoefeningen over alle tien thema's, elk met uitleg,
   coachingspunten, fouten met correctie, varianten en een veldtekening. Zoeken, filteren (thema,
   leeftijd, niveau, intensiteit, materiaal) en favorieten. Eigen oefeningen toevoegen, bewerken en
   dupliceren; aanpassingen aan meegeleverde oefeningen worden apart bewaard.
@@ -55,9 +69,9 @@ Huidige versie: zie `js/version.js` (fase 1 = `0.1.x`).
 | `js/backup.js` | Back-up en herstel als JSON-bestand, herinnering |
 | `js/ui.js` | Gedeelde UI-helpers (veilige HTML, toast, sheets, geluid, flits) |
 | `js/field.js` | Veldmodus en timer |
-| `js/logic/` | Pure logica zonder DOM: `constants`, `load` (belastingsregels, varianten), `timer`, `session`, `library`, `backupFormat` |
+| `js/logic/` | Pure logica zonder DOM: `constants`, `load` (belastingsregels, varianten), `generator` (trainingsvoorstel), `timer`, `session`, `library`, `backupFormat` |
 | `js/diagram/render.js` | Rendering van de veldtekeningen en legende (SVG) |
-| `data/exercises.json` | Seedbibliotheek met 35 startoefeningen |
+| `data/exercises.json` | Seedbibliotheek met 36 startoefeningen |
 | `icons/` | `icon-192.png`, `icon-512.png`, `icon-maskable-512.png`, `apple-touch-icon.png`, `favicon-64.png` |
 | `tests/` | Tests voor `js/logic/`, de diagrammen, de seeddata en de precache-lijst |
 | `tools/build-exercises.mjs` | Bron van `data/exercises.json` (geen onderdeel van de app) |
@@ -123,7 +137,7 @@ Geïnstalleerde apps tonen dan "Nieuwe versie beschikbaar, tik om te vernieuwen"
 
 ## Volgende fases
 
-- **Fase 2**: automatische trainingsgenerator, diagrameditor, animatiemodus, afdruk-/PDF-export.
+- **Fase 2**: diagrameditor, animatiemodus, afdruk-/PDF-export (de generator is er al).
 - **Fase 3**: keepersbeheer, aanwezigheid, evaluaties, delen en importeren van trainingen en oefeningen.
 
 ## Open vragen

@@ -30,6 +30,7 @@ const PRECACHE = [
   'js/logic/session.js',
   'js/logic/library.js',
   'js/logic/backupFormat.js',
+  'js/logic/generator.js',
   'js/diagram/render.js',
   'data/exercises.json',
   'icons/icon-192.png',

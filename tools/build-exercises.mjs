@@ -77,6 +77,22 @@ const ex = [
       [pass(1, [48, 84], [32, 46]), run(2, [46, 41], [34, 46]), pass(3, [52, 84], [68, 46]), run(4, [54, 41], [66, 46])])
   },
   {
+    id: 'valvorm-duo-stand', name: 'Valvormen in duo vanuit stand',
+    summary: 'Twee keepers rollen elkaar de bal naast het lichaam toe; vallen vanuit lage stand naar de zijkant.',
+    description: 'Twee keepers staan op 4 meter van elkaar in een lage basishouding. Om beurt rollen ze de bal op 1 meter naast de ander. Die zakt door de knieën en valt over de zijkant naar de bal, met de bal vóór het lichaam. Eerst traag en kort bij het lichaam, daarna iets verder. Met één keeper rolt de trainer.',
+    themes: ['duiken'], ages: ALL, levels: LV_ALL, intensity: 'laag', materials: ['ballen'],
+    keepers: { min: 1, max: 6 }, trainers: 1, zone: '4 × 4 m per duo', duration: 6, sets: 3, reps: 6, rest: 30,
+    divesPerRep: 0.5, explosive: false, blockTypes: ['opwarming'], warmup: ['valvorm'], complexity: 1,
+    coaching: ['Laag beginnen, dicht bij de grond', 'Landen op de zijkant', 'Bal vóór het lichaam'],
+    mistakes: [
+      { fault: 'Vallen vanuit gestrekte benen', fix: 'Eerst diep door de knieën, dan pas vallen: zo is de val kort en zacht.' },
+      { fault: 'Met de handen de val opvangen', fix: 'Handen blijven aan de bal, de zijkant van het lichaam landt.' }
+    ],
+    variants: { easier: 'Vanuit kniestand en een stilliggende bal.', harder: 'Bal iets verder en sneller, of na een zijwaartse pas.' },
+    diagram: D('vrij', [K(30, 50, 'K1'), K(70, 50, 'K2'), B(66, 44)],
+      [pass(1, [66, 44], [34, 30]), run(2, [30, 46], [33, 32]), pass(3, [34, 56], [66, 70]), run(4, [70, 54], [67, 68])])
+  },
+  {
     id: 'vangen-w-greep-kom', name: 'Vangen in W-greep en kom',
     summary: 'Ballen op borst- en hoofdhoogte vangen in W-greep, ballen op buikhoogte in de kom.',
     description: 'De trainer staat op 8 tot 10 meter en werpt of schiet afwisselend op hoofdhoogte (W-greep), borsthoogte (W-greep) en buikhoogte (kom met de onderarmen). De keeper zet bij elke bal een kleine stap naar voren en vangt in balans. Na elke vangbal terug in de basishouding.',

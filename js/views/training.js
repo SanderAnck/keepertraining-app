@@ -8,6 +8,11 @@ import { createItem, reapplyVariants, addKernBlock, removeBlock, addItem, remove
 import { filterExercises } from '../logic/library.js';
 import { paramsChips, issueList } from './common.js';
 import { paramsForm, bindParams } from './params.js';
+import { generateSession, swapItem, seededRandom } from '../logic/generator.js';
+
+// Training die net aangemaakt werd: open meteen de parameters met de knop "Stel training voor".
+let freshId = null;
+export const markNew = (id) => { freshId = id; };
 import { renderDiagram } from '../diagram/render.js';
 
 let session = null;
@@ -27,6 +32,7 @@ export async function render(root, [id]) {
     return;
   }
   draw();
+  if (freshId === id) { freshId = null; openParams(); }
   main.onclick = onClick;
   main.onchange = onChange;
   main.oninput = onInput;
@@ -61,6 +67,10 @@ function itemRow(item, block, first, last) {
       </div>
       <p class="meta">${t.sets} × ${item.reps > 1 ? item.reps + ' herh.' : fmtSec(t.workSec)} · rust ${item.rest} s · ${fmtMin(t.totalSec)}${dives ? ` · ${dives} duiken` : ''}</p>
       ${issueList(issues)}
+      <div class="item-tools">
+        <button class="btn small-btn" data-act="swap" data-id="${item.id}" ${item.locked ? 'disabled' : ''}>↻ Andere oefening</button>
+        <button class="btn small-btn${item.locked ? ' on' : ''}" data-act="lock" data-id="${item.id}" aria-pressed="${!!item.locked}">${item.locked ? 'Vastgezet ✓' : 'Vastzetten'}</button>
+      </div>
     </div>
     <div class="item-actions">
       <button class="btn icon" data-act="up" data-id="${item.id}" ${first ? 'disabled' : ''} aria-label="Omhoog">▲</button>
@@ -90,6 +100,7 @@ function draw() {
       ${session.status === 'gegeven' ? html`<p><span class="badge ok">Gegeven</span></p>` : ''}
     </section>
 
+    ${session.isTemplate ? '' : proposeCard(allItems.length)}
     <section class="card">
       <div class="row between"><h2 class="h">Parameters</h2><button class="btn" data-act="params">Wijzigen</button></div>
       <div class="chips">${paramsChips(p)}</div>
@@ -166,6 +177,18 @@ async function onClick(e) {
   const id = b.dataset.id;
   switch (b.dataset.act) {
     case 'params': return openParams();
+    case 'propose': return propose();
+    case 'lock': {
+      const it = flattenSession(session).find((f) => f.item.id === id)?.item;
+      return commit(updateItem(session, id, { locked: !it?.locked }));
+    }
+    case 'swap': {
+      const r = swapItem(session, id, state.exercises, seededRandom(Date.now()));
+      if (!r.swapped) { toast('Geen andere passende oefening gevonden'); return; }
+      await commit(r.session);
+      toast(`Gewisseld voor ${r.exercise.name}`);
+      return;
+    }
     case 'add': return openPicker(id);
     case 'edit': return openItem(id);
     case 'up': return commit(moveItem(session, id, -1));
@@ -211,8 +234,25 @@ async function onClick(e) {
   }
 }
 
+function proposeCard(count) {
+  return html`<section class="card propose">
+    <h2 class="h">${count ? 'Nieuw voorstel' : 'Training voorstellen'}</h2>
+    <p class="hint">${count ? 'Vervangt alle oefeningen behalve de vastgezette. Oefeningen die je zelf toevoegt of aanpast, worden automatisch vastgezet.'
+      : 'Stel de parameters in en laat KeeperCoach een volledige training samenstellen. Daarna pas je alles aan zoals je wilt.'}</p>
+    <button class="btn ${count ? 'big wide-solid' : 'primary huge'}" data-act="propose">${count ? '↻ Nieuw voorstel' : 'Stel training voor'}</button>
+  </section>`;
+}
+
+async function propose() {
+  const prev = session;
+  const next = generateSession(session.parameters, state.exercises, { keep: session, rng: seededRandom(Date.now()) });
+  await commit(next);
+  toast('Training voorgesteld', { action: 'Ongedaan maken', onAction: () => commit(prev), duration: 6000 });
+}
+
 function openParams() {
-  const d = sheet('Parameters', paramsForm(session.parameters), { wide: true });
+  const d = sheet('Parameters', html`${paramsForm(session.parameters)}<button class="btn primary huge" data-propose>Stel training voor met deze parameters</button>`, { wide: true });
+  d.querySelector('[data-propose]').addEventListener('click', () => { d.closeSheet(); propose(); });
   bindParams(d, session.parameters, (p) => {
     const next = reapplyVariants({ ...session, parameters: p }, getExercise);
     commit(next);
@@ -260,7 +300,7 @@ function openPicker(blockId) {
     const pick = e.target.closest('[data-ex]');
     if (pick) {
       const ex = getExercise(pick.dataset.ex);
-      await commit(addItem(session, blockId, createItem(ex, session.parameters)));
+      await commit(addItem(session, blockId, { ...createItem(ex, session.parameters), locked: true }));
       d.closeSheet();
       toast(`${ex.name} toegevoegd`);
     }
@@ -306,7 +346,8 @@ function openItem(itemId) {
       sets: Math.max(1, +fd.get('sets') || 1),
       reps: Math.max(1, +fd.get('reps') || 1),
       rest: Math.max(0, +fd.get('rest') || 0),
-      note: fd.get('note') || ''
+      note: fd.get('note') || '',
+      locked: true
     };
     d.querySelector('#vtext').textContent = variantText(patch.variant) || '';
     showTiming(patch);

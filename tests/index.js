@@ -1,6 +1,7 @@
 // Startpunt zodat `node --test tests/` werkt: laadt alle testbestanden in deze map.
 import './backup.test.js';
 import './diagram.test.js';
+import './generator.test.js';
 import './exercises.test.js';
 import './library.test.js';
 import './load.test.js';

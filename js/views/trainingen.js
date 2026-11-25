@@ -4,10 +4,12 @@ import { html, raw } from '../ui.js';
 import { setTop } from '../app.js';
 import { groupSessions, createSession, duplicateSession, isoDate } from '../logic/session.js';
 import { sessionCard } from './common.js';
+import { markNew } from './training.js';
 
 export async function newSession() {
   const s = createSession({ params: state.settings.defaults, date: isoDate() });
   await saveSession(s);
+  markNew(s.id);
   location.hash = '#/training/' + s.id;
 }
 
