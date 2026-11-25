@@ -7,7 +7,22 @@ toestel (IndexedDB).
 
 **Live:** https://sanderanck.github.io/keepertraining-app/
 
-Huidige versie: zie `js/version.js` (nu 0.5.0; fase 1 was `0.1.x`).
+Huidige versie: zie `js/version.js` (nu 0.6.0; fase 1 was `0.1.x`).
+
+## Nieuw in 0.6.0: diagrameditor
+
+- **Tekening aanpassen** op elke oefening (of "Tekening bewerken" in het bewerkscherm) opent de editor.
+- **Plaatsen**: kies een element (keeper, trainer, medespeler, aanvaller, bal, pion, hoepel, ladder, horde, mini-goal,
+  rebounder) en tik op het veld; versleep elementen met de vinger. Pijlen die bij een element starten, schuiven mee.
+  Een geselecteerd element kun je een label geven (max. 5 tekens), 45° draaien (ladder, horde, mini-goal,
+  rebounder), dupliceren of verwijderen.
+- **Pijl**: kies loopbeweging keeper, baltraject of dribbel en trek de pijl met je vinger; het spoor wordt strak
+  getrokken (bochten blijven). Kies de stap (nieuwe stap of dezelfde als een vorige). Een geselecteerde pijl kan van
+  soort of stap veranderen.
+- **Wissen**: tik op een element of pijl. **↶ / ↷** maakt ongedaan en opnieuw. Veldtype kies je in de editor.
+- Bewaard als data (JSON, coördinaten 0–100), nooit als afbeelding. Een aanpassing aan een meegeleverde oefening
+  wordt apart bewaard en blijft behouden bij updates.
+- Logica in `js/logic/diagramEdit.js` (getest in `tests/diagramEdit.test.js`), scherm in `js/diagram/editor.js`.
 
 ## Nieuw in 0.5.0
 
@@ -178,7 +193,7 @@ Geïnstalleerde apps tonen dan "Nieuwe versie beschikbaar, tik om te vernieuwen"
 
 ## Volgende fases
 
-- **Fase 2**: diagrameditor, animatiemodus, afdruk-/PDF-export (de generator is er al).
+- **Fase 2**: animatiemodus en afdruk-/PDF-export (generator en diagrameditor zijn er al).
 - **Fase 3**: aanwezigheid, delen en importeren van trainingen en oefeningen (keepersbeheer en evaluaties zitten er sinds 0.4.0 in).
 
 ## Open vragen

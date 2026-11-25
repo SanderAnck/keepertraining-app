@@ -181,11 +181,15 @@ export function renderLegend(diagram, opts = {}) {
     ['pion', 'Pion'], ['hoepel', 'Hoepel'], ['ladder', 'Ladder'], ['horde', 'Horde'], ['minigoal', 'Mini-goal'], ['rebounder', 'Rebounder'],
     ['line-loop', 'Loopbeweging keeper'], ['line-bal', 'Baltraject (pass of schot)'], ['line-dribbel', 'Dribbel']
   ].filter(([k]) => !present || present.has(k));
-  const sw = (k) => {
-    let inner;
-    if (k.startsWith('line-')) inner = line({ t: k.slice(5), p: [[2, 50], [22, 50]] }, { ...c, bg: c.bg });
-    else inner = element({ t: k, x: 12, y: 50, label: k === 'keeper' ? 'K' : undefined }, c);
-    return `<svg viewBox="0 0 24 70" width="36" height="22" preserveAspectRatio="xMidYMid meet" aria-hidden="true"><rect x="0" y="20" width="24" height="30" fill="${c.bg}" rx="3"/><g transform="translate(0 0)">${inner}</g></svg>`;
-  };
+  const sw = (k) => symbolSvg(k, opts);
   return `<ul class="legend">${items.map(([k, l]) => `<li>${sw(k)}<span>${l}</span></li>`).join('')}</ul>`;
+}
+
+/** Klein symbool (element of lijntype 'line-loop' enz.) als SVG-tekst, voor legende en editorpalet. */
+export function symbolSvg(k, opts = {}) {
+  const c = opts.sun ? PALETTES.sun : PALETTES.normal;
+  let inner;
+  if (k.startsWith('line-')) inner = line({ t: k.slice(5), p: [[2, 50], [22, 50]] }, { ...c, bg: c.bg });
+  else inner = element({ t: k, x: 12, y: 50, label: k === 'keeper' ? 'K' : undefined }, c);
+  return `<svg viewBox="0 0 24 70" width="36" height="22" preserveAspectRatio="xMidYMid meet" aria-hidden="true"><rect x="0" y="20" width="24" height="30" fill="${c.bg}" rx="3"/><g transform="translate(0 0)">${inner}</g></svg>`;
 }

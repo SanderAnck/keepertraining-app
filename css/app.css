@@ -425,3 +425,27 @@ body.in-field #toast.show { transform: translate(-50%, 0); }
 .seg.rate .seg-opt span { width: 100%; justify-content: center; padding: .45rem 0; font-variant-numeric: tabular-nums; font-size: 1.05rem; }
 .seg.rate .seg-opt.none input:checked + span { background: var(--surface-2); color: var(--muted); }
 .rating-form details summary, details.card summary { cursor: pointer; font-weight: 700; min-height: 44px; display: flex; align-items: center; }
+
+/* ---------- Diagrameditor ---------- */
+dialog.sheet.editor-sheet { max-width: 900px; }
+.dia-editor { display: flex; flex-direction: column; gap: .5rem; }
+.ed-bar { display: flex; justify-content: space-between; align-items: center; gap: .5rem; flex-wrap: wrap; }
+.ed-hist { display: flex; gap: .35rem; }
+.ed-hist .btn { min-width: 48px; min-height: 48px; font-size: 1.4rem; padding: 0; }
+.ed-hist .btn:disabled { opacity: .35; }
+.ed-canvas { touch-action: none; -webkit-user-select: none; user-select: none; margin: 0; cursor: crosshair; }
+.ed-canvas svg { display: block; width: 100%; height: auto; aspect-ratio: 100 / 70; }
+.ed-palette .ed-pal { display: inline-flex; align-items: center; gap: .3rem; padding: .3rem .7rem .3rem .4rem; white-space: nowrap; }
+.ed-palette .ed-pal svg { flex: none; border-radius: 4px; }
+.ed-draw { display: flex; flex-wrap: wrap; gap: .5rem; align-items: center; justify-content: space-between; }
+.ed-draw .seg-opt span svg { margin-right: .2rem; }
+.ed-step output { min-width: 7.5rem; text-align: center; font-weight: 750; }
+.ed-hint { margin: 0; min-height: 2.6em; }
+.ed-card { margin: 0; }
+.ed-card .seg { margin: .5rem 0; }
+.ed-sel-row { align-items: flex-end; flex-wrap: wrap; margin-top: .5rem; }
+.ed-label { margin: 0; max-width: 7rem; }
+button.dia-wrap.dia-edit { display: block; width: 100%; padding: 0; border: 0; background: none; cursor: pointer; }
+.ed-tools .seg-opt span, .ed-modes .seg-opt span { min-height: 44px; padding: .4rem .8rem; }
+.ed-tools .stepper .btn { width: 44px; height: 44px; }
+.ed-tools .stepper output { font-size: 1.05rem; }

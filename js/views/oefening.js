@@ -6,6 +6,7 @@ import { THEMES, AGE_GROUPS, LEVELS, INTENSITIES, MATERIALS, BLOCK_TYPES, FIELD_
 import { duplicateExercise } from '../logic/library.js';
 import { createItem, addItem, isoDate } from '../logic/session.js';
 import { renderDiagram, renderLegend } from '../diagram/render.js';
+import { openDiagramEditor } from '../diagram/editor.js';
 
 export async function render(main, [id, mode]) {
   const ex = getExercise(id);
@@ -34,6 +35,7 @@ function renderDetail(main, ex) {
         ${ex.origin !== 'seed' ? html`<span class="badge">${ex.origin === 'aangepast' ? 'Aangepast' : 'Eigen oefening'}</span>` : ''}</div>
       <p class="lead">${ex.summary}</p>
       <figure class="dia-wrap big">${raw(renderDiagram(ex.diagram, { title: ex.name }))}</figure>
+      <button class="btn wide-solid" data-act="drawing">Tekening aanpassen</button>
       <details class="legend-box"><summary>Legende</summary>${raw(renderLegend(ex.diagram))}</details>
       <div class="row gap wrap">
         <button class="btn big${fav ? ' on' : ''}" data-act="fav" aria-pressed="${fav}">${fav ? '★ Favoriet' : '☆ Favoriet'}</button>
@@ -65,6 +67,16 @@ function renderDetail(main, ex) {
     const b = e.target.closest('[data-act]');
     if (!b) return;
     if (b.dataset.act === 'fav') { const on = await toggleFavorite(ex.id); toast(on ? 'Toegevoegd aan favorieten' : 'Uit favorieten'); renderDetail(main, getExercise(ex.id)); }
+    if (b.dataset.act === 'drawing') {
+      openDiagramEditor(ex.diagram, {
+        title: ex.name,
+        onSave: async (diagram) => {
+          const rec = await saveExercise({ ...ex, diagram });
+          toast(isSeed(ex.id) ? 'Tekening bewaard als jouw aanpassing' : 'Tekening bewaard');
+          renderDetail(main, rec);
+        }
+      });
+    }
     if (b.dataset.act === 'dup') { const c = duplicateExercise(ex); await saveExercise(c); toast('Gedupliceerd'); location.hash = `#/oefening/${c.id}/bewerk`; }
     if (b.dataset.act === 'restore') {
       if (!(await confirmSheet('Origineel herstellen', 'Je aanpassingen aan deze oefening worden gewist.', 'Herstellen', true))) return;
@@ -125,13 +137,14 @@ function renderEdit(main, ex) {
     <label class="field"><span class="label">Variant makkelijker</span><textarea name="easier" rows="2">${ex.variants?.easier || ''}</textarea></label>
     <label class="field"><span class="label">Variant moeilijker</span><textarea name="harder" rows="2">${ex.variants?.harder || ''}</textarea></label>
     <fieldset><legend>Veldtekening</legend>
-      <div class="seg">${FIELD_TYPES.map((f) => html`<label class="seg-opt"><input type="radio" name="field" value="${f.id}" ${ex.diagram?.field === f.id ? 'checked' : ''}><span>${f.label}</span></label>`)}</div>
-      <div class="dia-wrap" id="preview">${raw(renderDiagram(ex.diagram))}</div>
-      <p class="hint">De diagrameditor (elementen verslepen, pijlen tekenen) komt in fase 2. Een gedupliceerde oefening behoudt haar tekening.</p>
+      <button type="button" class="dia-wrap dia-edit" id="preview" data-act="diagram" aria-label="Tekening bewerken">${raw(renderDiagram(ex.diagram))}</button>
+      <button type="button" class="btn big wide-solid" data-act="diagram">Tekening bewerken</button>
+      <p class="hint">Plaats en versleep elementen, teken pijlen met je vinger en kies het veld. Wordt bewaard samen met de oefening.</p>
     </fieldset>
     <div class="row gap sticky-actions"><button class="btn primary huge" data-act="save">Opslaan</button></div>
   </form>`.s;
   const form = main.querySelector('form');
+  let diagram = ex.diagram || { field: 'doel', elements: [], lines: [] };
   const read = () => {
     const fd = new FormData(form);
     const all = (n) => fd.getAll(n);
@@ -153,13 +166,21 @@ function renderEdit(main, ex) {
         const [fault, ...fix] = l.split(/\s+[—–-]\s+/); return { fault: fault.trim(), fix: fix.join(' – ').trim() };
       }),
       variants: { easier: fd.get('easier').trim(), harder: fd.get('harder').trim() },
-      diagram: { ...(ex.diagram || { elements: [], lines: [] }), field: fd.get('field') || 'doel' }
+      diagram
     };
   };
-  form.addEventListener('change', (e) => {
-    if (e.target.name === 'field') main.querySelector('#preview').innerHTML = renderDiagram(read().diagram);
-  });
   main.onclick = async (e) => {
+    if (e.target.closest('[data-act="diagram"]')) {
+      openDiagramEditor(diagram, {
+        title: form.name.value || ex.name || 'Nieuwe oefening',
+        onSave: (dg) => {
+          diagram = dg;
+          main.querySelector('#preview').innerHTML = renderDiagram(diagram);
+          toast('Tekening aangepast. Vergeet niet de oefening op te slaan.', { duration: 4000 });
+        }
+      });
+      return;
+    }
     if (!e.target.closest('[data-act="save"]')) return;
     const rec = read();
     await saveExercise(rec);

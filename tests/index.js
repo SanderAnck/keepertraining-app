@@ -9,3 +9,4 @@ import './precache.test.js';
 import './session.test.js';
 import './timer.test.js';
 import './keepers.test.js';
+import './diagramEdit.test.js';
