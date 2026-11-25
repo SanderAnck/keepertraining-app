@@ -1,6 +1,7 @@
 // Bron van de seedbibliotheek: genereert data/exercises.json. Uitvoeren met `node tools/build-exercises.mjs`.
 // Geen onderdeel van de app zelf (geen build-stap nodig): het JSON-bestand wordt mee gecommit.
 import { writeFileSync } from 'node:fs';
+import extra from './exercises-extra.mjs';
 
 const ALL = ['u6_9', 'u10_12', 'u13_15', 'u16_19', 'senioren'];
 const FROM10 = ALL.slice(1);
@@ -607,6 +608,7 @@ const ex = [
   }
 ];
 
-const out = { version: 1, exercises: ex };
+ex.push(...extra);
+const out = { version: 2, exercises: ex };
 writeFileSync(new URL('../data/exercises.json', import.meta.url), JSON.stringify(out, null, 1) + '\n');
 console.log(`data/exercises.json: ${ex.length} oefeningen`);

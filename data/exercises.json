@@ -1,5 +1,5 @@
 {
- "version": 1,
+ "version": 2,
  "exercises": [
   {
    "id": "mobiliteit-pionnen",
@@ -4793,6 +4793,9862 @@
        [
         50,
         27
+       ]
+      ],
+      "s": 2
+     }
+    ]
+   }
+  },
+  {
+   "ages": [
+    "u6_9",
+    "u10_12",
+    "u13_15",
+    "u16_19",
+    "senioren"
+   ],
+   "levels": [
+    "beginner",
+    "gevorderd",
+    "elite"
+   ],
+   "intensity": "gemiddeld",
+   "materials": [
+    "ballen"
+   ],
+   "keepers": {
+    "min": 1,
+    "max": 3
+   },
+   "trainers": 1,
+   "zone": "Doel en doelgebied",
+   "duration": 8,
+   "sets": 3,
+   "reps": 6,
+   "rest": 45,
+   "divesPerRep": 0,
+   "explosive": false,
+   "blockTypes": [
+    "kern"
+   ],
+   "complexity": 2,
+   "id": "vangen-stuiterbal",
+   "name": "Stuiterballen vangen",
+   "summary": "De trainer laat de bal vlak voor de keeper stuiteren; de keeper vangt hem in balans tegen het lichaam.",
+   "description": "De trainer werpt of trapt de bal vanop 8 meter zodat hij 1 à 2 meter voor de keeper stuitert. De keeper stapt naar voren om de bal zo snel mogelijk na de stuit te vangen, met het lichaam achter de bal. Wissel lage en hoge stuiters af.",
+   "themes": [
+    "vangen"
+   ],
+   "coaching": [
+    "Naar de bal toe stappen",
+    "Lichaam achter de bal",
+    "Vangen net na de stuit"
+   ],
+   "mistakes": [
+    {
+     "fault": "Wachten tot de bal hoog opspringt",
+     "fix": "Stap naar voren en vang hem kort na de grond."
+    },
+    {
+     "fault": "Bal klapt uit de handen",
+     "fix": "Handen en borst vormen samen een kom."
+    }
+   ],
+   "variants": {
+    "easier": "Zachte, voorspelbare stuit op 3 meter.",
+    "harder": "Stuit op nat gras of met effect, vanop 12 meter."
+   },
+   "diagram": {
+    "field": "doel",
+    "elements": [
+     {
+      "t": "keeper",
+      "x": 50,
+      "y": 12
+     },
+     {
+      "t": "trainer",
+      "x": 50,
+      "y": 62
+     },
+     {
+      "t": "bal",
+      "x": 50,
+      "y": 57
+     }
+    ],
+    "lines": [
+     {
+      "t": "bal",
+      "p": [
+       [
+        50,
+        56
+       ],
+       [
+        50,
+        30
+       ],
+       [
+        50,
+        22
+       ]
+      ],
+      "s": 1
+     },
+     {
+      "t": "loop",
+      "p": [
+       [
+        50,
+        13
+       ],
+       [
+        50,
+        20
+       ]
+      ],
+      "s": 2
+     }
+    ]
+   }
+  },
+  {
+   "ages": [
+    "u6_9",
+    "u10_12",
+    "u13_15",
+    "u16_19",
+    "senioren"
+   ],
+   "levels": [
+    "beginner",
+    "gevorderd",
+    "elite"
+   ],
+   "intensity": "gemiddeld",
+   "materials": [
+    "ballen",
+    "pionnen"
+   ],
+   "keepers": {
+    "min": 1,
+    "max": 3
+   },
+   "trainers": 1,
+   "zone": "Doel en doelgebied",
+   "duration": 8,
+   "sets": 3,
+   "reps": 6,
+   "rest": 45,
+   "divesPerRep": 0,
+   "explosive": false,
+   "blockTypes": [
+    "kern"
+   ],
+   "complexity": 2,
+   "id": "vangen-zijwaartse-pas",
+   "name": "Vangen na zijwaartse verplaatsing",
+   "summary": "De keeper verplaatst met bijzetpassen tussen twee pionnen en vangt de bal die naar zijn positie gespeeld wordt.",
+   "description": "Twee pionnen staan 3 meter uit elkaar op de doellijn. De keeper verplaatst met bijzetpassen naar een pion, de trainer speelt de bal naar die kant op borsthoogte. Na het vangen rolt de keeper terug en verplaatst naar de andere pion.",
+   "themes": [
+    "vangen",
+    "voetenwerk"
+   ],
+   "coaching": [
+    "Bijzetten, niet kruisen",
+    "Schouders recht naar de bal",
+    "Stilstaan voor het vangen"
+   ],
+   "mistakes": [
+    {
+     "fault": "Vangen terwijl je nog beweegt",
+     "fix": "Kleine sprongstop, dan pas vangen."
+    },
+    {
+     "fault": "Benen kruisen",
+     "fix": "Altijd bijzetpassen met de voeten op schouderbreedte."
+    }
+   ],
+   "variants": {
+    "easier": "Werpbal en de trainer wacht tot de keeper staat.",
+    "harder": "De trainer kiest de kant op het laatste moment."
+   },
+   "diagram": {
+    "field": "doel",
+    "elements": [
+     {
+      "t": "keeper",
+      "x": 50,
+      "y": 12
+     },
+     {
+      "t": "pion",
+      "x": 40,
+      "y": 12
+     },
+     {
+      "t": "pion",
+      "x": 60,
+      "y": 12
+     },
+     {
+      "t": "trainer",
+      "x": 50,
+      "y": 60
+     },
+     {
+      "t": "bal",
+      "x": 50,
+      "y": 55
+     }
+    ],
+    "lines": [
+     {
+      "t": "loop",
+      "p": [
+       [
+        50,
+        12
+       ],
+       [
+        58,
+        12
+       ]
+      ],
+      "s": 1
+     },
+     {
+      "t": "bal",
+      "p": [
+       [
+        51,
+        54
+       ],
+       [
+        58,
+        17
+       ]
+      ],
+      "s": 2
+     }
+    ]
+   }
+  },
+  {
+   "ages": [
+    "u10_12",
+    "u13_15",
+    "u16_19",
+    "senioren"
+   ],
+   "levels": [
+    "gevorderd",
+    "elite"
+   ],
+   "intensity": "gemiddeld",
+   "materials": [
+    "ballen"
+   ],
+   "keepers": {
+    "min": 2,
+    "max": 4
+   },
+   "trainers": 1,
+   "zone": "Doel en doelgebied",
+   "duration": 8,
+   "sets": 3,
+   "reps": 6,
+   "rest": 45,
+   "divesPerRep": 0,
+   "explosive": false,
+   "blockTypes": [
+    "kern"
+   ],
+   "complexity": 2,
+   "id": "vangen-twee-ballen",
+   "name": "Twee ballen kort na elkaar",
+   "summary": "Twee trainers of keepers spelen om beurt kort na elkaar; de keeper vangt, legt neer en is klaar voor de volgende.",
+   "description": "Twee schutters staan op 10 meter, een links en een rechts. De eerste speelt op het lichaam, de keeper vangt, legt de bal opzij en stelt zich meteen op tegenover de tweede schutter, die 2 seconden later speelt. Traint snel herstellen van de positie.",
+   "themes": [
+    "vangen",
+    "voetenwerk"
+   ],
+   "coaching": [
+    "Na het vangen meteen bijdraaien",
+    "Basishouding voor elke bal",
+    "Bal veilig opzij leggen"
+   ],
+   "mistakes": [
+    {
+     "fault": "Positie niet aanpassen aan de tweede schutter",
+     "fix": "Draai mee tot je recht voor de bal staat."
+    },
+    {
+     "fault": "Bal laten vallen om tijd te winnen",
+     "fix": "Eerst veilig, dan snel."
+    }
+   ],
+   "variants": {
+    "easier": "4 seconden tussen de ballen.",
+    "harder": "Tweede bal meteen na de eerste en harder."
+   },
+   "diagram": {
+    "field": "doel",
+    "elements": [
+     {
+      "t": "keeper",
+      "x": 50,
+      "y": 12
+     },
+     {
+      "t": "trainer",
+      "x": 35,
+      "y": 58
+     },
+     {
+      "t": "speler",
+      "x": 65,
+      "y": 58,
+      "label": "K2"
+     },
+     {
+      "t": "bal",
+      "x": 36,
+      "y": 53
+     },
+     {
+      "t": "bal",
+      "x": 64,
+      "y": 53
+     }
+    ],
+    "lines": [
+     {
+      "t": "bal",
+      "p": [
+       [
+        37,
+        52
+       ],
+       [
+        48,
+        17
+       ]
+      ],
+      "s": 1
+     },
+     {
+      "t": "loop",
+      "p": [
+       [
+        50,
+        12
+       ],
+       [
+        52,
+        13
+       ]
+      ],
+      "s": 2
+     },
+     {
+      "t": "bal",
+      "p": [
+       [
+        63,
+        52
+       ],
+       [
+        53,
+        17
+       ]
+      ],
+      "s": 3
+     }
+    ]
+   }
+  },
+  {
+   "ages": [
+    "u13_15",
+    "u16_19",
+    "senioren"
+   ],
+   "levels": [
+    "gevorderd",
+    "elite"
+   ],
+   "intensity": "gemiddeld",
+   "materials": [
+    "ballen"
+   ],
+   "keepers": {
+    "min": 1,
+    "max": 3
+   },
+   "trainers": 1,
+   "zone": "Strafschopgebied",
+   "duration": 8,
+   "sets": 3,
+   "reps": 8,
+   "rest": 45,
+   "divesPerRep": 0.3,
+   "explosive": false,
+   "blockTypes": [
+    "kern"
+   ],
+   "complexity": 2,
+   "id": "vangen-afstandsschot",
+   "name": "Afstandsschoten vangen",
+   "summary": "Harde schoten vanop 18 tot 20 meter op en net naast het lichaam vangen zonder rebound.",
+   "description": "De trainer schiet vanaf de rand van de zestien. De keeper staat iets voor de lijn, zet zijn voeten net voor het schot (sprongstop) en vangt de bal tegen de borst of in de kom. Elke bal die uit de handen springt is een rebound voor een aanvaller: daar wordt op gelet.",
+   "themes": [
+    "vangen"
+   ],
+   "coaching": [
+    "Sprongstop voor het schot",
+    "Geen rebound geven",
+    "Handen achter de bal"
+   ],
+   "mistakes": [
+    {
+     "fault": "Voeten nog in beweging bij het schot",
+     "fix": "Lees het uithalen van de schutter en sta stil."
+    },
+    {
+     "fault": "Bal wegtikken die je kunt vangen",
+     "fix": "Vangen is altijd de eerste keuze."
+    }
+   ],
+   "variants": {
+    "easier": "Afstand 14 meter en schoten recht op het lichaam.",
+    "harder": "Een aanvaller volgt in op elke rebound."
+   },
+   "diagram": {
+    "field": "zestien",
+    "elements": [
+     {
+      "t": "keeper",
+      "x": 50,
+      "y": 12
+     },
+     {
+      "t": "trainer",
+      "x": 50,
+      "y": 62
+     },
+     {
+      "t": "bal",
+      "x": 50,
+      "y": 57
+     }
+    ],
+    "lines": [
+     {
+      "t": "bal",
+      "p": [
+       [
+        50,
+        56
+       ],
+       [
+        48,
+        16
+       ]
+      ],
+      "s": 1
+     }
+    ]
+   }
+  },
+  {
+   "ages": [
+    "u6_9",
+    "u10_12",
+    "u13_15",
+    "u16_19",
+    "senioren"
+   ],
+   "levels": [
+    "beginner",
+    "gevorderd"
+   ],
+   "intensity": "laag",
+   "materials": [
+    "ballen"
+   ],
+   "keepers": {
+    "min": 1,
+    "max": 3
+   },
+   "trainers": 1,
+   "zone": "Doel en doelgebied",
+   "duration": 8,
+   "sets": 3,
+   "reps": 6,
+   "rest": 45,
+   "divesPerRep": 0,
+   "explosive": false,
+   "blockTypes": [
+    "opwarming",
+    "kern"
+   ],
+   "complexity": 1,
+   "id": "vangen-zitten-opstaan",
+   "name": "Vangen vanuit zit",
+   "summary": "De keeper zit, staat op het signaal snel recht en vangt de bal die meteen volgt.",
+   "description": "De keeper zit op de grond met de benen gekruist. Op het signaal van de trainer staat hij zo snel mogelijk recht zonder de handen te gebruiken (of met één hand voor de jongsten) en vangt de bal die de trainer op borsthoogte werpt. Leuk als wedstrijdje tussen keepers.",
+   "themes": [
+    "vangen",
+    "reflexen"
+   ],
+   "warmup": [
+    "balgewenning"
+   ],
+   "coaching": [
+    "Snel in de basishouding",
+    "Handen klaar voor de borst",
+    "Kijk naar de bal"
+   ],
+   "mistakes": [
+    {
+     "fault": "Rechtkomen en meteen vangen zonder balans",
+     "fix": "Eerst stabiel staan, dan vangen."
+    },
+    {
+     "fault": "Ogen naar de grond bij het rechtstaan",
+     "fix": "Blijf de trainer aankijken."
+    }
+   ],
+   "variants": {
+    "easier": "Starten vanuit kniestand.",
+    "harder": "Starten vanuit buiklig of met een duik na het rechtstaan."
+   },
+   "diagram": {
+    "field": "doel",
+    "elements": [
+     {
+      "t": "keeper",
+      "x": 50,
+      "y": 16
+     },
+     {
+      "t": "trainer",
+      "x": 50,
+      "y": 55
+     },
+     {
+      "t": "bal",
+      "x": 50,
+      "y": 50
+     }
+    ],
+    "lines": [
+     {
+      "t": "loop",
+      "p": [
+       [
+        52,
+        20
+       ],
+       [
+        52,
+        15
+       ]
+      ],
+      "s": 1
+     },
+     {
+      "t": "bal",
+      "p": [
+       [
+        50,
+        49
+       ],
+       [
+        50,
+        22
+       ]
+      ],
+      "s": 2
+     }
+    ]
+   }
+  },
+  {
+   "ages": [
+    "u6_9",
+    "u10_12",
+    "u13_15",
+    "u16_19",
+    "senioren"
+   ],
+   "levels": [
+    "beginner",
+    "gevorderd",
+    "elite"
+   ],
+   "intensity": "laag",
+   "materials": [
+    "ballen"
+   ],
+   "keepers": {
+    "min": 1,
+    "max": 6
+   },
+   "trainers": 1,
+   "zone": "4 × 4 m per duo",
+   "duration": 6,
+   "sets": 3,
+   "reps": 10,
+   "rest": 20,
+   "divesPerRep": 0,
+   "explosive": false,
+   "blockTypes": [
+    "opwarming"
+   ],
+   "complexity": 1,
+   "id": "vangen-tennisbal",
+   "name": "Handjes met tennisballen",
+   "summary": "Vangen en gooien met kleine ballen om de hand-oogcoördinatie en zachte handen te verbeteren.",
+   "description": "Twee keepers staan op 3 meter van elkaar. Ze gooien een kleine bal (of een gewone bal voor de jongsten) met één hand, vangen met één hand, dan met de andere, dan via een stuit. Ideaal als rustige opwarming of tussendoor.",
+   "themes": [
+    "vangen",
+    "reflexen"
+   ],
+   "warmup": [
+    "balgewenning"
+   ],
+   "coaching": [
+    "Zachte handen",
+    "Kijk de bal in de hand",
+    "Afwisselen links en rechts"
+   ],
+   "mistakes": [
+    {
+     "fault": "Harde, gespannen handen",
+     "fix": "Laat de hand meegeven met de bal."
+    },
+    {
+     "fault": "Enkel met de sterke hand",
+     "fix": "Elke serie start met de zwakke hand."
+    }
+   ],
+   "variants": {
+    "easier": "Grote bal, twee handen en korte afstand.",
+    "harder": "Twee ballen tegelijk of jongleren met drie."
+   },
+   "diagram": {
+    "field": "vrij",
+    "elements": [
+     {
+      "t": "keeper",
+      "x": 38,
+      "y": 50,
+      "label": "K1"
+     },
+     {
+      "t": "keeper",
+      "x": 62,
+      "y": 50,
+      "label": "K2"
+     },
+     {
+      "t": "bal",
+      "x": 42,
+      "y": 44
+     }
+    ],
+    "lines": [
+     {
+      "t": "bal",
+      "p": [
+       [
+        42,
+        44
+       ],
+       [
+        58,
+        44
+       ]
+      ],
+      "s": 1
+     },
+     {
+      "t": "bal",
+      "p": [
+       [
+        58,
+        56
+       ],
+       [
+        50,
+        64
+       ],
+       [
+        42,
+        56
+       ]
+      ],
+      "s": 2
+     }
+    ]
+   }
+  },
+  {
+   "ages": [
+    "u10_12",
+    "u13_15",
+    "u16_19",
+    "senioren"
+   ],
+   "levels": [
+    "beginner",
+    "gevorderd",
+    "elite"
+   ],
+   "intensity": "gemiddeld",
+   "materials": [
+    "ballen"
+   ],
+   "keepers": {
+    "min": 1,
+    "max": 3
+   },
+   "trainers": 1,
+   "zone": "Doel en doelgebied",
+   "duration": 8,
+   "sets": 3,
+   "reps": 6,
+   "rest": 60,
+   "divesPerRep": 1,
+   "explosive": false,
+   "blockTypes": [
+    "kern"
+   ],
+   "complexity": 2,
+   "id": "duik-halve-hoogte",
+   "name": "Duiken op halve hoogte",
+   "summary": "Ballen op heuphoogte naast de keeper: afzet, vangen in de lucht en landen op de zijkant.",
+   "description": "De trainer werpt of schiet vanop 9 meter op heuphoogte, net buiten het bereik van een stap. De keeper zet af met het been aan de balkant, vangt de bal in de lucht (onderste hand achter, bovenste hand bovenop) en landt op de zijkant. Afwisselend links en rechts.",
+   "themes": [
+    "duiken"
+   ],
+   "coaching": [
+    "Afzet met het been aan de balkant",
+    "Bal vangen in de lucht",
+    "Landen op de zijkant"
+   ],
+   "mistakes": [
+    {
+     "fault": "Eerst landen en dan pas vangen",
+     "fix": "Vang de bal voor je de grond raakt."
+    },
+    {
+     "fault": "Duiken met de rug naar het veld",
+     "fix": "Borst blijft naar de schutter gericht."
+    }
+   ],
+   "variants": {
+    "easier": "Vanuit kniestand op een zachte ondergrond.",
+    "harder": "Na een zijwaartse verplaatsing of met een tweede bal."
+   },
+   "diagram": {
+    "field": "doel",
+    "elements": [
+     {
+      "t": "keeper",
+      "x": 50,
+      "y": 12
+     },
+     {
+      "t": "trainer",
+      "x": 50,
+      "y": 60
+     },
+     {
+      "t": "bal",
+      "x": 50,
+      "y": 55
+     }
+    ],
+    "lines": [
+     {
+      "t": "bal",
+      "p": [
+       [
+        48,
+        54
+       ],
+       [
+        41,
+        12
+       ]
+      ],
+      "s": 1
+     },
+     {
+      "t": "loop",
+      "p": [
+       [
+        48,
+        12
+       ],
+       [
+        42,
+        11
+       ]
+      ],
+      "s": 2
+     },
+     {
+      "t": "bal",
+      "p": [
+       [
+        52,
+        54
+       ],
+       [
+        59,
+        12
+       ]
+      ],
+      "s": 3
+     },
+     {
+      "t": "loop",
+      "p": [
+       [
+        52,
+        12
+       ],
+       [
+        58,
+        11
+       ]
+      ],
+      "s": 4
+     }
+    ]
+   }
+  },
+  {
+   "ages": [
+    "u13_15",
+    "u16_19",
+    "senioren"
+   ],
+   "levels": [
+    "gevorderd",
+    "elite"
+   ],
+   "intensity": "hoog",
+   "materials": [
+    "ballen",
+    "hordes"
+   ],
+   "keepers": {
+    "min": 1,
+    "max": 3
+   },
+   "trainers": 1,
+   "zone": "Doel en doelgebied",
+   "duration": 8,
+   "sets": 3,
+   "reps": 5,
+   "rest": 75,
+   "divesPerRep": 1,
+   "explosive": true,
+   "blockTypes": [
+    "kern"
+   ],
+   "complexity": 2,
+   "id": "duik-over-horde",
+   "name": "Duik over een lage horde",
+   "summary": "Een lage horde dwingt de keeper om echt af te zetten en over het obstakel te duiken in plaats van te vallen.",
+   "description": "Een lage horde (of pion op zijn kant) ligt naast de keeper. De trainer speelt de bal over de horde, de keeper zet af en duikt eroverheen. Traint een echte afzet en een duik naar voren-opzij.",
+   "themes": [
+    "duiken"
+   ],
+   "coaching": [
+    "Explosieve afzet",
+    "Schuin naar voren duiken",
+    "Handen eerst",
+    "Veilig landen"
+   ],
+   "mistakes": [
+    {
+     "fault": "Op de horde vallen",
+     "fix": "Begin met een zachte horde en vergroot de afstand pas als de afzet goed is."
+    },
+    {
+     "fault": "Achterwaarts duiken",
+     "fix": "Kies een punt vóór je als landingsplaats."
+    }
+   ],
+   "variants": {
+    "easier": "Een pion of een lint in plaats van een horde.",
+    "harder": "Hogere bal en de keeper start vanuit een verplaatsing."
+   },
+   "diagram": {
+    "field": "doel",
+    "elements": [
+     {
+      "t": "keeper",
+      "x": 50,
+      "y": 12
+     },
+     {
+      "t": "horde",
+      "x": 42,
+      "y": 13,
+      "r": 90
+     },
+     {
+      "t": "trainer",
+      "x": 50,
+      "y": 60
+     },
+     {
+      "t": "bal",
+      "x": 50,
+      "y": 55
+     }
+    ],
+    "lines": [
+     {
+      "t": "bal",
+      "p": [
+       [
+        48,
+        54
+       ],
+       [
+        36,
+        12
+       ]
+      ],
+      "s": 1
+     },
+     {
+      "t": "loop",
+      "p": [
+       [
+        48,
+        12
+       ],
+       [
+        37,
+        12
+       ]
+      ],
+      "s": 2
+     }
+    ]
+   }
+  },
+  {
+   "ages": [
+    "u13_15",
+    "u16_19",
+    "senioren"
+   ],
+   "levels": [
+    "gevorderd",
+    "elite"
+   ],
+   "intensity": "hoog",
+   "materials": [
+    "ballen"
+   ],
+   "keepers": {
+    "min": 2,
+    "max": 3
+   },
+   "trainers": 1,
+   "zone": "Doel en doelgebied",
+   "duration": 8,
+   "sets": 3,
+   "reps": 4,
+   "rest": 90,
+   "divesPerRep": 2,
+   "explosive": true,
+   "blockTypes": [
+    "kern"
+   ],
+   "complexity": 2,
+   "id": "duik-recovery",
+   "name": "Duik en snel herstel",
+   "summary": "Na een duik meteen recht en klaar voor een tweede bal naar de andere kant.",
+   "description": "De trainer speelt een eerste bal laag naast de keeper. Na de duik legt de keeper de bal weg, komt meteen recht en verwerkt de tweede bal die de assistent of tweede keeper naar de andere hoek speelt. Herstellen gaat over één knie, zonder op de rug te rollen.",
+   "themes": [
+    "duiken",
+    "reflexen"
+   ],
+   "coaching": [
+    "Herstellen over één knie",
+    "Hoofd meteen naar de bal",
+    "Kort en explosief"
+   ],
+   "mistakes": [
+    {
+     "fault": "Over de rug rollen om recht te komen",
+     "fix": "Draai naar de buik, één knie neer, recht."
+    },
+    {
+     "fault": "Te laat kijken naar de tweede schutter",
+     "fix": "Hoofd draait al tijdens het rechtkomen."
+    }
+   ],
+   "variants": {
+    "easier": "Tweede bal pas na 3 seconden en gerold.",
+    "harder": "Tweede bal hoog naar de verre hoek."
+   },
+   "diagram": {
+    "field": "doel",
+    "elements": [
+     {
+      "t": "keeper",
+      "x": 50,
+      "y": 12
+     },
+     {
+      "t": "trainer",
+      "x": 42,
+      "y": 58
+     },
+     {
+      "t": "speler",
+      "x": 58,
+      "y": 58,
+      "label": "K2"
+     },
+     {
+      "t": "bal",
+      "x": 43,
+      "y": 53
+     },
+     {
+      "t": "bal",
+      "x": 57,
+      "y": 53
+     }
+    ],
+    "lines": [
+     {
+      "t": "bal",
+      "p": [
+       [
+        43,
+        52
+       ],
+       [
+        41,
+        13
+       ]
+      ],
+      "s": 1
+     },
+     {
+      "t": "loop",
+      "p": [
+       [
+        48,
+        12
+       ],
+       [
+        42,
+        13
+       ]
+      ],
+      "s": 2
+     },
+     {
+      "t": "bal",
+      "p": [
+       [
+        57,
+        52
+       ],
+       [
+        60,
+        12
+       ]
+      ],
+      "s": 3
+     },
+     {
+      "t": "loop",
+      "p": [
+       [
+        43,
+        14
+       ],
+       [
+        59,
+        13
+       ]
+      ],
+      "s": 4
+     }
+    ]
+   }
+  },
+  {
+   "ages": [
+    "u6_9",
+    "u10_12",
+    "u13_15",
+    "u16_19",
+    "senioren"
+   ],
+   "levels": [
+    "beginner",
+    "gevorderd"
+   ],
+   "intensity": "laag",
+   "materials": [
+    "ballen"
+   ],
+   "keepers": {
+    "min": 1,
+    "max": 3
+   },
+   "trainers": 1,
+   "zone": "Doel en doelgebied",
+   "duration": 8,
+   "sets": 3,
+   "reps": 5,
+   "rest": 40,
+   "divesPerRep": 1,
+   "explosive": false,
+   "blockTypes": [
+    "opwarming",
+    "kern"
+   ],
+   "complexity": 1,
+   "id": "duik-vanuit-knie",
+   "name": "Duiktechniek vanuit kniestand",
+   "summary": "Opbouw van de duik: vanuit kniestand naar de bal duiken, eerst kort en dan verder.",
+   "description": "De keeper zit op de knieën. De trainer werpt de bal op 1 tot 2 meter naast de keeper op halve hoogte. De keeper duikt vanuit kniestand, vangt en landt op de zijkant. Een veilige manier om de duik aan te leren bij jonge of beginnende keepers.",
+   "themes": [
+    "duiken"
+   ],
+   "warmup": [
+    "valvorm"
+   ],
+   "coaching": [
+    "Onderste hand achter de bal",
+    "Landen op heup en schouder",
+    "Bal vóór het gezicht"
+   ],
+   "mistakes": [
+    {
+     "fault": "Landen op de buik",
+     "fix": "Draai de borst naar de trainer, dan land je op de zijkant."
+    },
+    {
+     "fault": "Ellebogen eerst op de grond",
+     "fix": "De armen blijven bij de bal."
+    }
+   ],
+   "variants": {
+    "easier": "Bal op de grond naast de keeper, enkel omvallen.",
+    "harder": "Vanuit hurkzit en de bal verder weg."
+   },
+   "diagram": {
+    "field": "vrij",
+    "elements": [
+     {
+      "t": "keeper",
+      "x": 50,
+      "y": 45
+     },
+     {
+      "t": "trainer",
+      "x": 50,
+      "y": 88
+     },
+     {
+      "t": "bal",
+      "x": 50,
+      "y": 83
+     }
+    ],
+    "lines": [
+     {
+      "t": "bal",
+      "p": [
+       [
+        48,
+        82
+       ],
+       [
+        34,
+        45
+       ]
+      ],
+      "s": 1
+     },
+     {
+      "t": "loop",
+      "p": [
+       [
+        47,
+        45
+       ],
+       [
+        36,
+        45
+       ]
+      ],
+      "s": 2
+     }
+    ]
+   }
+  },
+  {
+   "ages": [
+    "u10_12",
+    "u13_15",
+    "u16_19",
+    "senioren"
+   ],
+   "levels": [
+    "gevorderd",
+    "elite"
+   ],
+   "intensity": "gemiddeld",
+   "materials": [
+    "ballen"
+   ],
+   "keepers": {
+    "min": 1,
+    "max": 3
+   },
+   "trainers": 1,
+   "zone": "Doel en doelgebied",
+   "duration": 8,
+   "sets": 3,
+   "reps": 5,
+   "rest": 60,
+   "divesPerRep": 1,
+   "explosive": false,
+   "blockTypes": [
+    "kern"
+   ],
+   "complexity": 2,
+   "id": "duik-doelpaal",
+   "name": "Duiken bij de paal",
+   "summary": "Ballen tegen de voet van de paal: korte, snelle duik zonder de paal te raken.",
+   "description": "De keeper staat een meter van de paal. De trainer speelt laag naar de korte hoek. De keeper duikt kort en vangt de bal of duwt hem rond de paal. Daarna dezelfde oefening aan de andere paal. Let op een veilige afstand tot de paal.",
+   "themes": [
+    "duiken",
+    "voetenwerk"
+   ],
+   "coaching": [
+    "Kort en laag duiken",
+    "Bal rond de paal duwen",
+    "Hoofd weg van de paal"
+   ],
+   "mistakes": [
+    {
+     "fault": "Te ver van de paal staan",
+     "fix": "Positie op een meter, de paal is je oriëntatie."
+    },
+    {
+     "fault": "Bal terug in het doelgebied duwen",
+     "fix": "Duw de bal naast het doel."
+    }
+   ],
+   "variants": {
+    "easier": "Rollende bal en meer afstand tot de paal.",
+    "harder": "Schot op halve hoogte naar de korte hoek."
+   },
+   "diagram": {
+    "field": "doel",
+    "elements": [
+     {
+      "t": "keeper",
+      "x": 42,
+      "y": 12
+     },
+     {
+      "t": "trainer",
+      "x": 30,
+      "y": 58
+     },
+     {
+      "t": "bal",
+      "x": 31,
+      "y": 53
+     }
+    ],
+    "lines": [
+     {
+      "t": "bal",
+      "p": [
+       [
+        32,
+        52
+       ],
+       [
+        38,
+        9
+       ]
+      ],
+      "s": 1
+     },
+     {
+      "t": "loop",
+      "p": [
+       [
+        42,
+        12
+       ],
+       [
+        39,
+        10
+       ]
+      ],
+      "s": 2
+     }
+    ]
+   }
+  },
+  {
+   "ages": [
+    "u16_19",
+    "senioren"
+   ],
+   "levels": [
+    "elite"
+   ],
+   "intensity": "hoog",
+   "materials": [
+    "ballen"
+   ],
+   "keepers": {
+    "min": 2,
+    "max": 3
+   },
+   "trainers": 1,
+   "zone": "Doel en doelgebied",
+   "duration": 8,
+   "sets": 3,
+   "reps": 4,
+   "rest": 90,
+   "divesPerRep": 2,
+   "explosive": true,
+   "blockTypes": [
+    "kern"
+   ],
+   "complexity": 3,
+   "id": "duik-dubbele-duik",
+   "name": "Dubbele redding",
+   "summary": "Eerste schot wegduiken, meteen een tweede bal op de rebound verwerken.",
+   "description": "De trainer schiet naar de hoek; de keeper duikt. Meteen daarna rolt of speelt een tweede schutter een bal naar de plaats waar een rebound zou vallen. De keeper komt recht en duikt opnieuw. Wedstrijdecht en zwaar: korte series.",
+   "themes": [
+    "duiken",
+    "wedstrijd"
+   ],
+   "coaching": [
+    "Eerste bal weg van het doel",
+    "Recht over één knie",
+    "Tweede duik naar voren"
+   ],
+   "mistakes": [
+    {
+     "fault": "Na de eerste duik blijven liggen",
+     "fix": "Meteen recht, de rebound komt altijd."
+    },
+    {
+     "fault": "Tweede duik achterwaarts",
+     "fix": "Duik naar de bal toe, schuin vooruit."
+    }
+   ],
+   "variants": {
+    "easier": "Tweede bal pas na 3 seconden en gerold.",
+    "harder": "Tweede bal van een aanvaller die in één tijd afwerkt."
+   },
+   "diagram": {
+    "field": "doel",
+    "elements": [
+     {
+      "t": "keeper",
+      "x": 50,
+      "y": 12
+     },
+     {
+      "t": "trainer",
+      "x": 50,
+      "y": 62
+     },
+     {
+      "t": "speler",
+      "x": 30,
+      "y": 36,
+      "label": "K2"
+     },
+     {
+      "t": "bal",
+      "x": 50,
+      "y": 57
+     },
+     {
+      "t": "bal",
+      "x": 32,
+      "y": 32
+     }
+    ],
+    "lines": [
+     {
+      "t": "bal",
+      "p": [
+       [
+        50,
+        56
+       ],
+       [
+        61,
+        13
+       ]
+      ],
+      "s": 1
+     },
+     {
+      "t": "loop",
+      "p": [
+       [
+        52,
+        12
+       ],
+       [
+        60,
+        13
+       ]
+      ],
+      "s": 2
+     },
+     {
+      "t": "bal",
+      "p": [
+       [
+        33,
+        31
+       ],
+       [
+        44,
+        18
+       ]
+      ],
+      "s": 3
+     },
+     {
+      "t": "loop",
+      "p": [
+       [
+        58,
+        14
+       ],
+       [
+        46,
+        18
+       ]
+      ],
+      "s": 4
+     }
+    ]
+   }
+  },
+  {
+   "ages": [
+    "u6_9",
+    "u10_12",
+    "u13_15",
+    "u16_19",
+    "senioren"
+   ],
+   "levels": [
+    "beginner",
+    "gevorderd"
+   ],
+   "intensity": "laag",
+   "materials": [
+    "ballen"
+   ],
+   "keepers": {
+    "min": 2,
+    "max": 6
+   },
+   "trainers": 1,
+   "zone": "4 × 4 m per duo",
+   "duration": 6,
+   "sets": 3,
+   "reps": 8,
+   "rest": 30,
+   "divesPerRep": 0.5,
+   "explosive": false,
+   "blockTypes": [
+    "opwarming"
+   ],
+   "complexity": 1,
+   "id": "duik-zittend-duo",
+   "name": "Valwedstrijd in duo",
+   "summary": "Speelse valvorm: twee keepers zitten tegenover elkaar en proberen elkaar te verrassen met rollende ballen.",
+   "description": "Twee keepers zitten op 4 meter van elkaar, benen gespreid. Om beurt rollen ze de bal net naast de ander. Die valt opzij naar de bal. Wie de bal mist, geeft een punt weg. Speels en veilig voor de jongsten.",
+   "themes": [
+    "duiken"
+   ],
+   "warmup": [
+    "valvorm"
+   ],
+   "coaching": [
+    "Vallen op de zijkant",
+    "Bal vóór het lichaam",
+    "Snel terug rechtop zitten"
+   ],
+   "mistakes": [
+    {
+     "fault": "Vallen op de rug",
+     "fix": "Draai de borst naar de bal."
+    },
+    {
+     "fault": "Alleen met de handen reiken",
+     "fix": "Laat het hele lichaam meegaan."
+    }
+   ],
+   "variants": {
+    "easier": "Bal trager en dichter bij het lichaam.",
+    "harder": "Vanuit kniestand en de bal stuiteren."
+   },
+   "diagram": {
+    "field": "vrij",
+    "elements": [
+     {
+      "t": "keeper",
+      "x": 35,
+      "y": 50,
+      "label": "K1"
+     },
+     {
+      "t": "keeper",
+      "x": 65,
+      "y": 50,
+      "label": "K2"
+     },
+     {
+      "t": "bal",
+      "x": 61,
+      "y": 48
+     }
+    ],
+    "lines": [
+     {
+      "t": "bal",
+      "p": [
+       [
+        61,
+        48
+       ],
+       [
+        37,
+        36
+       ]
+      ],
+      "s": 1
+     },
+     {
+      "t": "loop",
+      "p": [
+       [
+        35,
+        47
+       ],
+       [
+        36,
+        38
+       ]
+      ],
+      "s": 2
+     }
+    ]
+   }
+  },
+  {
+   "ages": [
+    "u6_9",
+    "u10_12",
+    "u13_15",
+    "u16_19",
+    "senioren"
+   ],
+   "levels": [
+    "beginner",
+    "gevorderd",
+    "elite"
+   ],
+   "intensity": "laag",
+   "materials": [
+    "ballen",
+    "hoepels"
+   ],
+   "keepers": {
+    "min": 1,
+    "max": 6
+   },
+   "trainers": 1,
+   "zone": "12 × 6 m",
+   "duration": 6,
+   "sets": 3,
+   "reps": 6,
+   "rest": 20,
+   "divesPerRep": 0,
+   "explosive": false,
+   "blockTypes": [
+    "opwarming",
+    "kern"
+   ],
+   "complexity": 1,
+   "id": "voetenwerk-hoepelparcours",
+   "name": "Hoepelparcours met vangbal",
+   "summary": "Korte voetjes door een hoepelparcours (vooruit, zijwaarts, in en uit) en een vangbal op het einde.",
+   "description": "Zes hoepels liggen in een zigzag. De keeper stapt met één voet in elke hoepel, daarna met twee voeten, daarna zijwaarts. Aan het einde vangt hij een bal van de trainer. Ideaal voor de opwarming en voor jonge keepers.",
+   "themes": [
+    "voetenwerk"
+   ],
+   "warmup": [
+    "mobiliteit"
+   ],
+   "coaching": [
+    "Op de voorvoeten",
+    "Korte, snelle passen",
+    "Armen mee"
+   ],
+   "mistakes": [
+    {
+     "fault": "Lange, trage passen",
+     "fix": "Klein en snel: zo vaak mogelijk de grond raken."
+    },
+    {
+     "fault": "Kijken naar de voeten",
+     "fix": "Blik vooruit naar de trainer."
+    }
+   ],
+   "variants": {
+    "easier": "Wandelen door de hoepels, dan rustig vangen.",
+    "harder": "Patroon niet aangekondigd: de trainer roept het."
+   },
+   "diagram": {
+    "field": "vrij",
+    "elements": [
+     {
+      "t": "hoepel",
+      "x": 15,
+      "y": 40
+     },
+     {
+      "t": "hoepel",
+      "x": 25,
+      "y": 60
+     },
+     {
+      "t": "hoepel",
+      "x": 35,
+      "y": 40
+     },
+     {
+      "t": "hoepel",
+      "x": 45,
+      "y": 60
+     },
+     {
+      "t": "hoepel",
+      "x": 55,
+      "y": 40
+     },
+     {
+      "t": "hoepel",
+      "x": 65,
+      "y": 60
+     },
+     {
+      "t": "keeper",
+      "x": 6,
+      "y": 50
+     },
+     {
+      "t": "trainer",
+      "x": 88,
+      "y": 50
+     },
+     {
+      "t": "bal",
+      "x": 84,
+      "y": 50
+     }
+    ],
+    "lines": [
+     {
+      "t": "loop",
+      "p": [
+       [
+        7,
+        50
+       ],
+       [
+        15,
+        40
+       ],
+       [
+        25,
+        60
+       ],
+       [
+        35,
+        40
+       ],
+       [
+        45,
+        60
+       ],
+       [
+        55,
+        40
+       ],
+       [
+        65,
+        60
+       ],
+       [
+        72,
+        52
+       ]
+      ],
+      "s": 1
+     },
+     {
+      "t": "bal",
+      "p": [
+       [
+        84,
+        47
+       ],
+       [
+        75,
+        48
+       ]
+      ],
+      "s": 2
+     }
+    ]
+   }
+  },
+  {
+   "ages": [
+    "u6_9",
+    "u10_12",
+    "u13_15",
+    "u16_19",
+    "senioren"
+   ],
+   "levels": [
+    "beginner",
+    "gevorderd",
+    "elite"
+   ],
+   "intensity": "laag",
+   "materials": [
+    "ladders"
+   ],
+   "keepers": {
+    "min": 1,
+    "max": 6
+   },
+   "trainers": 1,
+   "zone": "12 × 4 m",
+   "duration": 6,
+   "sets": 3,
+   "reps": 6,
+   "rest": 20,
+   "divesPerRep": 0,
+   "explosive": false,
+   "blockTypes": [
+    "opwarming"
+   ],
+   "complexity": 1,
+   "id": "voetenwerk-ladder-varianten",
+   "name": "Ladderpatronen",
+   "summary": "Verschillende ladderpatronen als opwarming en coördinatie: twee voeten in, zijwaarts, in-uit.",
+   "description": "Een ladder ligt op de grond. De keeper doet een patroon per reeks: twee voeten in elk vak, zijwaarts in-in-uit-uit, Ickey shuffle en hink-stap. Na de ladder versnelt hij 5 meter. Terug wandelen is de rust.",
+   "themes": [
+    "voetenwerk"
+   ],
+   "warmup": [
+    "mobiliteit"
+   ],
+   "coaching": [
+    "Licht op de voeten",
+    "Armen meebewegen",
+    "Kort grondcontact"
+   ],
+   "mistakes": [
+    {
+     "fault": "Op de sporten trappen",
+     "fix": "Eerst traag en correct, dan sneller."
+    },
+    {
+     "fault": "Rug gebogen",
+     "fix": "Borst vooruit, kin omhoog."
+    }
+   ],
+   "variants": {
+    "easier": "Eén voet in elk vak, wandelend.",
+    "harder": "Na de ladder een reactiesprint op signaal."
+   },
+   "diagram": {
+    "field": "vrij",
+    "elements": [
+     {
+      "t": "ladder",
+      "x": 45,
+      "y": 50,
+      "r": 0
+     },
+     {
+      "t": "keeper",
+      "x": 25,
+      "y": 50
+     },
+     {
+      "t": "pion",
+      "x": 80,
+      "y": 50
+     }
+    ],
+    "lines": [
+     {
+      "t": "loop",
+      "p": [
+       [
+        26,
+        50
+       ],
+       [
+        64,
+        50
+       ]
+      ],
+      "s": 1
+     },
+     {
+      "t": "loop",
+      "p": [
+       [
+        64,
+        50
+       ],
+       [
+        78,
+        50
+       ]
+      ],
+      "s": 2
+     }
+    ]
+   }
+  },
+  {
+   "ages": [
+    "u13_15",
+    "u16_19",
+    "senioren"
+   ],
+   "levels": [
+    "gevorderd",
+    "elite"
+   ],
+   "intensity": "gemiddeld",
+   "materials": [
+    "ballen"
+   ],
+   "keepers": {
+    "min": 1,
+    "max": 3
+   },
+   "trainers": 1,
+   "zone": "Doel en doelgebied",
+   "duration": 8,
+   "sets": 3,
+   "reps": 6,
+   "rest": 45,
+   "divesPerRep": 0.5,
+   "explosive": false,
+   "blockTypes": [
+    "kern"
+   ],
+   "complexity": 2,
+   "id": "voetenwerk-kruispas-hoge-bal",
+   "name": "Kruispas naar de verre paal",
+   "summary": "De keeper verplaatst met een kruispas over het doel en vangt een bal bij de verre paal.",
+   "description": "De keeper start aan de eerste paal. De trainer speelt een bal hoog naar de verre paal. De keeper gebruikt de kruispas (eerste pas opzij, tweede pas kruisen) om snel over het doel te verplaatsen en vangt of tikt de bal bij de tweede paal.",
+   "themes": [
+    "voetenwerk",
+    "hogeballen"
+   ],
+   "coaching": [
+    "Eerste pas opzij",
+    "Kruispas voor afstand",
+    "Afzet op het laatste been"
+   ],
+   "mistakes": [
+    {
+     "fault": "Achteruit lopen",
+     "fix": "Zijwaarts verplaatsen met de borst naar het veld."
+    },
+    {
+     "fault": "Te laat vertrekken",
+     "fix": "Vertrek zodra de trainer de bal raakt."
+    }
+   ],
+   "variants": {
+    "easier": "Lagere bal en meer tijd.",
+    "harder": "Met een aanvaller die meegaat naar de tweede paal."
+   },
+   "diagram": {
+    "field": "doel",
+    "elements": [
+     {
+      "t": "keeper",
+      "x": 40,
+      "y": 12
+     },
+     {
+      "t": "trainer",
+      "x": 30,
+      "y": 60
+     },
+     {
+      "t": "bal",
+      "x": 31,
+      "y": 55
+     }
+    ],
+    "lines": [
+     {
+      "t": "bal",
+      "p": [
+       [
+        32,
+        54
+       ],
+       [
+        50,
+        25
+       ],
+       [
+        61,
+        12
+       ]
+      ],
+      "s": 1
+     },
+     {
+      "t": "loop",
+      "p": [
+       [
+        41,
+        12
+       ],
+       [
+        60,
+        12
+       ]
+      ],
+      "s": 2
+     }
+    ]
+   }
+  },
+  {
+   "ages": [
+    "u10_12",
+    "u13_15",
+    "u16_19",
+    "senioren"
+   ],
+   "levels": [
+    "beginner",
+    "gevorderd",
+    "elite"
+   ],
+   "intensity": "gemiddeld",
+   "materials": [
+    "ballen"
+   ],
+   "keepers": {
+    "min": 1,
+    "max": 3
+   },
+   "trainers": 1,
+   "zone": "Doel en doelgebied",
+   "duration": 8,
+   "sets": 3,
+   "reps": 8,
+   "rest": 45,
+   "divesPerRep": 0.5,
+   "explosive": false,
+   "blockTypes": [
+    "kern"
+   ],
+   "complexity": 2,
+   "id": "voetenwerk-sprongstop",
+   "name": "Sprongstop op het schotmoment",
+   "summary": "De keeper loopt naar voren en zet op het juiste moment een sprongstop, zodat hij stilstaat als de bal vertrekt.",
+   "description": "De keeper start op de doellijn en komt enkele passen uit terwijl de trainer de bal klaarlegt. Net voor het schot zet de keeper een kleine sprongstop (split step) en verwerkt het schot. Het doel is timing: stilstaan op het moment van het schot.",
+   "themes": [
+    "voetenwerk"
+   ],
+   "coaching": [
+    "Sprongstop vlak voor het schot",
+    "Landen op de voorvoeten",
+    "Gewicht licht naar voren"
+   ],
+   "mistakes": [
+    {
+     "fault": "Te vroeg stoppen en stilstaan",
+     "fix": "Blijf bewegen tot de schutter uithaalt."
+    },
+    {
+     "fault": "Nog bewegen bij het schot",
+     "fix": "Lees het standbeen van de schutter."
+    }
+   ],
+   "variants": {
+    "easier": "Trainer roept \"nu\" voor hij schiet.",
+    "harder": "Trainer varieert het tempo en schiet soms meteen."
+   },
+   "diagram": {
+    "field": "doel",
+    "elements": [
+     {
+      "t": "keeper",
+      "x": 50,
+      "y": 10
+     },
+     {
+      "t": "trainer",
+      "x": 50,
+      "y": 66
+     },
+     {
+      "t": "bal",
+      "x": 50,
+      "y": 61
+     }
+    ],
+    "lines": [
+     {
+      "t": "loop",
+      "p": [
+       [
+        50,
+        11
+       ],
+       [
+        50,
+        22
+       ]
+      ],
+      "s": 1
+     },
+     {
+      "t": "bal",
+      "p": [
+       [
+        50,
+        60
+       ],
+       [
+        44,
+        24
+       ]
+      ],
+      "s": 2
+     }
+    ]
+   }
+  },
+  {
+   "ages": [
+    "u6_9",
+    "u10_12",
+    "u13_15",
+    "u16_19",
+    "senioren"
+   ],
+   "levels": [
+    "beginner",
+    "gevorderd",
+    "elite"
+   ],
+   "intensity": "gemiddeld",
+   "materials": [
+    "ballen",
+    "pionnen"
+   ],
+   "keepers": {
+    "min": 1,
+    "max": 3
+   },
+   "trainers": 1,
+   "zone": "Doel en doelgebied",
+   "duration": 8,
+   "sets": 3,
+   "reps": 6,
+   "rest": 45,
+   "divesPerRep": 0,
+   "explosive": false,
+   "blockTypes": [
+    "kern"
+   ],
+   "complexity": 2,
+   "id": "voetenwerk-pionnenster",
+   "name": "Pionnenster",
+   "summary": "Vanuit het midden van een ster van pionnen naar de pion die de trainer aanwijst, terug en een bal verwerken.",
+   "description": "Vijf pionnen staan in een ster rond de keeper op 3 meter. De trainer wijst een pion aan; de keeper verplaatst zijwaarts of voorwaarts, tikt de pion aan, keert terug en verwerkt een bal. De keeper blijft altijd met de borst naar de trainer.",
+   "themes": [
+    "voetenwerk",
+    "reflexen"
+   ],
+   "coaching": [
+    "Borst naar de trainer",
+    "Korte passen",
+    "In balans terug in het midden"
+   ],
+   "mistakes": [
+    {
+     "fault": "Rug naar de trainer bij het aantikken",
+     "fix": "Verplaats zijwaarts of achterwaarts, nooit met de rug."
+    },
+    {
+     "fault": "Grote passen",
+     "fix": "Kleine, snelle passen geven meer controle."
+    }
+   ],
+   "variants": {
+    "easier": "Drie pionnen en de trainer zegt welke.",
+    "harder": "Twee pionnen na elkaar en een duikbal op het einde."
+   },
+   "diagram": {
+    "field": "doel",
+    "elements": [
+     {
+      "t": "keeper",
+      "x": 50,
+      "y": 28
+     },
+     {
+      "t": "pion",
+      "x": 36,
+      "y": 18
+     },
+     {
+      "t": "pion",
+      "x": 64,
+      "y": 18
+     },
+     {
+      "t": "pion",
+      "x": 34,
+      "y": 38
+     },
+     {
+      "t": "pion",
+      "x": 66,
+      "y": 38
+     },
+     {
+      "t": "pion",
+      "x": 50,
+      "y": 44
+     },
+     {
+      "t": "trainer",
+      "x": 50,
+      "y": 75
+     },
+     {
+      "t": "bal",
+      "x": 50,
+      "y": 70
+     }
+    ],
+    "lines": [
+     {
+      "t": "loop",
+      "p": [
+       [
+        50,
+        28
+       ],
+       [
+        62,
+        19
+       ],
+       [
+        51,
+        27
+       ]
+      ],
+      "s": 1
+     },
+     {
+      "t": "bal",
+      "p": [
+       [
+        50,
+        69
+       ],
+       [
+        50,
+        33
+       ]
+      ],
+      "s": 2
+     }
+    ]
+   }
+  },
+  {
+   "ages": [
+    "u13_15",
+    "u16_19",
+    "senioren"
+   ],
+   "levels": [
+    "gevorderd",
+    "elite"
+   ],
+   "intensity": "hoog",
+   "materials": [
+    "ballen"
+   ],
+   "keepers": {
+    "min": 1,
+    "max": 3
+   },
+   "trainers": 1,
+   "zone": "Doel en doelgebied",
+   "duration": 8,
+   "sets": 3,
+   "reps": 5,
+   "rest": 75,
+   "divesPerRep": 0.5,
+   "explosive": true,
+   "blockTypes": [
+    "kern"
+   ],
+   "complexity": 2,
+   "id": "voetenwerk-achterwaarts-hoge-bal",
+   "name": "Achterwaarts verplaatsen naar een lob",
+   "summary": "De keeper staat hoog, de trainer lobt; de keeper verplaatst achterwaarts-zijwaarts en tikt de bal over.",
+   "description": "De keeper staat 6 meter voor zijn doel. De trainer lobt de bal richting het doel. De keeper draait zijdelings, verplaatst met kruispassen achteruit en tikt de bal met de verste hand over de lat of vangt hem.",
+   "themes": [
+    "voetenwerk",
+    "hogeballen"
+   ],
+   "coaching": [
+    "Zijdelings draaien, niet achteruit lopen",
+    "Kruispas",
+    "Tikken met de verste hand"
+   ],
+   "mistakes": [
+    {
+     "fault": "Achteruit lopen en vallen",
+     "fix": "Draai de heupen en loop zijwaarts."
+    },
+    {
+     "fault": "Bal in het doel tikken",
+     "fix": "Tik de bal over de lat, niet ertegen."
+    }
+   ],
+   "variants": {
+    "easier": "Keeper start op 3 meter en de lob is traag.",
+    "harder": "Start op 10 meter, na een eerste reddingsactie."
+   },
+   "diagram": {
+    "field": "doel",
+    "elements": [
+     {
+      "t": "keeper",
+      "x": 50,
+      "y": 30
+     },
+     {
+      "t": "trainer",
+      "x": 50,
+      "y": 75
+     },
+     {
+      "t": "bal",
+      "x": 50,
+      "y": 70
+     }
+    ],
+    "lines": [
+     {
+      "t": "bal",
+      "p": [
+       [
+        50,
+        69
+       ],
+       [
+        50,
+        40
+       ],
+       [
+        52,
+        8
+       ]
+      ],
+      "s": 1
+     },
+     {
+      "t": "loop",
+      "p": [
+       [
+        50,
+        30
+       ],
+       [
+        53,
+        18
+       ],
+       [
+        52,
+        11
+       ]
+      ],
+      "s": 2
+     }
+    ]
+   }
+  },
+  {
+   "ages": [
+    "u6_9",
+    "u10_12",
+    "u13_15",
+    "u16_19",
+    "senioren"
+   ],
+   "levels": [
+    "beginner",
+    "gevorderd"
+   ],
+   "intensity": "laag",
+   "materials": [
+    "ballen"
+   ],
+   "keepers": {
+    "min": 2,
+    "max": 6
+   },
+   "trainers": 1,
+   "zone": "10 × 5 m",
+   "duration": 8,
+   "sets": 3,
+   "reps": 8,
+   "rest": 30,
+   "divesPerRep": 0,
+   "explosive": false,
+   "blockTypes": [
+    "kern"
+   ],
+   "complexity": 1,
+   "id": "hoge-bal-tweetal",
+   "name": "Hoge ballen in tweetal",
+   "summary": "Twee keepers werpen elkaar hoge ballen toe en vangen op het hoogste punt met de knie omhoog.",
+   "description": "Twee keepers staan op 10 meter. De ene werpt hoog, de andere neemt twee passen aanloop, zet af op één been en vangt op het hoogste punt. Na tien worpen wisselen. Geschikt om de techniek in te slijpen zonder trainer.",
+   "themes": [
+    "hogeballen"
+   ],
+   "coaching": [
+    "Knie omhoog",
+    "Vangen boven het hoofd",
+    "Afzet op één been"
+   ],
+   "mistakes": [
+    {
+     "fault": "Vangen achter het hoofd",
+     "fix": "Handen vóór het hoofd zodat je de bal ziet."
+    },
+    {
+     "fault": "Twee benen afzetten",
+     "fix": "Eén been: hoger en beter beschermd."
+    }
+   ],
+   "variants": {
+    "easier": "Stilstaand vangen boven het hoofd.",
+    "harder": "Ballen met meer effect of via een stuit."
+   },
+   "diagram": {
+    "field": "vrij",
+    "elements": [
+     {
+      "t": "keeper",
+      "x": 25,
+      "y": 50,
+      "label": "K1"
+     },
+     {
+      "t": "keeper",
+      "x": 75,
+      "y": 50,
+      "label": "K2"
+     },
+     {
+      "t": "bal",
+      "x": 28,
+      "y": 45
+     }
+    ],
+    "lines": [
+     {
+      "t": "bal",
+      "p": [
+       [
+        29,
+        45
+       ],
+       [
+        50,
+        20
+       ],
+       [
+        70,
+        44
+       ]
+      ],
+      "s": 1
+     },
+     {
+      "t": "loop",
+      "p": [
+       [
+        76,
+        52
+       ],
+       [
+        72,
+        46
+       ]
+      ],
+      "s": 2
+     }
+    ]
+   }
+  },
+  {
+   "ages": [
+    "u13_15",
+    "u16_19",
+    "senioren"
+   ],
+   "levels": [
+    "gevorderd",
+    "elite"
+   ],
+   "intensity": "gemiddeld",
+   "materials": [
+    "ballen"
+   ],
+   "keepers": {
+    "min": 1,
+    "max": 3
+   },
+   "trainers": 1,
+   "zone": "Strafschopgebied",
+   "duration": 8,
+   "sets": 2,
+   "reps": 8,
+   "rest": 60,
+   "divesPerRep": 0,
+   "explosive": false,
+   "blockTypes": [
+    "kern"
+   ],
+   "complexity": 3,
+   "id": "hoge-bal-tweede-paal",
+   "name": "Voorzetten naar de tweede paal",
+   "summary": "Lange voorzetten naar de tweede paal onderscheppen of laten gaan.",
+   "description": "De trainer geeft voorzetten vanaf de flank richting de tweede paal. De keeper beslist: onderscheppen in het doelgebied of terugzakken naar de tweede paal en klaarstaan voor een kopbal. Na elke bal kort benoemen waarom.",
+   "themes": [
+    "hogeballen"
+   ],
+   "coaching": [
+    "Startpositie in het midden",
+    "Lees de baan",
+    "Niet zeker? Terug naar de paal"
+   ],
+   "mistakes": [
+    {
+     "fault": "Halverwege blijven staan",
+     "fix": "Kies: helemaal gaan of terug naar de paal."
+    },
+    {
+     "fault": "Te ver op de eerste paal starten",
+     "fix": "Begin iets naar het midden van het doel."
+    }
+   ],
+   "variants": {
+    "easier": "Voorzet werpen vanaf 15 meter.",
+    "harder": "Met een aanvaller aan de tweede paal."
+   },
+   "diagram": {
+    "field": "zestien",
+    "elements": [
+     {
+      "t": "keeper",
+      "x": 48,
+      "y": 10
+     },
+     {
+      "t": "trainer",
+      "x": 12,
+      "y": 40
+     },
+     {
+      "t": "bal",
+      "x": 14,
+      "y": 36
+     },
+     {
+      "t": "pion",
+      "x": 10,
+      "y": 46
+     }
+    ],
+    "lines": [
+     {
+      "t": "bal",
+      "p": [
+       [
+        15,
+        36
+       ],
+       [
+        40,
+        18
+       ],
+       [
+        60,
+        16
+       ]
+      ],
+      "s": 1
+     },
+     {
+      "t": "loop",
+      "p": [
+       [
+        48,
+        10
+       ],
+       [
+        57,
+        15
+       ]
+      ],
+      "s": 2
+     }
+    ]
+   }
+  },
+  {
+   "ages": [
+    "u13_15",
+    "u16_19",
+    "senioren"
+   ],
+   "levels": [
+    "gevorderd",
+    "elite"
+   ],
+   "intensity": "hoog",
+   "materials": [
+    "ballen"
+   ],
+   "keepers": {
+    "min": 3,
+    "max": 6
+   },
+   "trainers": 1,
+   "zone": "Strafschopgebied",
+   "duration": 8,
+   "sets": 2,
+   "reps": 6,
+   "rest": 60,
+   "divesPerRep": 0,
+   "explosive": true,
+   "blockTypes": [
+    "kern"
+   ],
+   "complexity": 3,
+   "id": "hoge-bal-hoekschop",
+   "name": "Hoekschoppen met drukte",
+   "summary": "Hoekschoppen verwerken met spelers en een aanvaller in het doelgebied.",
+   "description": "De trainer neemt hoekschoppen. Twee of drie spelers (keepers of medespelers) staan in het doelgebied, waarvan één de keeper hindert. De keeper kiest zijn startpositie, coacht, komt uit en vangt of bokst. Daarna kort bespreken.",
+   "themes": [
+    "hogeballen",
+    "communicatie"
+   ],
+   "coaching": [
+    "Startpositie midden van het doel",
+    "Luid roepen",
+    "Hoog onderscheppen",
+    "Twijfel = boksen"
+   ],
+   "mistakes": [
+    {
+     "fault": "Ingesloten door spelers",
+     "fix": "Zoek ruimte voor de aanloop vóór de bal vertrekt."
+    },
+    {
+     "fault": "Te laat roepen",
+     "fix": "Roep bij het vertrek van de bal."
+    }
+   ],
+   "variants": {
+    "easier": "Zonder hindernis en met geworpen hoekschoppen.",
+    "harder": "Twee aanvallers die actief naar de bal gaan."
+   },
+   "diagram": {
+    "field": "zestien",
+    "elements": [
+     {
+      "t": "keeper",
+      "x": 50,
+      "y": 9
+     },
+     {
+      "t": "aanvaller",
+      "x": 52,
+      "y": 16,
+      "label": "A"
+     },
+     {
+      "t": "speler",
+      "x": 42,
+      "y": 18,
+      "label": "V"
+     },
+     {
+      "t": "trainer",
+      "x": 97,
+      "y": 6
+     },
+     {
+      "t": "bal",
+      "x": 95,
+      "y": 7
+     }
+    ],
+    "lines": [
+     {
+      "t": "bal",
+      "p": [
+       [
+        94,
+        8
+       ],
+       [
+        70,
+        6
+       ],
+       [
+        54,
+        14
+       ]
+      ],
+      "s": 1
+     },
+     {
+      "t": "loop",
+      "p": [
+       [
+        50,
+        10
+       ],
+       [
+        53,
+        14
+       ]
+      ],
+      "s": 2
+     }
+    ]
+   }
+  },
+  {
+   "ages": [
+    "u10_12",
+    "u13_15",
+    "u16_19",
+    "senioren"
+   ],
+   "levels": [
+    "beginner",
+    "gevorderd",
+    "elite"
+   ],
+   "intensity": "laag",
+   "materials": [
+    "ballen"
+   ],
+   "keepers": {
+    "min": 1,
+    "max": 3
+   },
+   "trainers": 1,
+   "zone": "Doel en doelgebied",
+   "duration": 8,
+   "sets": 3,
+   "reps": 8,
+   "rest": 30,
+   "divesPerRep": 0,
+   "explosive": false,
+   "blockTypes": [
+    "kern"
+   ],
+   "complexity": 1,
+   "id": "hoge-bal-boksen-techniek",
+   "name": "Boksen: techniek",
+   "summary": "Wegboksen met één en twee vuisten aanleren tegen een aangegooide bal.",
+   "description": "De trainer werpt de bal op hoofdhoogte en iets hoger. Eerst boksen met twee vuisten (bal komt recht van voren) terug naar de trainer, daarna met één vuist (bal komt van opzij) verder door naar de flank. Vuisten gesloten, duimen bovenop.",
+   "themes": [
+    "hogeballen"
+   ],
+   "coaching": [
+    "Vuisten gesloten, duim bovenop",
+    "Twee vuisten bij een bal van voren",
+    "Hoog en ver"
+   ],
+   "mistakes": [
+    {
+     "fault": "Met open hand slaan",
+     "fix": "Sluit de vuist en raak de bal met de knokkels."
+    },
+    {
+     "fault": "Kort boksen",
+     "fix": "Strek de armen door, alsof je ver weg slaat."
+    }
+   ],
+   "variants": {
+    "easier": "Zachte bal, stilstaand.",
+    "harder": "Met aanloop en een tegenstander die licht duwt."
+   },
+   "diagram": {
+    "field": "doel",
+    "elements": [
+     {
+      "t": "keeper",
+      "x": 50,
+      "y": 14
+     },
+     {
+      "t": "trainer",
+      "x": 50,
+      "y": 50
+     },
+     {
+      "t": "bal",
+      "x": 50,
+      "y": 46
+     }
+    ],
+    "lines": [
+     {
+      "t": "bal",
+      "p": [
+       [
+        50,
+        45
+       ],
+       [
+        50,
+        30
+       ],
+       [
+        50,
+        19
+       ]
+      ],
+      "s": 1
+     },
+     {
+      "t": "bal",
+      "p": [
+       [
+        50,
+        18
+       ],
+       [
+        70,
+        40
+       ]
+      ],
+      "s": 2
+     }
+    ]
+   }
+  },
+  {
+   "ages": [
+    "u13_15",
+    "u16_19",
+    "senioren"
+   ],
+   "levels": [
+    "gevorderd",
+    "elite"
+   ],
+   "intensity": "gemiddeld",
+   "materials": [
+    "ballen"
+   ],
+   "keepers": {
+    "min": 3,
+    "max": 6
+   },
+   "trainers": 1,
+   "zone": "Strafschopgebied",
+   "duration": 8,
+   "sets": 3,
+   "reps": 6,
+   "rest": 45,
+   "divesPerRep": 0,
+   "explosive": false,
+   "blockTypes": [
+    "kern"
+   ],
+   "complexity": 3,
+   "id": "hoge-bal-terugzakken",
+   "name": "Ingeworpen bal naar het doel",
+   "summary": "Lange inworpen of vrije trappen in het doelgebied onderscheppen tussen meerdere spelers.",
+   "description": "De trainer werpt of trapt de bal vanaf de zijlijn in het doelgebied. Twee spelers staan voor de keeper. De keeper zakt niet terug op zijn lijn maar kiest het moment om uit te komen. Belangrijk bij lange inworpen in de jeugd.",
+   "themes": [
+    "hogeballen",
+    "communicatie"
+   ],
+   "coaching": [
+    "Positie iets naar voren",
+    "Ruimte voor je aanloop houden",
+    "Duidelijk roepen"
+   ],
+   "mistakes": [
+    {
+     "fault": "Op de lijn gekluisterd",
+     "fix": "Een inworp hangt lang in de lucht: je hebt tijd."
+    },
+    {
+     "fault": "Tussen spelers gaan staan",
+     "fix": "Zoek een vrije lijn naar de bal."
+    }
+   ],
+   "variants": {
+    "easier": "Zonder spelers in het doelgebied.",
+    "harder": "Spelers springen mee naar de bal."
+   },
+   "diagram": {
+    "field": "zestien",
+    "elements": [
+     {
+      "t": "keeper",
+      "x": 50,
+      "y": 10
+     },
+     {
+      "t": "speler",
+      "x": 46,
+      "y": 20,
+      "label": "S"
+     },
+     {
+      "t": "aanvaller",
+      "x": 56,
+      "y": 19
+     },
+     {
+      "t": "trainer",
+      "x": 99,
+      "y": 32
+     },
+     {
+      "t": "bal",
+      "x": 97,
+      "y": 30
+     }
+    ],
+    "lines": [
+     {
+      "t": "bal",
+      "p": [
+       [
+        96,
+        30
+       ],
+       [
+        70,
+        18
+       ],
+       [
+        52,
+        17
+       ]
+      ],
+      "s": 1
+     },
+     {
+      "t": "loop",
+      "p": [
+       [
+        50,
+        11
+       ],
+       [
+        52,
+        16
+       ]
+      ],
+      "s": 2
+     }
+    ]
+   }
+  },
+  {
+   "ages": [
+    "u13_15",
+    "u16_19",
+    "senioren"
+   ],
+   "levels": [
+    "gevorderd",
+    "elite"
+   ],
+   "intensity": "gemiddeld",
+   "materials": [
+    "ballen"
+   ],
+   "keepers": {
+    "min": 1,
+    "max": 3
+   },
+   "trainers": 1,
+   "zone": "Doel en doelgebied",
+   "duration": 8,
+   "sets": 3,
+   "reps": 6,
+   "rest": 60,
+   "divesPerRep": 0.5,
+   "explosive": false,
+   "blockTypes": [
+    "kern"
+   ],
+   "complexity": 2,
+   "id": "hoge-bal-tikken-over-lat",
+   "name": "Over de lat tikken",
+   "summary": "Hoge ballen die onder de lat komen met de open hand over de lat tikken.",
+   "description": "De trainer werpt of trapt hoge ballen die net onder de lat vallen. De keeper verplaatst met de kruispas en tikt de bal met de open hand (of vuist) over de lat. Altijd met de hand die het verst van het doel is.",
+   "themes": [
+    "hogeballen",
+    "duiken"
+   ],
+   "coaching": [
+    "Tikken met de verste hand",
+    "Hand onder de bal",
+    "Kruispas naar achteren"
+   ],
+   "mistakes": [
+    {
+     "fault": "Bal tegen de lat tikken",
+     "fix": "Raak de onderkant van de bal zodat hij omhoog gaat."
+    },
+    {
+     "fault": "Met de dichtste hand tikken",
+     "fix": "De verste hand reikt hoger en houdt je borst open."
+    }
+   ],
+   "variants": {
+    "easier": "Werpbal vanop korte afstand.",
+    "harder": "Na een eerste bal op het lichaam."
+   },
+   "diagram": {
+    "field": "doel",
+    "elements": [
+     {
+      "t": "keeper",
+      "x": 50,
+      "y": 16
+     },
+     {
+      "t": "trainer",
+      "x": 50,
+      "y": 62
+     },
+     {
+      "t": "bal",
+      "x": 50,
+      "y": 57
+     }
+    ],
+    "lines": [
+     {
+      "t": "bal",
+      "p": [
+       [
+        50,
+        56
+       ],
+       [
+        55,
+        25
+       ],
+       [
+        57,
+        7
+       ]
+      ],
+      "s": 1
+     },
+     {
+      "t": "loop",
+      "p": [
+       [
+        50,
+        16
+       ],
+       [
+        55,
+        10
+       ]
+      ],
+      "s": 2
+     }
+    ]
+   }
+  },
+  {
+   "ages": [
+    "u6_9",
+    "u10_12"
+   ],
+   "levels": [
+    "beginner",
+    "gevorderd"
+   ],
+   "intensity": "laag",
+   "materials": [
+    "ballen",
+    "hoepels"
+   ],
+   "keepers": {
+    "min": 1,
+    "max": 6
+   },
+   "trainers": 1,
+   "zone": "10 × 10 m",
+   "duration": 8,
+   "sets": 3,
+   "reps": 8,
+   "rest": 30,
+   "divesPerRep": 0,
+   "explosive": false,
+   "blockTypes": [
+    "kern",
+    "afsluiting"
+   ],
+   "complexity": 1,
+   "id": "hoge-bal-spelvorm-jong",
+   "name": "Spelvorm: vang de regenboog",
+   "summary": "Speels voor de jongsten: hoge ballen vangen boven het hoofd en punten scoren per vangbal.",
+   "description": "De trainer werpt de bal in een boog (de regenboog) in een zone met hoepels. De keeper loopt naar de bal en vangt hem boven het hoofd. Vangen in een hoepel is dubbele punten. Speels en veilig voor U6 tot U12.",
+   "themes": [
+    "hogeballen",
+    "vangen"
+   ],
+   "coaching": [
+    "Handen boven het hoofd",
+    "Kijk de bal in de handen",
+    "Lopen naar de bal"
+   ],
+   "mistakes": [
+    {
+     "fault": "Wachten tot de bal valt",
+     "fix": "Loop naar de plek waar de bal gaat landen."
+    },
+    {
+     "fault": "Bal tegen het gezicht",
+     "fix": "Handen voor het hoofd, duimen samen."
+    }
+   ],
+   "variants": {
+    "easier": "Lage boog en een grotere bal.",
+    "harder": "Hogere boog of eerst draaien."
+   },
+   "diagram": {
+    "field": "vrij",
+    "elements": [
+     {
+      "t": "hoepel",
+      "x": 40,
+      "y": 35
+     },
+     {
+      "t": "hoepel",
+      "x": 60,
+      "y": 35
+     },
+     {
+      "t": "hoepel",
+      "x": 50,
+      "y": 60
+     },
+     {
+      "t": "keeper",
+      "x": 50,
+      "y": 80
+     },
+     {
+      "t": "trainer",
+      "x": 50,
+      "y": 10
+     },
+     {
+      "t": "bal",
+      "x": 50,
+      "y": 15
+     }
+    ],
+    "lines": [
+     {
+      "t": "bal",
+      "p": [
+       [
+        50,
+        16
+       ],
+       [
+        45,
+        25
+       ],
+       [
+        40,
+        35
+       ]
+      ],
+      "s": 1
+     },
+     {
+      "t": "loop",
+      "p": [
+       [
+        50,
+        78
+       ],
+       [
+        42,
+        40
+       ]
+      ],
+      "s": 2
+     }
+    ]
+   }
+  },
+  {
+   "ages": [
+    "u13_15",
+    "u16_19",
+    "senioren"
+   ],
+   "levels": [
+    "gevorderd",
+    "elite"
+   ],
+   "intensity": "hoog",
+   "materials": [
+    "ballen",
+    "pionnen"
+   ],
+   "keepers": {
+    "min": 1,
+    "max": 3
+   },
+   "trainers": 1,
+   "zone": "Strafschopgebied",
+   "duration": 8,
+   "sets": 3,
+   "reps": 5,
+   "rest": 75,
+   "divesPerRep": 0.5,
+   "explosive": true,
+   "blockTypes": [
+    "kern"
+   ],
+   "complexity": 3,
+   "id": "eentegeneen-hoek-verkleinen",
+   "name": "Hoek verkleinen bij een schuine aanval",
+   "summary": "Een aanvaller komt schuin op doel; de keeper verkleint de hoek aan de korte paal zonder de verre hoek open te laten.",
+   "description": "De aanvaller dribbelt vanaf de zijkant van de zestien schuin richting doel. De keeper verplaatst langs de denkbeeldige boog en komt uit tot hij de korte hoek dicht heeft. Bij het schot blokkeert hij. Daarna wordt de kant gewisseld.",
+   "themes": [
+    "eentegeneen",
+    "voetenwerk"
+   ],
+   "coaching": [
+    "Korte hoek eerst dicht",
+    "Op de lijn bal–midden doel",
+    "Lang blijven staan"
+   ],
+   "mistakes": [
+    {
+     "fault": "Korte hoek open laten",
+     "fix": "Sta een halve meter naar de korte paal."
+    },
+    {
+     "fault": "Te ver uitkomen bij een schuine hoek",
+     "fix": "Hoe schuiner, hoe dichter bij de paal."
+    }
+   ],
+   "variants": {
+    "easier": "Aanvaller wandelt en schiet op een pion.",
+    "harder": "Aanvaller mag ook een voorzet geven naar een tweede aanvaller."
+   },
+   "diagram": {
+    "field": "zestien",
+    "elements": [
+     {
+      "t": "keeper",
+      "x": 50,
+      "y": 9
+     },
+     {
+      "t": "aanvaller",
+      "x": 15,
+      "y": 55
+     },
+     {
+      "t": "bal",
+      "x": 18,
+      "y": 52
+     },
+     {
+      "t": "pion",
+      "x": 12,
+      "y": 60
+     }
+    ],
+    "lines": [
+     {
+      "t": "dribbel",
+      "p": [
+       [
+        19,
+        51
+       ],
+       [
+        32,
+        34
+       ]
+      ],
+      "s": 1
+     },
+     {
+      "t": "loop",
+      "p": [
+       [
+        50,
+        10
+       ],
+       [
+        45,
+        14
+       ]
+      ],
+      "s": 1
+     },
+     {
+      "t": "bal",
+      "p": [
+       [
+        33,
+        33
+       ],
+       [
+        44,
+        6
+       ]
+      ],
+      "s": 2
+     }
+    ]
+   }
+  },
+  {
+   "ages": [
+    "u13_15",
+    "u16_19",
+    "senioren"
+   ],
+   "levels": [
+    "gevorderd",
+    "elite"
+   ],
+   "intensity": "hoog",
+   "materials": [
+    "ballen",
+    "pionnen"
+   ],
+   "keepers": {
+    "min": 4,
+    "max": 6
+   },
+   "trainers": 1,
+   "zone": "Strafschopgebied plus 15 m",
+   "duration": 10,
+   "sets": 3,
+   "reps": 5,
+   "rest": 60,
+   "divesPerRep": 0.5,
+   "explosive": true,
+   "blockTypes": [
+    "kern"
+   ],
+   "complexity": 3,
+   "id": "eentegeneen-twee-aanvallers",
+   "name": "2-tegen-1 met keeper",
+   "summary": "Twee aanvallers tegen een verdediger en de keeper: de keeper kiest tussen bal en pass.",
+   "description": "Twee aanvallers starten op 30 meter, een verdediger zakt terug. De keeper coacht de verdediger, positioneert zich voor de balbezitter en reageert op de pass. Na elke aanval wisselen de rollen. Vraagt meerdere keepers of medespelers.",
+   "themes": [
+    "eentegeneen",
+    "communicatie"
+   ],
+   "coaching": [
+    "Coach de verdediger",
+    "Positie voor de bal",
+    "Niet te vroeg kiezen"
+   ],
+   "mistakes": [
+    {
+     "fault": "Op de pass gokken",
+     "fix": "Blijf voor de bal tot de pass vertrekt."
+    },
+    {
+     "fault": "Zwijgen",
+     "fix": "Zeg de verdediger welke man hij neemt."
+    }
+   ],
+   "variants": {
+    "easier": "Verdediger mag de bal niet afpakken, enkel de pass afschermen.",
+    "harder": "Een tweede verdediger komt achteraan mee."
+   },
+   "diagram": {
+    "field": "zestien",
+    "elements": [
+     {
+      "t": "pion",
+      "x": 30,
+      "y": 76
+     },
+     {
+      "t": "pion",
+      "x": 70,
+      "y": 76
+     },
+     {
+      "t": "keeper",
+      "x": 50,
+      "y": 9
+     },
+     {
+      "t": "aanvaller",
+      "x": 35,
+      "y": 70,
+      "label": "A1"
+     },
+     {
+      "t": "aanvaller",
+      "x": 65,
+      "y": 70,
+      "label": "A2"
+     },
+     {
+      "t": "speler",
+      "x": 50,
+      "y": 50,
+      "label": "V"
+     },
+     {
+      "t": "bal",
+      "x": 35,
+      "y": 66
+     }
+    ],
+    "lines": [
+     {
+      "t": "dribbel",
+      "p": [
+       [
+        35,
+        65
+       ],
+       [
+        40,
+        44
+       ]
+      ],
+      "s": 1
+     },
+     {
+      "t": "bal",
+      "p": [
+       [
+        41,
+        43
+       ],
+       [
+        60,
+        38
+       ]
+      ],
+      "s": 2
+     },
+     {
+      "t": "loop",
+      "p": [
+       [
+        50,
+        10
+       ],
+       [
+        54,
+        18
+       ]
+      ],
+      "s": 2
+     },
+     {
+      "t": "bal",
+      "p": [
+       [
+        60,
+        37
+       ],
+       [
+        52,
+        6
+       ]
+      ],
+      "s": 3
+     }
+    ]
+   }
+  },
+  {
+   "ages": [
+    "u10_12",
+    "u13_15",
+    "u16_19",
+    "senioren"
+   ],
+   "levels": [
+    "beginner",
+    "gevorderd",
+    "elite"
+   ],
+   "intensity": "gemiddeld",
+   "materials": [
+    "ballen"
+   ],
+   "keepers": {
+    "min": 1,
+    "max": 3
+   },
+   "trainers": 1,
+   "zone": "Doel en doelgebied",
+   "duration": 8,
+   "sets": 3,
+   "reps": 6,
+   "rest": 45,
+   "divesPerRep": 0.5,
+   "explosive": false,
+   "blockTypes": [
+    "kern"
+   ],
+   "complexity": 2,
+   "id": "eentegeneen-knielblok",
+   "name": "Knielblok en stervorm",
+   "summary": "Techniektraining voor de twee blokvormen bij een schot van dichtbij.",
+   "description": "De trainer staat op 6 meter met de bal aan de voet. Bij een schot langs de grond blokkeert de keeper met een knielblok (knie naar de grond, handen naast de knie). Bij een schot hoger of onvoorspelbaar maakt hij een stervorm (armen en benen breed). Eerst op aankondiging, dan vrij.",
+   "themes": [
+    "eentegeneen"
+   ],
+   "coaching": [
+    "Knielblok: handen naast de knie",
+    "Stervorm: groot en breed",
+    "Ogen open"
+   ],
+   "mistakes": [
+    {
+     "fault": "Opening tussen de benen bij het knielblok",
+     "fix": "Knie sluit de ruimte met de andere voet."
+    },
+    {
+     "fault": "Wegdraaien bij de stervorm",
+     "fix": "Borst naar de bal, blijf groot."
+    }
+   ],
+   "variants": {
+    "easier": "Trainer kondigt aan welke blokvorm en schiet zacht.",
+    "harder": "Trainer kiest zelf: schieten, stiften of uitspelen."
+   },
+   "diagram": {
+    "field": "doel",
+    "elements": [
+     {
+      "t": "keeper",
+      "x": 50,
+      "y": 22
+     },
+     {
+      "t": "trainer",
+      "x": 50,
+      "y": 46
+     },
+     {
+      "t": "bal",
+      "x": 50,
+      "y": 42
+     }
+    ],
+    "lines": [
+     {
+      "t": "bal",
+      "p": [
+       [
+        50,
+        41
+       ],
+       [
+        47,
+        27
+       ]
+      ],
+      "s": 1
+     },
+     {
+      "t": "loop",
+      "p": [
+       [
+        50,
+        22
+       ],
+       [
+        50,
+        24
+       ]
+      ],
+      "s": 2
+     }
+    ]
+   }
+  },
+  {
+   "ages": [
+    "u13_15",
+    "u16_19",
+    "senioren"
+   ],
+   "levels": [
+    "gevorderd",
+    "elite"
+   ],
+   "intensity": "hoog",
+   "materials": [
+    "ballen"
+   ],
+   "keepers": {
+    "min": 1,
+    "max": 3
+   },
+   "trainers": 1,
+   "zone": "Strafschopgebied plus 10 m",
+   "duration": 8,
+   "sets": 3,
+   "reps": 5,
+   "rest": 75,
+   "divesPerRep": 0.5,
+   "explosive": true,
+   "blockTypes": [
+    "kern"
+   ],
+   "complexity": 3,
+   "id": "eentegeneen-ruimte-in-de-rug",
+   "name": "Doorgebroken aanvaller van achteruit",
+   "summary": "Een aanvaller breekt door achter de verdediging; de keeper vertrekt snel en sluit de ruimte.",
+   "description": "De trainer speelt de bal diep in de zestien voor een aanvaller die van op 25 meter vertrekt. De keeper moet snel beslissen: de bal onderscheppen voor de aanvaller, of in de basishouding wachten als de aanvaller eerst is.",
+   "themes": [
+    "eentegeneen"
+   ],
+   "coaching": [
+    "Snel beslissen",
+    "Eerst aan de bal? Ga!",
+    "Anders afremmen en blokken"
+   ],
+   "mistakes": [
+    {
+     "fault": "Twijfelen",
+     "fix": "Beslis op de eerste meters van de bal."
+    },
+    {
+     "fault": "Doorlopen als de aanvaller eerst is",
+     "fix": "Afremmen en de hoek verkleinen."
+    }
+   ],
+   "variants": {
+    "easier": "Aanvaller start verder weg zodat de keeper vaak eerst is.",
+    "harder": "Aanvaller start dichter en de pass is sneller."
+   },
+   "diagram": {
+    "field": "zestien",
+    "elements": [
+     {
+      "t": "keeper",
+      "x": 50,
+      "y": 9
+     },
+     {
+      "t": "trainer",
+      "x": 50,
+      "y": 95
+     },
+     {
+      "t": "aanvaller",
+      "x": 35,
+      "y": 75
+     },
+     {
+      "t": "bal",
+      "x": 50,
+      "y": 90
+     }
+    ],
+    "lines": [
+     {
+      "t": "bal",
+      "p": [
+       [
+        50,
+        89
+       ],
+       [
+        50,
+        40
+       ]
+      ],
+      "s": 1
+     },
+     {
+      "t": "loop",
+      "p": [
+       [
+        50,
+        10
+       ],
+       [
+        50,
+        34
+       ]
+      ],
+      "s": 2
+     }
+    ]
+   }
+  },
+  {
+   "ages": [
+    "u6_9",
+    "u10_12"
+   ],
+   "levels": [
+    "beginner",
+    "gevorderd"
+   ],
+   "intensity": "gemiddeld",
+   "materials": [
+    "ballen",
+    "pionnen"
+   ],
+   "keepers": {
+    "min": 1,
+    "max": 6
+   },
+   "trainers": 1,
+   "zone": "12 × 8 m",
+   "duration": 8,
+   "sets": 3,
+   "reps": 6,
+   "rest": 30,
+   "divesPerRep": 0.5,
+   "explosive": false,
+   "blockTypes": [
+    "kern",
+    "afsluiting"
+   ],
+   "complexity": 1,
+   "id": "eentegeneen-spelvorm-jong",
+   "name": "Spelvorm: rover en keeper",
+   "summary": "Speelse 1-tegen-1 voor jonge keepers: de rover dribbelt naar een klein doel, de keeper pakt de bal af.",
+   "description": "Een klein doel van pionnen (3 meter). De rover (andere keeper of trainer) dribbelt vanop 10 meter traag naar het doel. De keeper komt uit en pakt de bal in de voeten. Na elke beurt wisselen. Speels en veilig, aan laag tempo.",
+   "themes": [
+    "eentegeneen"
+   ],
+   "coaching": [
+    "Naar de bal toe",
+    "Handen eerst",
+    "Durven!"
+   ],
+   "mistakes": [
+    {
+     "fault": "Met de voeten de bal afpakken",
+     "fix": "Keepers gebruiken de handen."
+    },
+    {
+     "fault": "Op de rover springen",
+     "fix": "Ga naar de bal, niet naar de speler."
+    }
+   ],
+   "variants": {
+    "easier": "De rover wandelt en legt de bal ver voor.",
+    "harder": "De rover mag een schijnbeweging maken."
+   },
+   "diagram": {
+    "field": "vrij",
+    "elements": [
+     {
+      "t": "pion",
+      "x": 42,
+      "y": 20
+     },
+     {
+      "t": "pion",
+      "x": 58,
+      "y": 20
+     },
+     {
+      "t": "keeper",
+      "x": 50,
+      "y": 28
+     },
+     {
+      "t": "aanvaller",
+      "x": 50,
+      "y": 85
+     },
+     {
+      "t": "bal",
+      "x": 50,
+      "y": 80
+     }
+    ],
+    "lines": [
+     {
+      "t": "dribbel",
+      "p": [
+       [
+        50,
+        79
+       ],
+       [
+        50,
+        50
+       ]
+      ],
+      "s": 1
+     },
+     {
+      "t": "loop",
+      "p": [
+       [
+        50,
+        29
+       ],
+       [
+        50,
+        46
+       ]
+      ],
+      "s": 2
+     }
+    ]
+   }
+  },
+  {
+   "ages": [
+    "u16_19",
+    "senioren"
+   ],
+   "levels": [
+    "gevorderd",
+    "elite"
+   ],
+   "intensity": "hoog",
+   "materials": [
+    "ballen",
+    "pionnen"
+   ],
+   "keepers": {
+    "min": 2,
+    "max": 6
+   },
+   "trainers": 1,
+   "zone": "Halve veld",
+   "duration": 10,
+   "sets": 2,
+   "reps": 5,
+   "rest": 75,
+   "divesPerRep": 0.5,
+   "explosive": true,
+   "blockTypes": [
+    "kern",
+    "afsluiting"
+   ],
+   "complexity": 3,
+   "id": "eentegeneen-penalty-in-loop",
+   "name": "Shoot-out met tijdsdruk",
+   "summary": "Aanvaller start op de middenlijn met 8 seconden; keeper kiest timing van uitkomen.",
+   "description": "Zoals een shoot-out in het hockey: de aanvaller start op 35 meter met de bal en heeft 8 seconden om te scoren. De keeper beslist hoe ver hij uitkomt en wanneer hij afremt. Wedstrijdvorm voor oudere keepers.",
+   "themes": [
+    "eentegeneen",
+    "wedstrijd"
+   ],
+   "coaching": [
+    "Druk zetten zonder te springen",
+    "Afremmen op 5 meter",
+    "Lang staan"
+   ],
+   "mistakes": [
+    {
+     "fault": "Wachten op de lijn",
+     "fix": "Zet druk zodat de aanvaller moet kiezen."
+    },
+    {
+     "fault": "Te vroeg duiken",
+     "fix": "Wacht op de fout van de aanvaller."
+    }
+   ],
+   "variants": {
+    "easier": "10 seconden en de aanvaller mag enkel schieten.",
+    "harder": "6 seconden en een verdediger achtervolgt."
+   },
+   "diagram": {
+    "field": "halfveld",
+    "elements": [
+     {
+      "t": "keeper",
+      "x": 50,
+      "y": 6
+     },
+     {
+      "t": "aanvaller",
+      "x": 50,
+      "y": 92,
+      "label": "K2"
+     },
+     {
+      "t": "bal",
+      "x": 50,
+      "y": 88
+     },
+     {
+      "t": "pion",
+      "x": 44,
+      "y": 94
+     },
+     {
+      "t": "pion",
+      "x": 56,
+      "y": 94
+     }
+    ],
+    "lines": [
+     {
+      "t": "dribbel",
+      "p": [
+       [
+        50,
+        87
+       ],
+       [
+        50,
+        40
+       ]
+      ],
+      "s": 1
+     },
+     {
+      "t": "loop",
+      "p": [
+       [
+        50,
+        7
+       ],
+       [
+        50,
+        22
+       ]
+      ],
+      "s": 1
+     },
+     {
+      "t": "bal",
+      "p": [
+       [
+        50,
+        38
+       ],
+       [
+        54,
+        4
+       ]
+      ],
+      "s": 2
+     }
+    ]
+   }
+  },
+  {
+   "ages": [
+    "u10_12",
+    "u13_15",
+    "u16_19",
+    "senioren"
+   ],
+   "levels": [
+    "beginner",
+    "gevorderd",
+    "elite"
+   ],
+   "intensity": "gemiddeld",
+   "materials": [
+    "ballen"
+   ],
+   "keepers": {
+    "min": 1,
+    "max": 3
+   },
+   "trainers": 1,
+   "zone": "Doel en doelgebied",
+   "duration": 8,
+   "sets": 3,
+   "reps": 5,
+   "rest": 45,
+   "divesPerRep": 0,
+   "explosive": false,
+   "blockTypes": [
+    "kern"
+   ],
+   "complexity": 2,
+   "id": "eentegeneen-afstand-inschatten",
+   "name": "Afstand inschatten bij een dribbel",
+   "summary": "De keeper komt uit wanneer de bal los van de voet is en stopt wanneer de aanvaller de bal weer raakt.",
+   "description": "De trainer dribbelt traag op doel en duwt de bal af en toe verder voor zich. Telkens de bal los is, zet de keeper twee snelle passen naar voren. Raakt de trainer de bal, dan staat de keeper stil in de basishouding. Leert het ritme van uitkomen.",
+   "themes": [
+    "eentegeneen",
+    "voetenwerk"
+   ],
+   "coaching": [
+    "Bal los? Uitkomen",
+    "Aanvaller raakt bal? Stilstaan",
+    "Kort en snel"
+   ],
+   "mistakes": [
+    {
+     "fault": "In één ruk uitlopen",
+     "fix": "Uitkomen in stukjes, telkens als de bal los is."
+    },
+    {
+     "fault": "Stilstaan met de benen gestrekt",
+     "fix": "Basishouding, knieën licht gebogen."
+    }
+   ],
+   "variants": {
+    "easier": "Trainer roept \"los\" en \"stop\".",
+    "harder": "Trainer varieert het tempo en schiet op het onverwachte moment."
+   },
+   "diagram": {
+    "field": "zestien",
+    "elements": [
+     {
+      "t": "keeper",
+      "x": 50,
+      "y": 9
+     },
+     {
+      "t": "aanvaller",
+      "x": 50,
+      "y": 70
+     },
+     {
+      "t": "bal",
+      "x": 50,
+      "y": 66
+     }
+    ],
+    "lines": [
+     {
+      "t": "dribbel",
+      "p": [
+       [
+        50,
+        65
+       ],
+       [
+        50,
+        40
+       ]
+      ],
+      "s": 1
+     },
+     {
+      "t": "loop",
+      "p": [
+       [
+        50,
+        10
+       ],
+       [
+        50,
+        24
+       ]
+      ],
+      "s": 2
+     }
+    ]
+   }
+  },
+  {
+   "ages": [
+    "u10_12",
+    "u13_15",
+    "u16_19",
+    "senioren"
+   ],
+   "levels": [
+    "gevorderd",
+    "elite"
+   ],
+   "intensity": "gemiddeld",
+   "materials": [
+    "ballen",
+    "pionnen"
+   ],
+   "keepers": {
+    "min": 1,
+    "max": 3
+   },
+   "trainers": 1,
+   "zone": "Doel en doelgebied",
+   "duration": 8,
+   "sets": 3,
+   "reps": 8,
+   "rest": 45,
+   "divesPerRep": 0.5,
+   "explosive": false,
+   "blockTypes": [
+    "kern"
+   ],
+   "complexity": 2,
+   "id": "reflex-afgeweken-bal",
+   "name": "Afgeweken schot",
+   "summary": "Schoten worden afgeweken door een pion of medespeler voor het doel; de keeper reageert op de nieuwe richting.",
+   "description": "Twee pionnen of een kleine hoepel staan op 6 meter voor het doel. De trainer schiet zo dat sommige ballen tegen de pionnen afwijken. De keeper blijft laag en reageert op de afwijking. Leert niet te vroeg te kiezen.",
+   "themes": [
+    "reflexen"
+   ],
+   "coaching": [
+    "Niet te vroeg kiezen",
+    "Laag en klaar",
+    "Handen vóór het lichaam"
+   ],
+   "mistakes": [
+    {
+     "fault": "Al vertrekken naar de eerste richting",
+     "fix": "Wacht tot de bal voorbij de pionnen is."
+    },
+    {
+     "fault": "Te rechtop staan",
+     "fix": "Lage basishouding, gewicht vooraan."
+    }
+   ],
+   "variants": {
+    "easier": "Grotere afstand tussen pionnen en doel.",
+    "harder": "Dichterbij en harder."
+   },
+   "diagram": {
+    "field": "doel",
+    "elements": [
+     {
+      "t": "keeper",
+      "x": 50,
+      "y": 12
+     },
+     {
+      "t": "pion",
+      "x": 46,
+      "y": 32
+     },
+     {
+      "t": "pion",
+      "x": 54,
+      "y": 32
+     },
+     {
+      "t": "trainer",
+      "x": 50,
+      "y": 66
+     },
+     {
+      "t": "bal",
+      "x": 50,
+      "y": 61
+     }
+    ],
+    "lines": [
+     {
+      "t": "bal",
+      "p": [
+       [
+        50,
+        60
+       ],
+       [
+        53,
+        34
+       ],
+       [
+        44,
+        13
+       ]
+      ],
+      "s": 1
+     }
+    ]
+   }
+  },
+  {
+   "ages": [
+    "u13_15",
+    "u16_19",
+    "senioren"
+   ],
+   "levels": [
+    "gevorderd",
+    "elite"
+   ],
+   "intensity": "gemiddeld",
+   "materials": [
+    "ballen"
+   ],
+   "keepers": {
+    "min": 1,
+    "max": 3
+   },
+   "trainers": 1,
+   "zone": "Doel en doelgebied",
+   "duration": 8,
+   "sets": 3,
+   "reps": 6,
+   "rest": 45,
+   "divesPerRep": 0.5,
+   "explosive": false,
+   "blockTypes": [
+    "kern"
+   ],
+   "complexity": 2,
+   "id": "reflex-rug-naar-schutter",
+   "name": "Draai en reageer",
+   "summary": "De keeper staat met de rug naar de schutter, draait op het schot en reageert op de bal.",
+   "description": "De keeper kijkt naar het doel. De trainer roept en schiet tegelijk. De keeper draait zo snel mogelijk om en reageert op de bal. Afstand 10 meter, zodat er net genoeg tijd is. Reactiesnelheid en oriëntatie.",
+   "themes": [
+    "reflexen"
+   ],
+   "coaching": [
+    "Hoofd eerst draaien",
+    "Klein draaien, in balans",
+    "Meteen de bal zoeken"
+   ],
+   "mistakes": [
+    {
+     "fault": "Groot draaien en uit balans",
+     "fix": "Draai op de voorvoeten, kort."
+    },
+    {
+     "fault": "Te laat de handen omhoog",
+     "fix": "Handen draaien mee voor de borst."
+    }
+   ],
+   "variants": {
+    "easier": "Trainer roept, wacht een seconde en werpt.",
+    "harder": "Afstand 7 meter en schot naar de hoek."
+   },
+   "diagram": {
+    "field": "doel",
+    "elements": [
+     {
+      "t": "keeper",
+      "x": 50,
+      "y": 18
+     },
+     {
+      "t": "trainer",
+      "x": 50,
+      "y": 52
+     },
+     {
+      "t": "bal",
+      "x": 50,
+      "y": 48
+     }
+    ],
+    "lines": [
+     {
+      "t": "loop",
+      "p": [
+       [
+        55,
+        14
+       ],
+       [
+        58,
+        18
+       ],
+       [
+        55,
+        22
+       ]
+      ],
+      "s": 1
+     },
+     {
+      "t": "bal",
+      "p": [
+       [
+        50,
+        47
+       ],
+       [
+        44,
+        22
+       ]
+      ],
+      "s": 2
+     }
+    ]
+   }
+  },
+  {
+   "ages": [
+    "u10_12",
+    "u13_15",
+    "u16_19",
+    "senioren"
+   ],
+   "levels": [
+    "beginner",
+    "gevorderd",
+    "elite"
+   ],
+   "intensity": "gemiddeld",
+   "materials": [
+    "ballen",
+    "rebounder"
+   ],
+   "keepers": {
+    "min": 1,
+    "max": 3
+   },
+   "trainers": 1,
+   "zone": "Doel en doelgebied",
+   "duration": 8,
+   "sets": 3,
+   "reps": 8,
+   "rest": 40,
+   "divesPerRep": 0,
+   "explosive": false,
+   "blockTypes": [
+    "kern"
+   ],
+   "complexity": 2,
+   "id": "reflex-tennisbal-muur",
+   "name": "Kaatsbal tegen de muur",
+   "summary": "De trainer gooit een bal tegen een muur of rebounder achter de keeper; de keeper reageert op de terugkaatsing.",
+   "description": "De keeper staat 3 meter voor een muur of rebounder, met de rug naar de trainer. De trainer werpt de bal over de keeper tegen de rebounder. De keeper ziet de bal pas na de terugkaatsing en vangt of wert af.",
+   "themes": [
+    "reflexen"
+   ],
+   "coaching": [
+    "Laag en breed",
+    "Handen klaar",
+    "Reageer, gok niet"
+   ],
+   "mistakes": [
+    {
+     "fault": "Te dicht bij de rebounder",
+     "fix": "Minstens 3 meter, anders is het geen reflex maar geluk."
+    },
+    {
+     "fault": "Rechtop staan",
+     "fix": "Laag zitten zodat je beide kanten haalt."
+    }
+   ],
+   "variants": {
+    "easier": "Grotere afstand en zachter werpen.",
+    "harder": "Kortere afstand of twee ballen na elkaar."
+   },
+   "diagram": {
+    "field": "vrij",
+    "elements": [
+     {
+      "t": "rebounder",
+      "x": 50,
+      "y": 20,
+      "r": 0
+     },
+     {
+      "t": "keeper",
+      "x": 50,
+      "y": 42
+     },
+     {
+      "t": "trainer",
+      "x": 50,
+      "y": 82
+     },
+     {
+      "t": "bal",
+      "x": 50,
+      "y": 77
+     }
+    ],
+    "lines": [
+     {
+      "t": "bal",
+      "p": [
+       [
+        50,
+        76
+       ],
+       [
+        52,
+        24
+       ]
+      ],
+      "s": 1
+     },
+     {
+      "t": "bal",
+      "p": [
+       [
+        50,
+        26
+       ],
+       [
+        44,
+        40
+       ]
+      ],
+      "s": 2
+     }
+    ]
+   }
+  },
+  {
+   "ages": [
+    "u10_12",
+    "u13_15",
+    "u16_19",
+    "senioren"
+   ],
+   "levels": [
+    "beginner",
+    "gevorderd",
+    "elite"
+   ],
+   "intensity": "gemiddeld",
+   "materials": [
+    "ballen"
+   ],
+   "keepers": {
+    "min": 2,
+    "max": 4
+   },
+   "trainers": 1,
+   "zone": "Doel en doelgebied",
+   "duration": 8,
+   "sets": 3,
+   "reps": 8,
+   "rest": 45,
+   "divesPerRep": 0.5,
+   "explosive": false,
+   "blockTypes": [
+    "kern"
+   ],
+   "complexity": 2,
+   "id": "reflex-kleurroep",
+   "name": "Kleur of nummer roepen",
+   "summary": "Twee schutters, de trainer roept wie schiet; de keeper moet snel kiezen en positie nemen.",
+   "description": "Twee schutters met elk een kleur of nummer staan op 12 meter, links en rechts. De trainer roept een kleur, die schutter schiet meteen. De keeper verplaatst zo snel mogelijk naar de juiste positie en verwerkt het schot.",
+   "themes": [
+    "reflexen",
+    "voetenwerk"
+   ],
+   "coaching": [
+    "Luisteren en kiezen",
+    "Snel positie nemen",
+    "Sprongstop voor het schot"
+   ],
+   "mistakes": [
+    {
+     "fault": "Gokken op de kleur",
+     "fix": "Blijf in het midden tot je de roep hoort."
+    },
+    {
+     "fault": "Te diep in doel",
+     "fix": "Stap mee naar voren voor een betere hoek."
+    }
+   ],
+   "variants": {
+    "easier": "Schutter wacht 2 seconden na de roep.",
+    "harder": "Drie schutters en de roep komt vlak voor het schot."
+   },
+   "diagram": {
+    "field": "doel",
+    "elements": [
+     {
+      "t": "keeper",
+      "x": 50,
+      "y": 14
+     },
+     {
+      "t": "trainer",
+      "x": 30,
+      "y": 58,
+      "label": "1"
+     },
+     {
+      "t": "speler",
+      "x": 70,
+      "y": 58,
+      "label": "2"
+     },
+     {
+      "t": "bal",
+      "x": 32,
+      "y": 53
+     },
+     {
+      "t": "bal",
+      "x": 68,
+      "y": 53
+     }
+    ],
+    "lines": [
+     {
+      "t": "loop",
+      "p": [
+       [
+        50,
+        14
+       ],
+       [
+        45,
+        15
+       ]
+      ],
+      "s": 1
+     },
+     {
+      "t": "bal",
+      "p": [
+       [
+        33,
+        52
+       ],
+       [
+        41,
+        14
+       ]
+      ],
+      "s": 2
+     }
+    ]
+   }
+  },
+  {
+   "ages": [
+    "u13_15",
+    "u16_19",
+    "senioren"
+   ],
+   "levels": [
+    "gevorderd",
+    "elite"
+   ],
+   "intensity": "hoog",
+   "materials": [
+    "ballen"
+   ],
+   "keepers": {
+    "min": 1,
+    "max": 3
+   },
+   "trainers": 1,
+   "zone": "Doel en doelgebied",
+   "duration": 8,
+   "sets": 3,
+   "reps": 5,
+   "rest": 75,
+   "divesPerRep": 0.5,
+   "explosive": true,
+   "blockTypes": [
+    "kern"
+   ],
+   "complexity": 2,
+   "id": "reflex-liggend-starten",
+   "name": "Starten vanuit buiklig",
+   "summary": "De keeper ligt op de buik, springt op het signaal recht en verwerkt meteen een schot.",
+   "description": "De keeper ligt op de buik op 2 meter voor de doellijn. Op het fluitsignaal komt hij zo snel mogelijk recht in de basishouding, en de trainer schiet meteen. Zwaar en explosief: lange rust.",
+   "themes": [
+    "reflexen",
+    "duiken"
+   ],
+   "coaching": [
+    "Explosief recht",
+    "Meteen in basishouding",
+    "Klaar voor elk schot"
+   ],
+   "mistakes": [
+    {
+     "fault": "Rechtkomen over de knieën in drie stappen",
+     "fix": "Duw je op met beide handen in één beweging."
+    },
+    {
+     "fault": "Nog niet klaar bij het schot",
+     "fix": "Eerst positie, dan pas de bal."
+    }
+   ],
+   "variants": {
+    "easier": "Starten vanuit zit.",
+    "harder": "Starten vanuit rugligging of na een koprol."
+   },
+   "diagram": {
+    "field": "doel",
+    "elements": [
+     {
+      "t": "keeper",
+      "x": 50,
+      "y": 18
+     },
+     {
+      "t": "trainer",
+      "x": 50,
+      "y": 58
+     },
+     {
+      "t": "bal",
+      "x": 50,
+      "y": 53
+     }
+    ],
+    "lines": [
+     {
+      "t": "loop",
+      "p": [
+       [
+        50,
+        20
+       ],
+       [
+        50,
+        15
+       ]
+      ],
+      "s": 1
+     },
+     {
+      "t": "bal",
+      "p": [
+       [
+        50,
+        52
+       ],
+       [
+        42,
+        13
+       ]
+      ],
+      "s": 2
+     }
+    ]
+   }
+  },
+  {
+   "ages": [
+    "u16_19",
+    "senioren"
+   ],
+   "levels": [
+    "elite"
+   ],
+   "intensity": "hoog",
+   "materials": [
+    "ballen"
+   ],
+   "keepers": {
+    "min": 1,
+    "max": 2
+   },
+   "trainers": 1,
+   "zone": "Doel en doelgebied",
+   "duration": 8,
+   "sets": 3,
+   "reps": 6,
+   "rest": 75,
+   "divesPerRep": 0.5,
+   "explosive": true,
+   "blockTypes": [
+    "kern"
+   ],
+   "complexity": 2,
+   "id": "reflex-voetvolley",
+   "name": "Volleys op korte afstand",
+   "summary": "De trainer volleert uit de hand vanop 8 meter; korte reactietijd en harde ballen.",
+   "description": "De trainer laat de bal uit de hand vallen en volleert naar het doel. Varieer: op het lichaam, naast het hoofd, laag aan de voeten. De keeper blijft klein en reageert. Korte series met volledige rust.",
+   "themes": [
+    "reflexen"
+   ],
+   "coaching": [
+    "Klein en compact",
+    "Handen vóór het lichaam",
+    "Bal weg van het doel"
+   ],
+   "mistakes": [
+    {
+     "fault": "Ogen dicht",
+     "fix": "Kijk de bal tot het contact."
+    },
+    {
+     "fault": "Te diep in de knieën",
+     "fix": "Licht gebogen, snel weg te springen."
+    }
+   ],
+   "variants": {
+    "easier": "Werpen in plaats van volleren.",
+    "harder": "Twee trainers die om beurt volleren."
+   },
+   "diagram": {
+    "field": "doel",
+    "elements": [
+     {
+      "t": "keeper",
+      "x": 50,
+      "y": 12
+     },
+     {
+      "t": "trainer",
+      "x": 50,
+      "y": 40
+     },
+     {
+      "t": "bal",
+      "x": 50,
+      "y": 37
+     }
+    ],
+    "lines": [
+     {
+      "t": "bal",
+      "p": [
+       [
+        49,
+        36
+       ],
+       [
+        44,
+        13
+       ]
+      ],
+      "s": 1
+     },
+     {
+      "t": "bal",
+      "p": [
+       [
+        51,
+        36
+       ],
+       [
+        57,
+        13
+       ]
+      ],
+      "s": 2
+     }
+    ]
+   }
+  },
+  {
+   "ages": [
+    "u6_9",
+    "u10_12",
+    "u13_15",
+    "u16_19",
+    "senioren"
+   ],
+   "levels": [
+    "beginner",
+    "gevorderd",
+    "elite"
+   ],
+   "intensity": "laag",
+   "materials": [
+    "ballen"
+   ],
+   "keepers": {
+    "min": 2,
+    "max": 5
+   },
+   "trainers": 1,
+   "zone": "Strafschopgebied",
+   "duration": 8,
+   "sets": 3,
+   "reps": 8,
+   "rest": 30,
+   "divesPerRep": 0,
+   "explosive": false,
+   "blockTypes": [
+    "kern"
+   ],
+   "complexity": 1,
+   "id": "distributie-onderhands-rollen",
+   "name": "Onderhands rollen naar de voet",
+   "summary": "Na een vangbal de bal onderhands en vlak naar de voet van een medespeler rollen.",
+   "description": "Twee medespelers (keepers) staan op 15 meter, links en rechts. De keeper vangt een bal van de trainer en rolt hem onderhands vlak naar de voet van de vrije medespeler, die met één aanname kan doorspelen.",
+   "themes": [
+    "distributie"
+   ],
+   "coaching": [
+    "Diep door de knieën",
+    "Bal vlak loslaten",
+    "Naar de goede voet"
+   ],
+   "mistakes": [
+    {
+     "fault": "Bal stuitert",
+     "fix": "Laat de bal los net boven de grond."
+    },
+    {
+     "fault": "Bal in de rug van de speler",
+     "fix": "Rol naar de voet die het verst van de druk is."
+    }
+   ],
+   "variants": {
+    "easier": "Kortere afstand en medespeler staat stil.",
+    "harder": "Medespeler beweegt en de bal moet in de loop."
+   },
+   "diagram": {
+    "field": "zestien",
+    "elements": [
+     {
+      "t": "keeper",
+      "x": 50,
+      "y": 10
+     },
+     {
+      "t": "trainer",
+      "x": 50,
+      "y": 50
+     },
+     {
+      "t": "speler",
+      "x": 15,
+      "y": 30,
+      "label": "K2"
+     },
+     {
+      "t": "speler",
+      "x": 85,
+      "y": 30,
+      "label": "K3"
+     },
+     {
+      "t": "bal",
+      "x": 50,
+      "y": 46
+     }
+    ],
+    "lines": [
+     {
+      "t": "bal",
+      "p": [
+       [
+        50,
+        45
+       ],
+       [
+        50,
+        14
+       ]
+      ],
+      "s": 1
+     },
+     {
+      "t": "bal",
+      "p": [
+       [
+        47,
+        13
+       ],
+       [
+        18,
+        29
+       ]
+      ],
+      "s": 2
+     }
+    ]
+   }
+  },
+  {
+   "ages": [
+    "u13_15",
+    "u16_19",
+    "senioren"
+   ],
+   "levels": [
+    "beginner",
+    "gevorderd",
+    "elite"
+   ],
+   "intensity": "laag",
+   "materials": [
+    "ballen",
+    "pionnen"
+   ],
+   "keepers": {
+    "min": 1,
+    "max": 3
+   },
+   "trainers": 1,
+   "zone": "Halve veld",
+   "duration": 8,
+   "sets": 3,
+   "reps": 8,
+   "rest": 30,
+   "divesPerRep": 0,
+   "explosive": false,
+   "blockTypes": [
+    "kern"
+   ],
+   "complexity": 1,
+   "id": "distributie-katapult",
+   "name": "Bovenhandse katapultworp",
+   "summary": "Lange, gestrekte werpbeweging over de schouder tot voorbij de middenlijn.",
+   "description": "De keeper werpt de bal met een gestrekte arm over de schouder (katapult) naar een medespeler of zone op 30 tot 40 meter. Aanloop van twee passen, steunbeen gericht naar het doel. Tel hoeveel ballen in de zone landen.",
+   "themes": [
+    "distributie"
+   ],
+   "coaching": [
+    "Arm gestrekt",
+    "Steunbeen naar het doel",
+    "Doorzwaaien"
+   ],
+   "mistakes": [
+    {
+     "fault": "Gebogen elleboog",
+     "fix": "Hou de arm gestrekt als een katapult."
+    },
+    {
+     "fault": "Te hoge baan",
+     "fix": "Laat de bal later los voor een vlakkere baan."
+    }
+   ],
+   "variants": {
+    "easier": "Kortere afstand en grote zone.",
+    "harder": "Naar een lopende medespeler."
+   },
+   "diagram": {
+    "field": "halfveld",
+    "elements": [
+     {
+      "t": "keeper",
+      "x": 50,
+      "y": 10
+     },
+     {
+      "t": "bal",
+      "x": 50,
+      "y": 13
+     },
+     {
+      "t": "pion",
+      "x": 70,
+      "y": 55
+     },
+     {
+      "t": "pion",
+      "x": 85,
+      "y": 55
+     },
+     {
+      "t": "pion",
+      "x": 70,
+      "y": 70
+     },
+     {
+      "t": "pion",
+      "x": 85,
+      "y": 70
+     },
+     {
+      "t": "speler",
+      "x": 78,
+      "y": 62
+     }
+    ],
+    "lines": [
+     {
+      "t": "bal",
+      "p": [
+       [
+        52,
+        14
+       ],
+       [
+        76,
+        60
+       ]
+      ],
+      "s": 1
+     }
+    ]
+   }
+  },
+  {
+   "ages": [
+    "u13_15",
+    "u16_19",
+    "senioren"
+   ],
+   "levels": [
+    "beginner",
+    "gevorderd",
+    "elite"
+   ],
+   "intensity": "laag",
+   "materials": [
+    "ballen",
+    "pionnen"
+   ],
+   "keepers": {
+    "min": 1,
+    "max": 3
+   },
+   "trainers": 1,
+   "zone": "Halve veld",
+   "duration": 8,
+   "sets": 2,
+   "reps": 8,
+   "rest": 30,
+   "divesPerRep": 0,
+   "explosive": false,
+   "blockTypes": [
+    "kern"
+   ],
+   "complexity": 1,
+   "id": "distributie-uittrap-grond",
+   "name": "Doeltrap naar de flanken",
+   "summary": "Doeltrappen vanaf de grond precies naar een medespeler op de flank.",
+   "description": "De bal ligt op de rand van het doelgebied. De keeper trapt lang naar een medespeler op de linker- of rechterflank, ter hoogte van de middenlijn. Werk aan aanloop (schuin), standbeen naast de bal en contact met de wreef.",
+   "themes": [
+    "distributie"
+   ],
+   "coaching": [
+    "Schuine aanloop",
+    "Standbeen naast de bal",
+    "Raken met de wreef"
+   ],
+   "mistakes": [
+    {
+     "fault": "Bal tegen de grond trappen",
+     "fix": "Raak de onderkant van de bal, lichaam licht achterover."
+    },
+    {
+     "fault": "Rechte aanloop",
+     "fix": "Kom schuin aan voor meer kracht."
+    }
+   ],
+   "variants": {
+    "easier": "Kortere afstand en een grote zone.",
+    "harder": "Medespeler loopt diep, trap in zijn loop."
+   },
+   "diagram": {
+    "field": "halfveld",
+    "elements": [
+     {
+      "t": "keeper",
+      "x": 50,
+      "y": 13
+     },
+     {
+      "t": "bal",
+      "x": 50,
+      "y": 10
+     },
+     {
+      "t": "speler",
+      "x": 12,
+      "y": 80
+     },
+     {
+      "t": "speler",
+      "x": 88,
+      "y": 80
+     },
+     {
+      "t": "pion",
+      "x": 8,
+      "y": 90
+     },
+     {
+      "t": "pion",
+      "x": 92,
+      "y": 90
+     }
+    ],
+    "lines": [
+     {
+      "t": "loop",
+      "p": [
+       [
+        42,
+        18
+       ],
+       [
+        48,
+        12
+       ]
+      ],
+      "s": 1
+     },
+     {
+      "t": "bal",
+      "p": [
+       [
+        49,
+        10
+       ],
+       [
+        14,
+        77
+       ]
+      ],
+      "s": 2
+     }
+    ]
+   }
+  },
+  {
+   "ages": [
+    "u13_15",
+    "u16_19",
+    "senioren"
+   ],
+   "levels": [
+    "gevorderd",
+    "elite"
+   ],
+   "intensity": "gemiddeld",
+   "materials": [
+    "ballen"
+   ],
+   "keepers": {
+    "min": 2,
+    "max": 4
+   },
+   "trainers": 1,
+   "zone": "Halve veld",
+   "duration": 8,
+   "sets": 3,
+   "reps": 6,
+   "rest": 45,
+   "divesPerRep": 0,
+   "explosive": false,
+   "blockTypes": [
+    "kern"
+   ],
+   "complexity": 3,
+   "id": "distributie-snelle-tegenaanval",
+   "name": "Uitworp in de loop",
+   "summary": "De keeper vangt een voorzet en werpt meteen naar een medespeler die diep loopt.",
+   "description": "De trainer geeft een voorzet die de keeper vangt. Op dat moment sprint een medespeler diep op de flank. De keeper werpt binnen 3 seconden in de loop van de medespeler, ver genoeg zodat hij niet hoeft te vertragen.",
+   "themes": [
+    "distributie",
+    "wedstrijd"
+   ],
+   "coaching": [
+    "Vangen, kijken, werpen",
+    "Voor de speler uit",
+    "Snel maar precies"
+   ],
+   "mistakes": [
+    {
+     "fault": "Te kort werpen",
+     "fix": "Werp naar de ruimte waar de speler over twee seconden is."
+    },
+    {
+     "fault": "Eerst laten stuiteren",
+     "fix": "De bal is sneller door de lucht of vlak over de grond."
+    }
+   ],
+   "variants": {
+    "easier": "Medespeler loopt trager en kortere worp.",
+    "harder": "Een verdediger loopt mee met de medespeler."
+   },
+   "diagram": {
+    "field": "halfveld",
+    "elements": [
+     {
+      "t": "keeper",
+      "x": 50,
+      "y": 8
+     },
+     {
+      "t": "trainer",
+      "x": 85,
+      "y": 25
+     },
+     {
+      "t": "bal",
+      "x": 83,
+      "y": 22
+     },
+     {
+      "t": "speler",
+      "x": 20,
+      "y": 40,
+      "label": "K2"
+     }
+    ],
+    "lines": [
+     {
+      "t": "bal",
+      "p": [
+       [
+        82,
+        22
+       ],
+       [
+        60,
+        10
+       ],
+       [
+        52,
+        9
+       ]
+      ],
+      "s": 1
+     },
+     {
+      "t": "bal",
+      "p": [
+       [
+        49,
+        10
+       ],
+       [
+        15,
+        60
+       ]
+      ],
+      "s": 2
+     }
+    ]
+   }
+  },
+  {
+   "ages": [
+    "u10_12",
+    "u13_15",
+    "u16_19",
+    "senioren"
+   ],
+   "levels": [
+    "beginner",
+    "gevorderd",
+    "elite"
+   ],
+   "intensity": "laag",
+   "materials": [
+    "ballen",
+    "pionnen"
+   ],
+   "keepers": {
+    "min": 1,
+    "max": 6
+   },
+   "trainers": 1,
+   "zone": "Halve veld",
+   "duration": 8,
+   "sets": 2,
+   "reps": 8,
+   "rest": 30,
+   "divesPerRep": 0,
+   "explosive": false,
+   "blockTypes": [
+    "kern",
+    "afsluiting"
+   ],
+   "complexity": 1,
+   "id": "distributie-precisie-pionnen",
+   "name": "Precisietrap naar pionnen",
+   "summary": "Vanuit de hand of de grond pionnen raken op verschillende afstanden.",
+   "description": "Vier pionnen staan op 20, 30, 40 en 50 meter. De keeper probeert met volley, dropkick of doeltrap elke pion te raken of binnen 3 meter te laten landen. Punten per afstand. Leuk als afsluiter.",
+   "themes": [
+    "distributie"
+   ],
+   "coaching": [
+    "Rustig mikken",
+    "Kijk naar de bal bij het raken",
+    "Doorzwaaien naar je doel"
+   ],
+   "mistakes": [
+    {
+     "fault": "Te hard willen trappen",
+     "fix": "Precisie eerst, kracht volgt."
+    },
+    {
+     "fault": "Bal opgooien voor de volley",
+     "fix": "Laat hem vallen van heuphoogte."
+    }
+   ],
+   "variants": {
+    "easier": "Enkel de dichtste pionnen, grote zone.",
+    "harder": "Enkel de verste pionnen of met de zwakke voet."
+   },
+   "diagram": {
+    "field": "halfveld",
+    "elements": [
+     {
+      "t": "keeper",
+      "x": 50,
+      "y": 8
+     },
+     {
+      "t": "bal",
+      "x": 50,
+      "y": 11
+     },
+     {
+      "t": "pion",
+      "x": 40,
+      "y": 35,
+      "label": "1"
+     },
+     {
+      "t": "pion",
+      "x": 60,
+      "y": 50,
+      "label": "2"
+     },
+     {
+      "t": "pion",
+      "x": 35,
+      "y": 65,
+      "label": "3"
+     },
+     {
+      "t": "pion",
+      "x": 65,
+      "y": 85,
+      "label": "4"
+     }
+    ],
+    "lines": [
+     {
+      "t": "bal",
+      "p": [
+       [
+        49,
+        12
+       ],
+       [
+        40,
+        33
+       ]
+      ],
+      "s": 1
+     },
+     {
+      "t": "bal",
+      "p": [
+       [
+        51,
+        12
+       ],
+       [
+        60,
+        48
+       ]
+      ],
+      "s": 2
+     }
+    ]
+   }
+  },
+  {
+   "ages": [
+    "u6_9",
+    "u10_12"
+   ],
+   "levels": [
+    "beginner",
+    "gevorderd"
+   ],
+   "intensity": "laag",
+   "materials": [
+    "ballen",
+    "pionnen"
+   ],
+   "keepers": {
+    "min": 1,
+    "max": 6
+   },
+   "trainers": 1,
+   "zone": "10 × 5 m",
+   "duration": 6,
+   "sets": 3,
+   "reps": 6,
+   "rest": 20,
+   "divesPerRep": 0,
+   "explosive": false,
+   "blockTypes": [
+    "kern",
+    "afsluiting"
+   ],
+   "complexity": 1,
+   "id": "distributie-werpen-jong",
+   "name": "Spelvorm: bowlen met de keeper",
+   "summary": "Speelse rolworp voor de jongsten: pionnen omrollen als kegels.",
+   "description": "Vijf pionnen staan als kegels op 8 meter. De keeper rolt de bal onderhands en probeert zoveel mogelijk pionnen om te rollen. Telkens drie pogingen, dan wisselen. Leert de onderhandse worp spelenderwijs.",
+   "themes": [
+    "distributie"
+   ],
+   "coaching": [
+    "Door de knieën",
+    "Bal laag laten rollen",
+    "Wijs na naar je doel"
+   ],
+   "mistakes": [
+    {
+     "fault": "Bal gooien in plaats van rollen",
+     "fix": "Laat los vlak bij de grond."
+    },
+    {
+     "fault": "Rechtop werpen",
+     "fix": "Zak diep, alsof je gaat bowlen."
+    }
+   ],
+   "variants": {
+    "easier": "Kortere afstand en meer kegels.",
+    "harder": "Langere afstand en één bepaalde kegel raken."
+   },
+   "diagram": {
+    "field": "vrij",
+    "elements": [
+     {
+      "t": "keeper",
+      "x": 15,
+      "y": 50
+     },
+     {
+      "t": "bal",
+      "x": 19,
+      "y": 50
+     },
+     {
+      "t": "pion",
+      "x": 75,
+      "y": 42
+     },
+     {
+      "t": "pion",
+      "x": 80,
+      "y": 47
+     },
+     {
+      "t": "pion",
+      "x": 80,
+      "y": 53
+     },
+     {
+      "t": "pion",
+      "x": 85,
+      "y": 40
+     },
+     {
+      "t": "pion",
+      "x": 85,
+      "y": 58
+     }
+    ],
+    "lines": [
+     {
+      "t": "bal",
+      "p": [
+       [
+        20,
+        50
+       ],
+       [
+        74,
+        48
+       ]
+      ],
+      "s": 1
+     }
+    ]
+   }
+  },
+  {
+   "ages": [
+    "u13_15",
+    "u16_19",
+    "senioren"
+   ],
+   "levels": [
+    "gevorderd",
+    "elite"
+   ],
+   "intensity": "laag",
+   "materials": [
+    "ballen"
+   ],
+   "keepers": {
+    "min": 1,
+    "max": 3
+   },
+   "trainers": 1,
+   "zone": "Halve veld",
+   "duration": 8,
+   "sets": 2,
+   "reps": 8,
+   "rest": 30,
+   "divesPerRep": 0,
+   "explosive": false,
+   "blockTypes": [
+    "kern"
+   ],
+   "complexity": 2,
+   "id": "distributie-dropkick-lijn",
+   "name": "Dropkick met lage baan",
+   "summary": "Dropkick aanleren: bal laten vallen en net na de stuit raken voor een strakke, lage baan.",
+   "description": "De keeper laat de bal vallen en raakt hem net nadat hij de grond raakt (dropkick). Doel is een vlakke, snelle bal naar een medespeler op 30 meter. Eerst stilstaand, dan met een kleine aanloop.",
+   "themes": [
+    "distributie"
+   ],
+   "coaching": [
+    "Bal laten vallen, niet gooien",
+    "Raken net na de stuit",
+    "Lichaam over de bal"
+   ],
+   "mistakes": [
+    {
+     "fault": "Raken voor de stuit",
+     "fix": "Wacht op de stuit: dat is een volley, geen dropkick."
+    },
+    {
+     "fault": "Bal gaat hoog",
+     "fix": "Knie over de bal, teen naar beneden."
+    }
+   ],
+   "variants": {
+    "easier": "Kortere afstand en stilstaand.",
+    "harder": "Naar een lopende medespeler op 40 meter."
+   },
+   "diagram": {
+    "field": "halfveld",
+    "elements": [
+     {
+      "t": "keeper",
+      "x": 50,
+      "y": 10
+     },
+     {
+      "t": "bal",
+      "x": 50,
+      "y": 13
+     },
+     {
+      "t": "speler",
+      "x": 70,
+      "y": 55,
+      "label": "K2"
+     }
+    ],
+    "lines": [
+     {
+      "t": "bal",
+      "p": [
+       [
+        51,
+        14
+       ],
+       [
+        68,
+        52
+       ]
+      ],
+      "s": 1
+     }
+    ]
+   }
+  },
+  {
+   "ages": [
+    "u13_15",
+    "u16_19",
+    "senioren"
+   ],
+   "levels": [
+    "gevorderd",
+    "elite"
+   ],
+   "intensity": "gemiddeld",
+   "materials": [
+    "ballen",
+    "pionnen"
+   ],
+   "keepers": {
+    "min": 3,
+    "max": 6
+   },
+   "trainers": 1,
+   "zone": "Strafschopgebied",
+   "duration": 10,
+   "sets": 3,
+   "reps": 6,
+   "rest": 45,
+   "divesPerRep": 0,
+   "explosive": false,
+   "blockTypes": [
+    "kern"
+   ],
+   "complexity": 3,
+   "id": "opbouw-driehoek",
+   "name": "Opbouw in een driehoek",
+   "summary": "De keeper speelt met twee centrale verdedigers in een driehoek de bal rond en kiest de vrije kant.",
+   "description": "Twee medespelers staan breed aan de rand van de zestien. Een aanvaller zet druk op een van hen. De keeper krijgt de bal, scant en speelt naar de vrije verdediger. Daarna speelt die terug of door. Met de voet, maximaal twee contacten.",
+   "themes": [
+    "opbouw"
+   ],
+   "coaching": [
+    "Scan voor de aanname",
+    "Open houding",
+    "Speel naar de vrije man"
+   ],
+   "mistakes": [
+    {
+     "fault": "Naar de gedekte man spelen",
+     "fix": "Kijk eerst waar de druk staat."
+    },
+    {
+     "fault": "Te traag",
+     "fix": "Twee contacten: aannemen en spelen."
+    }
+   ],
+   "variants": {
+    "easier": "Zonder aanvaller, vrij rondspelen.",
+    "harder": "Twee aanvallers en één contact."
+   },
+   "diagram": {
+    "field": "zestien",
+    "elements": [
+     {
+      "t": "pion",
+      "x": 12,
+      "y": 52
+     },
+     {
+      "t": "pion",
+      "x": 88,
+      "y": 52
+     },
+     {
+      "t": "keeper",
+      "x": 50,
+      "y": 10
+     },
+     {
+      "t": "speler",
+      "x": 20,
+      "y": 48,
+      "label": "V1"
+     },
+     {
+      "t": "speler",
+      "x": 80,
+      "y": 48,
+      "label": "V2"
+     },
+     {
+      "t": "aanvaller",
+      "x": 30,
+      "y": 40
+     },
+     {
+      "t": "bal",
+      "x": 50,
+      "y": 14
+     }
+    ],
+    "lines": [
+     {
+      "t": "bal",
+      "p": [
+       [
+        22,
+        46
+       ],
+       [
+        48,
+        14
+       ]
+      ],
+      "s": 1
+     },
+     {
+      "t": "bal",
+      "p": [
+       [
+        53,
+        13
+       ],
+       [
+        78,
+        46
+       ]
+      ],
+      "s": 2
+     }
+    ]
+   }
+  },
+  {
+   "ages": [
+    "u6_9",
+    "u10_12",
+    "u13_15",
+    "u16_19",
+    "senioren"
+   ],
+   "levels": [
+    "beginner",
+    "gevorderd",
+    "elite"
+   ],
+   "intensity": "laag",
+   "materials": [
+    "ballen",
+    "pionnen"
+   ],
+   "keepers": {
+    "min": 1,
+    "max": 3
+   },
+   "trainers": 1,
+   "zone": "Strafschopgebied",
+   "duration": 8,
+   "sets": 3,
+   "reps": 8,
+   "rest": 30,
+   "divesPerRep": 0,
+   "explosive": false,
+   "blockTypes": [
+    "opwarming",
+    "kern"
+   ],
+   "complexity": 1,
+   "id": "opbouw-aanname-zwakke-voet",
+   "name": "Aanname met beide voeten",
+   "summary": "Ballen aannemen en doorspelen met links en rechts, met een open lichaamshouding.",
+   "description": "De trainer speelt de bal naar de keeper, die hem met de verste voet aanneemt richting een poortje links of rechts en erdoor speelt. Telkens afwisselen. Ook de zwakke voet moet de bal kunnen aannemen en doorspelen.",
+   "themes": [
+    "opbouw"
+   ],
+   "warmup": [
+    "balgewenning"
+   ],
+   "coaching": [
+    "Aannemen met de verste voet",
+    "Open naar het veld",
+    "Kijk naar je doel"
+   ],
+   "mistakes": [
+    {
+     "fault": "Aannemen met de dichtste voet",
+     "fix": "De verste voet opent je lichaam."
+    },
+    {
+     "fault": "Bal onder het lichaam",
+     "fix": "Neem aan naar de kant waar je gaat spelen."
+    }
+   ],
+   "variants": {
+    "easier": "Trage pass en één poortje.",
+    "harder": "In één tijd doorspelen met de zwakke voet."
+   },
+   "diagram": {
+    "field": "zestien",
+    "elements": [
+     {
+      "t": "keeper",
+      "x": 50,
+      "y": 12
+     },
+     {
+      "t": "trainer",
+      "x": 50,
+      "y": 50
+     },
+     {
+      "t": "bal",
+      "x": 50,
+      "y": 46
+     },
+     {
+      "t": "pion",
+      "x": 20,
+      "y": 25
+     },
+     {
+      "t": "pion",
+      "x": 26,
+      "y": 25
+     },
+     {
+      "t": "pion",
+      "x": 74,
+      "y": 25
+     },
+     {
+      "t": "pion",
+      "x": 80,
+      "y": 25
+     }
+    ],
+    "lines": [
+     {
+      "t": "bal",
+      "p": [
+       [
+        50,
+        45
+       ],
+       [
+        50,
+        16
+       ]
+      ],
+      "s": 1
+     },
+     {
+      "t": "bal",
+      "p": [
+       [
+        52,
+        13
+       ],
+       [
+        77,
+        24
+       ]
+      ],
+      "s": 2
+     }
+    ]
+   }
+  },
+  {
+   "ages": [
+    "u16_19",
+    "senioren"
+   ],
+   "levels": [
+    "gevorderd",
+    "elite"
+   ],
+   "intensity": "gemiddeld",
+   "materials": [
+    "ballen",
+    "pionnen"
+   ],
+   "keepers": {
+    "min": 4,
+    "max": 6
+   },
+   "trainers": 1,
+   "zone": "Halve veld",
+   "duration": 10,
+   "sets": 3,
+   "reps": 6,
+   "rest": 45,
+   "divesPerRep": 0,
+   "explosive": false,
+   "blockTypes": [
+    "kern"
+   ],
+   "complexity": 3,
+   "id": "opbouw-lange-bal-of-kort",
+   "name": "Kort of lang beslissen",
+   "summary": "De keeper kiest bij de opbouw tussen een korte pass en een lange bal, afhankelijk van de druk.",
+   "description": "Twee korte opties (verdedigers) en één lange optie (aanvaller op de middenlijn). Twee aanvallers zetten druk; de trainer bepaalt bij elke herhaling waar ze staan. De keeper speelt kort als er een vrije man is, anders lang.",
+   "themes": [
+    "opbouw",
+    "distributie"
+   ],
+   "coaching": [
+    "Eerst kijken, dan beslissen",
+    "Vrije man kort, anders lang",
+    "Kwaliteit van de pass"
+   ],
+   "mistakes": [
+    {
+     "fault": "Altijd lang trappen",
+     "fix": "Kijk eerst of er een veilige korte optie is."
+    },
+    {
+     "fault": "Kort spelen onder druk",
+     "fix": "Als de korte man gedekt is, kies de lange bal."
+    }
+   ],
+   "variants": {
+    "easier": "Eén aanvaller, de keeper heeft tijd.",
+    "harder": "Aanvallers verplaatsen nog net voor de pass."
+   },
+   "diagram": {
+    "field": "halfveld",
+    "elements": [
+     {
+      "t": "pion",
+      "x": 50,
+      "y": 70
+     },
+     {
+      "t": "pion",
+      "x": 70,
+      "y": 70
+     },
+     {
+      "t": "keeper",
+      "x": 50,
+      "y": 8
+     },
+     {
+      "t": "speler",
+      "x": 25,
+      "y": 28,
+      "label": "V1"
+     },
+     {
+      "t": "speler",
+      "x": 75,
+      "y": 28,
+      "label": "V2"
+     },
+     {
+      "t": "aanvaller",
+      "x": 30,
+      "y": 22
+     },
+     {
+      "t": "aanvaller",
+      "x": 65,
+      "y": 30
+     },
+     {
+      "t": "speler",
+      "x": 60,
+      "y": 85,
+      "label": "S"
+     },
+     {
+      "t": "bal",
+      "x": 50,
+      "y": 11
+     }
+    ],
+    "lines": [
+     {
+      "t": "bal",
+      "p": [
+       [
+        50,
+        12
+       ],
+       [
+        58,
+        82
+       ]
+      ],
+      "s": 1
+     }
+    ]
+   }
+  },
+  {
+   "ages": [
+    "u13_15",
+    "u16_19",
+    "senioren"
+   ],
+   "levels": [
+    "gevorderd",
+    "elite"
+   ],
+   "intensity": "gemiddeld",
+   "materials": [
+    "ballen",
+    "pionnen"
+   ],
+   "keepers": {
+    "min": 3,
+    "max": 6
+   },
+   "trainers": 1,
+   "zone": "Strafschopgebied",
+   "duration": 8,
+   "sets": 3,
+   "reps": 6,
+   "rest": 45,
+   "divesPerRep": 0,
+   "explosive": false,
+   "blockTypes": [
+    "kern"
+   ],
+   "complexity": 3,
+   "id": "opbouw-terugspeelbal-onder-druk",
+   "name": "Terugspeelbal in één tijd",
+   "summary": "Een medespeler speelt terug onder druk; de keeper speelt in één tijd naar de andere flank.",
+   "description": "Een medespeler aan de rand van de zestien krijgt een aanvaller in de rug en speelt de bal terug naar de keeper. De keeper speelt in één tijd door naar een medespeler op de andere flank. Snel en zonder risico.",
+   "themes": [
+    "opbouw"
+   ],
+   "coaching": [
+    "Vooraf kijken",
+    "In één tijd",
+    "Strak langs de grond"
+   ],
+   "mistakes": [
+    {
+     "fault": "Eerst aannemen onder druk",
+     "fix": "Je weet al waar de bal heen moet: speel meteen."
+    },
+    {
+     "fault": "Bal hoog doorspelen",
+     "fix": "Knie over de bal, binnenkant voet."
+    }
+   ],
+   "variants": {
+    "easier": "Twee contacten toegestaan.",
+    "harder": "De aanvaller loopt mee door op de keeper."
+   },
+   "diagram": {
+    "field": "zestien",
+    "elements": [
+     {
+      "t": "pion",
+      "x": 20,
+      "y": 54
+     },
+     {
+      "t": "pion",
+      "x": 30,
+      "y": 54
+     },
+     {
+      "t": "keeper",
+      "x": 50,
+      "y": 10
+     },
+     {
+      "t": "speler",
+      "x": 25,
+      "y": 50,
+      "label": "V"
+     },
+     {
+      "t": "aanvaller",
+      "x": 28,
+      "y": 58
+     },
+     {
+      "t": "speler",
+      "x": 85,
+      "y": 40,
+      "label": "K3"
+     },
+     {
+      "t": "bal",
+      "x": 26,
+      "y": 46
+     }
+    ],
+    "lines": [
+     {
+      "t": "bal",
+      "p": [
+       [
+        27,
+        46
+       ],
+       [
+        48,
+        14
+       ]
+      ],
+      "s": 1
+     },
+     {
+      "t": "bal",
+      "p": [
+       [
+        53,
+        12
+       ],
+       [
+        82,
+        38
+       ]
+      ],
+      "s": 2
+     }
+    ]
+   }
+  },
+  {
+   "ages": [
+    "u13_15",
+    "u16_19",
+    "senioren"
+   ],
+   "levels": [
+    "gevorderd",
+    "elite"
+   ],
+   "intensity": "gemiddeld",
+   "materials": [
+    "ballen",
+    "pionnen"
+   ],
+   "keepers": {
+    "min": 6,
+    "max": 6
+   },
+   "trainers": 1,
+   "zone": "25 × 20 m",
+   "duration": 12,
+   "sets": 3,
+   "reps": 1,
+   "rest": 60,
+   "divesPerRep": 0,
+   "explosive": false,
+   "blockTypes": [
+    "kern"
+   ],
+   "complexity": 3,
+   "id": "opbouw-rondo-groot",
+   "name": "Positiespel 4-tegen-2 met keeper",
+   "summary": "Vier spelers en de keeper houden de bal tegen twee afdekkers in een zone met doel.",
+   "description": "In een zone van 25 × 20 meter voor het doel spelen de keeper en vier spelers de bal rond tegen twee afdekkers. De keeper is de diepste man en moet altijd aanspeelbaar zijn. Na 8 passes een punt. Verliest de ploeg de bal, dan mogen de afdekkers op doel spelen.",
+   "themes": [
+    "opbouw",
+    "communicatie"
+   ],
+   "coaching": [
+    "Altijd aanspeelbaar",
+    "Coach je medespelers",
+    "Speel weg van de druk"
+   ],
+   "mistakes": [
+    {
+     "fault": "Achter een tegenstander staan",
+     "fix": "Beweeg zodat er een vrije passlijn is."
+    },
+    {
+     "fault": "Stil blijven",
+     "fix": "Geef info: \"man\", \"tijd\", \"draai\"."
+    }
+   ],
+   "variants": {
+    "easier": "5-tegen-1 en grotere zone.",
+    "harder": "4-tegen-3 of beperkte contacten."
+   },
+   "diagram": {
+    "field": "zestien",
+    "elements": [
+     {
+      "t": "pion",
+      "x": 8,
+      "y": 70
+     },
+     {
+      "t": "pion",
+      "x": 92,
+      "y": 70
+     },
+     {
+      "t": "keeper",
+      "x": 50,
+      "y": 12
+     },
+     {
+      "t": "speler",
+      "x": 15,
+      "y": 35
+     },
+     {
+      "t": "speler",
+      "x": 85,
+      "y": 35
+     },
+     {
+      "t": "speler",
+      "x": 30,
+      "y": 60
+     },
+     {
+      "t": "speler",
+      "x": 70,
+      "y": 60
+     },
+     {
+      "t": "aanvaller",
+      "x": 42,
+      "y": 38
+     },
+     {
+      "t": "aanvaller",
+      "x": 60,
+      "y": 45
+     },
+     {
+      "t": "bal",
+      "x": 16,
+      "y": 32
+     }
+    ],
+    "lines": [
+     {
+      "t": "bal",
+      "p": [
+       [
+        18,
+        33
+       ],
+       [
+        47,
+        15
+       ]
+      ],
+      "s": 1
+     },
+     {
+      "t": "bal",
+      "p": [
+       [
+        53,
+        15
+       ],
+       [
+        82,
+        33
+       ]
+      ],
+      "s": 2
+     }
+    ]
+   }
+  },
+  {
+   "ages": [
+    "u6_9",
+    "u10_12",
+    "u13_15",
+    "u16_19",
+    "senioren"
+   ],
+   "levels": [
+    "beginner",
+    "gevorderd",
+    "elite"
+   ],
+   "intensity": "laag",
+   "materials": [
+    "ballen",
+    "pionnen"
+   ],
+   "keepers": {
+    "min": 1,
+    "max": 6
+   },
+   "trainers": 1,
+   "zone": "25 × 20 m",
+   "duration": 8,
+   "sets": 3,
+   "reps": 8,
+   "rest": 30,
+   "divesPerRep": 0,
+   "explosive": false,
+   "blockTypes": [
+    "opwarming",
+    "kern"
+   ],
+   "complexity": 1,
+   "id": "opbouw-passen-poortjes",
+   "name": "Passen door poortjes",
+   "summary": "Technische passvorm voor de keeper: korte en lange passes door poortjes op verschillende afstanden.",
+   "description": "Vier poortjes van pionnen staan op 10, 15, 20 en 25 meter. De keeper speelt de bal met binnenkant en wreef door elk poortje naar een medespeler of trainer. Eerst stilstaande bal, dan na een aanname.",
+   "themes": [
+    "opbouw",
+    "distributie"
+   ],
+   "warmup": [
+    "balgewenning"
+   ],
+   "coaching": [
+    "Standbeen naast de bal",
+    "Binnenkant voor korte passes",
+    "Kijk naar je doel"
+   ],
+   "mistakes": [
+    {
+     "fault": "Bal tikken met de teen",
+     "fix": "Gebruik de binnenkant voor precisie."
+    },
+    {
+     "fault": "Achteroverleunen",
+     "fix": "Lichaam over de bal voor een lage pass."
+    }
+   ],
+   "variants": {
+    "easier": "Grote poortjes op korte afstand.",
+    "harder": "Kleine poortjes en enkel de zwakke voet."
+   },
+   "diagram": {
+    "field": "vrij",
+    "elements": [
+     {
+      "t": "keeper",
+      "x": 10,
+      "y": 50
+     },
+     {
+      "t": "bal",
+      "x": 14,
+      "y": 50
+     },
+     {
+      "t": "pion",
+      "x": 30,
+      "y": 38
+     },
+     {
+      "t": "pion",
+      "x": 30,
+      "y": 46
+     },
+     {
+      "t": "pion",
+      "x": 50,
+      "y": 58
+     },
+     {
+      "t": "pion",
+      "x": 50,
+      "y": 66
+     },
+     {
+      "t": "pion",
+      "x": 70,
+      "y": 30
+     },
+     {
+      "t": "pion",
+      "x": 70,
+      "y": 38
+     },
+     {
+      "t": "trainer",
+      "x": 90,
+      "y": 50
+     }
+    ],
+    "lines": [
+     {
+      "t": "bal",
+      "p": [
+       [
+        15,
+        50
+       ],
+       [
+        30,
+        42
+       ],
+       [
+        88,
+        49
+       ]
+      ],
+      "s": 1
+     },
+     {
+      "t": "bal",
+      "p": [
+       [
+        15,
+        52
+       ],
+       [
+        50,
+        62
+       ],
+       [
+        88,
+        52
+       ]
+      ],
+      "s": 2
+     }
+    ]
+   }
+  },
+  {
+   "ages": [
+    "u6_9",
+    "u10_12",
+    "u13_15",
+    "u16_19",
+    "senioren"
+   ],
+   "levels": [
+    "beginner",
+    "gevorderd",
+    "elite"
+   ],
+   "intensity": "gemiddeld",
+   "materials": [
+    "ballen",
+    "pionnen"
+   ],
+   "keepers": {
+    "min": 2,
+    "max": 6
+   },
+   "trainers": 1,
+   "zone": "30 × 20 m",
+   "duration": 12,
+   "sets": 3,
+   "reps": 1,
+   "rest": 60,
+   "divesPerRep": 0,
+   "explosive": false,
+   "blockTypes": [
+    "kern",
+    "afsluiting"
+   ],
+   "complexity": 3,
+   "id": "opbouw-spelvorm-meevoetballen",
+   "name": "Spelvorm: keeper als laatste man",
+   "summary": "Kleine partij waarin de keeper meevoetbalt als vrije man en zijn doel verdedigt.",
+   "description": "Partijtje 3-tegen-3 op een half veld van 30 × 20 meter met twee doelen en twee keepers. De keepers mogen de bal enkel met de voet terugspelen binnen hun zone en zijn de vrije man voor hun ploeg. Doelpunt na een pass via de keeper telt dubbel.",
+   "themes": [
+    "opbouw",
+    "wedstrijd"
+   ],
+   "coaching": [
+    "Altijd aanspeelbaar",
+    "Rustig blijven aan de bal",
+    "Kies de veilige kant"
+   ],
+   "mistakes": [
+    {
+     "fault": "Risico in de eigen zestien",
+     "fix": "Twijfel? Speel naar de zijkant."
+    },
+    {
+     "fault": "Te ver uit doel",
+     "fix": "Blijf binnen bereik van je doel."
+    }
+   ],
+   "variants": {
+    "easier": "Keepers mogen ook met de hand spelen.",
+    "harder": "Twee contacten maximum voor de keeper."
+   },
+   "diagram": {
+    "field": "vrij",
+    "elements": [
+     {
+      "t": "pion",
+      "x": 4,
+      "y": 4
+     },
+     {
+      "t": "pion",
+      "x": 96,
+      "y": 4
+     },
+     {
+      "t": "pion",
+      "x": 96,
+      "y": 96
+     },
+     {
+      "t": "pion",
+      "x": 4,
+      "y": 96
+     },
+     {
+      "t": "minigoal",
+      "x": 50,
+      "y": 5,
+      "r": 0
+     },
+     {
+      "t": "minigoal",
+      "x": 50,
+      "y": 95,
+      "r": 180
+     },
+     {
+      "t": "keeper",
+      "x": 50,
+      "y": 12,
+      "label": "K1"
+     },
+     {
+      "t": "keeper",
+      "x": 50,
+      "y": 88,
+      "label": "K2"
+     },
+     {
+      "t": "speler",
+      "x": 30,
+      "y": 40
+     },
+     {
+      "t": "speler",
+      "x": 70,
+      "y": 45
+     },
+     {
+      "t": "aanvaller",
+      "x": 40,
+      "y": 60
+     },
+     {
+      "t": "aanvaller",
+      "x": 65,
+      "y": 65
+     },
+     {
+      "t": "bal",
+      "x": 32,
+      "y": 44
+     }
+    ],
+    "lines": [
+     {
+      "t": "bal",
+      "p": [
+       [
+        33,
+        43
+       ],
+       [
+        48,
+        15
+       ]
+      ],
+      "s": 1
+     },
+     {
+      "t": "bal",
+      "p": [
+       [
+        52,
+        14
+       ],
+       [
+        68,
+        42
+       ]
+      ],
+      "s": 2
+     }
+    ]
+   }
+  },
+  {
+   "ages": [
+    "u13_15",
+    "u16_19",
+    "senioren"
+   ],
+   "levels": [
+    "gevorderd",
+    "elite"
+   ],
+   "intensity": "gemiddeld",
+   "materials": [
+    "ballen",
+    "pionnen"
+   ],
+   "keepers": {
+    "min": 4,
+    "max": 6
+   },
+   "trainers": 1,
+   "zone": "Strafschopgebied plus 15 m",
+   "duration": 10,
+   "sets": 3,
+   "reps": 6,
+   "rest": 45,
+   "divesPerRep": 0.3,
+   "explosive": false,
+   "blockTypes": [
+    "kern"
+   ],
+   "complexity": 3,
+   "id": "communicatie-coachen-verdediging",
+   "name": "Verdediging coachen bij een aanval",
+   "summary": "De keeper coacht twee verdedigers terwijl de trainer aanvalt: druk zetten, dekken, schuiven.",
+   "description": "Twee verdedigers staan voor de zestien. De trainer en een aanvaller combineren. De keeper geeft korte, duidelijke opdrachten: \"druk!\", \"dekken!\", \"schuif links!\". Na elke aanval bespreekt de trainer welke commando's duidelijk waren.",
+   "themes": [
+    "communicatie"
+   ],
+   "coaching": [
+    "Kort en luid",
+    "Naam plus opdracht",
+    "Coach vóór het gevaar"
+   ],
+   "mistakes": [
+    {
+     "fault": "Lange zinnen",
+     "fix": "Twee woorden: naam en opdracht."
+    },
+    {
+     "fault": "Pas roepen als het te laat is",
+     "fix": "Kijk vooruit en coach de volgende actie."
+    }
+   ],
+   "variants": {
+    "easier": "De trainer pauzeert na elke pass zodat de keeper kan coachen.",
+    "harder": "Aanval aan wedstrijdtempo met twee aanvallers."
+   },
+   "diagram": {
+    "field": "zestien",
+    "elements": [
+     {
+      "t": "pion",
+      "x": 25,
+      "y": 80
+     },
+     {
+      "t": "pion",
+      "x": 75,
+      "y": 80
+     },
+     {
+      "t": "keeper",
+      "x": 50,
+      "y": 10
+     },
+     {
+      "t": "speler",
+      "x": 38,
+      "y": 45,
+      "label": "V1"
+     },
+     {
+      "t": "speler",
+      "x": 62,
+      "y": 45,
+      "label": "V2"
+     },
+     {
+      "t": "aanvaller",
+      "x": 45,
+      "y": 70
+     },
+     {
+      "t": "trainer",
+      "x": 70,
+      "y": 75
+     },
+     {
+      "t": "bal",
+      "x": 70,
+      "y": 71
+     }
+    ],
+    "lines": [
+     {
+      "t": "bal",
+      "p": [
+       [
+        69,
+        70
+       ],
+       [
+        47,
+        66
+       ]
+      ],
+      "s": 1
+     },
+     {
+      "t": "dribbel",
+      "p": [
+       [
+        46,
+        65
+       ],
+       [
+        52,
+        55
+       ]
+      ],
+      "s": 2
+     },
+     {
+      "t": "bal",
+      "p": [
+       [
+        52,
+        54
+       ],
+       [
+        56,
+        8
+       ]
+      ],
+      "s": 3
+     }
+    ]
+   }
+  },
+  {
+   "ages": [
+    "u6_9",
+    "u10_12",
+    "u13_15",
+    "u16_19",
+    "senioren"
+   ],
+   "levels": [
+    "beginner",
+    "gevorderd",
+    "elite"
+   ],
+   "intensity": "laag",
+   "materials": [
+    "ballen"
+   ],
+   "keepers": {
+    "min": 2,
+    "max": 6
+   },
+   "trainers": 1,
+   "zone": "Doel en doelgebied",
+   "duration": 8,
+   "sets": 3,
+   "reps": 8,
+   "rest": 30,
+   "divesPerRep": 0,
+   "explosive": false,
+   "blockTypes": [
+    "opwarming",
+    "kern",
+    "afsluiting"
+   ],
+   "complexity": 1,
+   "id": "communicatie-roepen-duo",
+   "name": "Roepen in duo: \"Ik!\" of \"Jij!\"",
+   "summary": "Twee keepers staan samen in doel en roepen wie de bal neemt; een snel en speels communicatiespel.",
+   "description": "Twee keepers staan naast elkaar in een doel van 7 meter. De trainer werpt of schiet tussen beide in. Een van de keepers roept \"ik!\" en neemt de bal, de andere maakt ruimte. Wie zwijgt of botst, levert een punt in. Leuk voor alle leeftijden.",
+   "themes": [
+    "communicatie"
+   ],
+   "coaching": [
+    "Vroeg roepen",
+    "Wie roept, gaat",
+    "De ander maakt ruimte"
+   ],
+   "mistakes": [
+    {
+     "fault": "Allebei naar de bal",
+     "fix": "De eerste roep beslist."
+    },
+    {
+     "fault": "Te zacht roepen",
+     "fix": "Roep zo dat ook je verdedigers het horen."
+    }
+   ],
+   "variants": {
+    "easier": "Trainer werpt traag en duidelijk naar het midden.",
+    "harder": "Schot harder en sneller na elkaar."
+   },
+   "diagram": {
+    "field": "doel",
+    "elements": [
+     {
+      "t": "keeper",
+      "x": 44,
+      "y": 12,
+      "label": "K1"
+     },
+     {
+      "t": "keeper",
+      "x": 56,
+      "y": 12,
+      "label": "K2"
+     },
+     {
+      "t": "trainer",
+      "x": 50,
+      "y": 60
+     },
+     {
+      "t": "bal",
+      "x": 50,
+      "y": 55
+     }
+    ],
+    "lines": [
+     {
+      "t": "bal",
+      "p": [
+       [
+        50,
+        54
+       ],
+       [
+        50,
+        16
+       ]
+      ],
+      "s": 1
+     }
+    ]
+   }
+  },
+  {
+   "ages": [
+    "u16_19",
+    "senioren"
+   ],
+   "levels": [
+    "gevorderd",
+    "elite"
+   ],
+   "intensity": "gemiddeld",
+   "materials": [
+    "ballen",
+    "pionnen"
+   ],
+   "keepers": {
+    "min": 1,
+    "max": 4
+   },
+   "trainers": 1,
+   "zone": "Halve veld",
+   "duration": 10,
+   "sets": 3,
+   "reps": 6,
+   "rest": 45,
+   "divesPerRep": 0,
+   "explosive": false,
+   "blockTypes": [
+    "kern"
+   ],
+   "complexity": 3,
+   "id": "communicatie-afstemming-buitenspel",
+   "name": "Lijn hoog houden met de verdediging",
+   "summary": "De keeper stuurt de verdedigingslijn naar voren en achteren en volgt zelf mee.",
+   "description": "Vier verdedigers (pionnen of spelers) vormen een lijn. De trainer speelt de bal naar voren of naar achteren. De keeper roept \"stap!\" of \"zak!\" en verplaatst zelf mee, zodat de afstand tot de lijn klein blijft. Daarna een diepe bal: de keeper onderschept.",
+   "themes": [
+    "communicatie",
+    "eentegeneen"
+   ],
+   "coaching": [
+    "Volg de lijn mee",
+    "Roep \"stap\" en \"zak\"",
+    "Diepe bal is voor jou"
+   ],
+   "mistakes": [
+    {
+     "fault": "Op de doellijn blijven",
+     "fix": "Blijf op 10 à 15 meter achter de lijn."
+    },
+    {
+     "fault": "Niet coachen",
+     "fix": "Jij ziet alles: stuur de lijn."
+    }
+   ],
+   "variants": {
+    "easier": "Zonder diepe bal, enkel de lijn sturen.",
+    "harder": "Met een aanvaller die op de diepte loopt."
+   },
+   "diagram": {
+    "field": "halfveld",
+    "elements": [
+     {
+      "t": "keeper",
+      "x": 50,
+      "y": 25
+     },
+     {
+      "t": "pion",
+      "x": 20,
+      "y": 45
+     },
+     {
+      "t": "pion",
+      "x": 40,
+      "y": 45
+     },
+     {
+      "t": "pion",
+      "x": 60,
+      "y": 45
+     },
+     {
+      "t": "pion",
+      "x": 80,
+      "y": 45
+     },
+     {
+      "t": "trainer",
+      "x": 50,
+      "y": 85
+     },
+     {
+      "t": "bal",
+      "x": 50,
+      "y": 80
+     }
+    ],
+    "lines": [
+     {
+      "t": "loop",
+      "p": [
+       [
+        50,
+        25
+       ],
+       [
+        50,
+        33
+       ]
+      ],
+      "s": 1
+     },
+     {
+      "t": "bal",
+      "p": [
+       [
+        50,
+        79
+       ],
+       [
+        55,
+        38
+       ]
+      ],
+      "s": 2
+     },
+     {
+      "t": "loop",
+      "p": [
+       [
+        50,
+        33
+       ],
+       [
+        54,
+        36
+       ]
+      ],
+      "s": 3
+     }
+    ]
+   }
+  },
+  {
+   "ages": [
+    "u13_15",
+    "u16_19",
+    "senioren"
+   ],
+   "levels": [
+    "gevorderd",
+    "elite"
+   ],
+   "intensity": "laag",
+   "materials": [
+    "ballen",
+    "pionnen"
+   ],
+   "keepers": {
+    "min": 1,
+    "max": 6
+   },
+   "trainers": 1,
+   "zone": "Strafschopgebied",
+   "duration": 8,
+   "sets": 2,
+   "reps": 5,
+   "rest": 30,
+   "divesPerRep": 0,
+   "explosive": false,
+   "blockTypes": [
+    "kern"
+   ],
+   "complexity": 2,
+   "id": "communicatie-hoekschop-indeling",
+   "name": "Hoekschop: indeling en zones",
+   "summary": "De keeper deelt zijn verdedigers in bij een hoekschop en bewaakt de vrije zones.",
+   "description": "Bij een stilstaande hoekschop zet de keeper zijn spelers (of pionnen) op hun plaats: man aan de eerste paal, zone in het doelgebied, een man op de rand van de zestien. Daarna neemt de trainer de hoekschop en verdedigt de groep.",
+   "themes": [
+    "communicatie",
+    "hogeballen"
+   ],
+   "coaching": [
+    "Iedereen een taak",
+    "Eerste paal bezet",
+    "Jij beslist in het doelgebied"
+   ],
+   "mistakes": [
+    {
+     "fault": "Te veel spelers op de lijn",
+     "fix": "De lijn is jouw zone; zet spelers op de eerste paal en ervoor."
+    },
+    {
+     "fault": "Pas indelen als de bal vertrekt",
+     "fix": "Ruim op tijd, vóór de nemer klaarstaat."
+    }
+   ],
+   "variants": {
+    "easier": "Enkel indelen zonder hoekschop.",
+    "harder": "Aanvallers wisselen van plaats net voor de hoekschop."
+   },
+   "diagram": {
+    "field": "zestien",
+    "elements": [
+     {
+      "t": "keeper",
+      "x": 50,
+      "y": 9
+     },
+     {
+      "t": "pion",
+      "x": 42,
+      "y": 10
+     },
+     {
+      "t": "pion",
+      "x": 50,
+      "y": 18
+     },
+     {
+      "t": "pion",
+      "x": 58,
+      "y": 18
+     },
+     {
+      "t": "pion",
+      "x": 50,
+      "y": 40
+     },
+     {
+      "t": "trainer",
+      "x": 97,
+      "y": 6
+     },
+     {
+      "t": "bal",
+      "x": 95,
+      "y": 7
+     }
+    ],
+    "lines": [
+     {
+      "t": "bal",
+      "p": [
+       [
+        94,
+        8
+       ],
+       [
+        72,
+        8
+       ],
+       [
+        54,
+        15
+       ]
+      ],
+      "s": 1
+     },
+     {
+      "t": "loop",
+      "p": [
+       [
+        50,
+        10
+       ],
+       [
+        53,
+        14
+       ]
+      ],
+      "s": 2
+     }
+    ]
+   }
+  },
+  {
+   "ages": [
+    "u6_9",
+    "u10_12",
+    "u13_15",
+    "u16_19",
+    "senioren"
+   ],
+   "levels": [
+    "beginner",
+    "gevorderd",
+    "elite"
+   ],
+   "intensity": "laag",
+   "materials": [
+    "ballen",
+    "pionnen"
+   ],
+   "keepers": {
+    "min": 2,
+    "max": 6
+   },
+   "trainers": 1,
+   "zone": "10 × 10 m",
+   "duration": 6,
+   "sets": 3,
+   "reps": 4,
+   "rest": 20,
+   "divesPerRep": 0,
+   "explosive": false,
+   "blockTypes": [
+    "afsluiting"
+   ],
+   "complexity": 1,
+   "id": "communicatie-spelvorm-blind",
+   "name": "Blinde keeper: alleen op stem",
+   "summary": "Speelse vertrouwensvorm: een keeper met de ogen dicht wordt door een andere keeper naar de bal gecoacht.",
+   "description": "Een keeper staat met de ogen dicht (of een hand voor de ogen) in een zone. De andere keeper coacht hem met korte woorden naar een stilliggende bal: \"links\", \"twee stappen\", \"stop\", \"pak\". Leert kort en precies coachen. Voor alle leeftijden als afsluiter.",
+   "themes": [
+    "communicatie"
+   ],
+   "coaching": [
+    "Kort en precies",
+    "Eén woord per opdracht",
+    "Vertrouw op je partner"
+   ],
+   "mistakes": [
+    {
+     "fault": "Te veel woorden tegelijk",
+     "fix": "Eén opdracht per keer, dan wachten."
+    },
+    {
+     "fault": "Onduidelijke richting",
+     "fix": "Spreek af: links en rechts vanuit de blinde keeper."
+    }
+   ],
+   "variants": {
+    "easier": "Ogen half open en de bal dichtbij.",
+    "harder": "De bal rolt traag en de keeper moet hem onderscheppen."
+   },
+   "diagram": {
+    "field": "vrij",
+    "elements": [
+     {
+      "t": "pion",
+      "x": 10,
+      "y": 10
+     },
+     {
+      "t": "pion",
+      "x": 90,
+      "y": 10
+     },
+     {
+      "t": "pion",
+      "x": 90,
+      "y": 90
+     },
+     {
+      "t": "pion",
+      "x": 10,
+      "y": 90
+     },
+     {
+      "t": "keeper",
+      "x": 30,
+      "y": 70,
+      "label": "K1"
+     },
+     {
+      "t": "keeper",
+      "x": 20,
+      "y": 30,
+      "label": "K2"
+     },
+     {
+      "t": "bal",
+      "x": 70,
+      "y": 30
+     }
+    ],
+    "lines": [
+     {
+      "t": "loop",
+      "p": [
+       [
+        32,
+        68
+       ],
+       [
+        50,
+        50
+       ],
+       [
+        66,
+        34
+       ]
+      ],
+      "s": 1
+     }
+    ]
+   }
+  },
+  {
+   "ages": [
+    "u13_15",
+    "u16_19",
+    "senioren"
+   ],
+   "levels": [
+    "gevorderd",
+    "elite"
+   ],
+   "intensity": "gemiddeld",
+   "materials": [
+    "ballen",
+    "pionnen"
+   ],
+   "keepers": {
+    "min": 2,
+    "max": 6
+   },
+   "trainers": 1,
+   "zone": "Strafschopgebied",
+   "duration": 8,
+   "sets": 2,
+   "reps": 5,
+   "rest": 60,
+   "divesPerRep": 1,
+   "explosive": false,
+   "blockTypes": [
+    "kern"
+   ],
+   "complexity": 3,
+   "id": "communicatie-vrije-trap-muur-wedstrijd",
+   "name": "Vrije trappen met muur en rebound",
+   "summary": "Vrije trap rond de zestien: muur zetten, schot verwerken en de rebound coachen.",
+   "description": "De keeper zet de muur (spelers of pionnen), de trainer trapt de vrije trap. Na de redding volgt een aanvaller in op de rebound. De keeper coacht zijn spelers om de rebound weg te werken of pakt hem zelf.",
+   "themes": [
+    "communicatie",
+    "wedstrijd"
+   ],
+   "coaching": [
+    "Muur snel zetten",
+    "Zicht op de bal",
+    "Rebound coachen"
+   ],
+   "mistakes": [
+    {
+     "fault": "Niet opletten na de redding",
+     "fix": "Na het schot is de fase niet voorbij: rebound!"
+    },
+    {
+     "fault": "Muur zetten en zelf achter de muur staan",
+     "fix": "Sta naast de muur met zicht op de bal."
+    }
+   ],
+   "variants": {
+    "easier": "Zonder rebound-aanvaller.",
+    "harder": "De nemer mag ook kort spelen naar een tweede schutter."
+   },
+   "diagram": {
+    "field": "zestien",
+    "elements": [
+     {
+      "t": "keeper",
+      "x": 58,
+      "y": 10
+     },
+     {
+      "t": "pion",
+      "x": 38,
+      "y": 44
+     },
+     {
+      "t": "pion",
+      "x": 42,
+      "y": 45
+     },
+     {
+      "t": "pion",
+      "x": 46,
+      "y": 46
+     },
+     {
+      "t": "trainer",
+      "x": 30,
+      "y": 70
+     },
+     {
+      "t": "bal",
+      "x": 33,
+      "y": 66
+     },
+     {
+      "t": "aanvaller",
+      "x": 60,
+      "y": 45
+     }
+    ],
+    "lines": [
+     {
+      "t": "bal",
+      "p": [
+       [
+        34,
+        64
+       ],
+       [
+        44,
+        40
+       ],
+       [
+        52,
+        8
+       ]
+      ],
+      "s": 1
+     },
+     {
+      "t": "loop",
+      "p": [
+       [
+        58,
+        11
+       ],
+       [
+        53,
+        10
+       ]
+      ],
+      "s": 2
+     },
+     {
+      "t": "bal",
+      "p": [
+       [
+        52,
+        12
+       ],
+       [
+        58,
+        30
+       ]
+      ],
+      "s": 3
+     }
+    ]
+   }
+  },
+  {
+   "ages": [
+    "u10_12",
+    "u13_15",
+    "u16_19",
+    "senioren"
+   ],
+   "levels": [
+    "beginner",
+    "gevorderd",
+    "elite"
+   ],
+   "intensity": "gemiddeld",
+   "materials": [
+    "ballen"
+   ],
+   "keepers": {
+    "min": 1,
+    "max": 2
+   },
+   "trainers": 1,
+   "zone": "Doel en doelgebied",
+   "duration": 15,
+   "sets": 5,
+   "reps": 1,
+   "rest": 15,
+   "divesPerRep": 4,
+   "explosive": false,
+   "blockTypes": [
+    "opwarming"
+   ],
+   "complexity": 2,
+   "id": "wedstrijd-opwarmroutine-kort",
+   "name": "Korte wedstrijdopwarming (15 min)",
+   "summary": "Compacte routine voor voor de match: balgewenning, voetenwerk, vangen, duiken en een paar hoge ballen.",
+   "description": "Vaste volgorde: 3 minuten balgewenning in de hand, 2 minuten voetenwerk met vangbal, 3 minuten lage en halve duiken, 3 minuten hoge ballen, 4 minuten schoten van verschillende posities. De keeper weet altijd wat er komt: rust en vertrouwen.",
+   "themes": [
+    "wedstrijd",
+    "vangen"
+   ],
+   "warmup": [
+    "balgewenning"
+   ],
+   "coaching": [
+    "Altijd dezelfde volgorde",
+    "Opbouwen in tempo",
+    "Eindigen met een goed gevoel"
+   ],
+   "mistakes": [
+    {
+     "fault": "Te zware opwarming",
+     "fix": "Het is opwarmen, geen training: kort en scherp."
+    },
+    {
+     "fault": "Eindigen met een tegendoelpunt",
+     "fix": "Laat de laatste bal altijd een succesvolle redding zijn."
+    }
+   ],
+   "variants": {
+    "easier": "10 minuten met minder duiken.",
+    "harder": "Voeg een paar voorzetten toe met een medespeler."
+   },
+   "diagram": {
+    "field": "zestien",
+    "elements": [
+     {
+      "t": "keeper",
+      "x": 50,
+      "y": 10
+     },
+     {
+      "t": "trainer",
+      "x": 50,
+      "y": 45
+     },
+     {
+      "t": "bal",
+      "x": 50,
+      "y": 41
+     },
+     {
+      "t": "pion",
+      "x": 30,
+      "y": 50
+     },
+     {
+      "t": "pion",
+      "x": 70,
+      "y": 50
+     }
+    ],
+    "lines": [
+     {
+      "t": "bal",
+      "p": [
+       [
+        50,
+        40
+       ],
+       [
+        50,
+        14
+       ]
+      ],
+      "s": 1
+     },
+     {
+      "t": "bal",
+      "p": [
+       [
+        48,
+        40
+       ],
+       [
+        42,
+        10
+       ]
+      ],
+      "s": 2
+     },
+     {
+      "t": "bal",
+      "p": [
+       [
+        52,
+        40
+       ],
+       [
+        58,
+        10
+       ]
+      ],
+      "s": 3
+     }
+    ]
+   }
+  },
+  {
+   "ages": [
+    "u16_19",
+    "senioren"
+   ],
+   "levels": [
+    "gevorderd",
+    "elite"
+   ],
+   "intensity": "hoog",
+   "materials": [
+    "ballen"
+   ],
+   "keepers": {
+    "min": 2,
+    "max": 3
+   },
+   "trainers": 1,
+   "zone": "Strafschopgebied",
+   "duration": 10,
+   "sets": 4,
+   "reps": 3,
+   "rest": 90,
+   "divesPerRep": 1,
+   "explosive": true,
+   "blockTypes": [
+    "kern"
+   ],
+   "complexity": 3,
+   "id": "wedstrijd-spelsituaties",
+   "name": "Wedstrijdsituaties na elkaar",
+   "summary": "Drie typische wedstrijdacties na elkaar: schot, voorzet en 1-tegen-1, met korte rust tussen de reeksen.",
+   "description": "De trainer en een medespeler spelen telkens drie acties na elkaar: een afstandsschot, een voorzet vanaf de flank en een doorgebroken aanvaller. De keeper herstelt tussen elke actie. Simuleert de intensiteit van een wedstrijd.",
+   "themes": [
+    "wedstrijd",
+    "eentegeneen"
+   ],
+   "coaching": [
+    "Na elke actie herstellen",
+    "Positie voor elke situatie",
+    "Volle concentratie"
+   ],
+   "mistakes": [
+    {
+     "fault": "Te snel naar de volgende actie zonder positie",
+     "fix": "Eerst juist staan, dan pas reageren."
+    },
+    {
+     "fault": "Concentratie verliezen",
+     "fix": "Elke actie is de belangrijkste."
+    }
+   ],
+   "variants": {
+    "easier": "Twee acties en langere rust.",
+    "harder": "Vier acties met een aanvaller op de rebounds."
+   },
+   "diagram": {
+    "field": "zestien",
+    "elements": [
+     {
+      "t": "keeper",
+      "x": 50,
+      "y": 10
+     },
+     {
+      "t": "trainer",
+      "x": 50,
+      "y": 60
+     },
+     {
+      "t": "speler",
+      "x": 90,
+      "y": 35,
+      "label": "K2"
+     },
+     {
+      "t": "aanvaller",
+      "x": 40,
+      "y": 75
+     },
+     {
+      "t": "bal",
+      "x": 50,
+      "y": 56
+     },
+     {
+      "t": "bal",
+      "x": 88,
+      "y": 32
+     }
+    ],
+    "lines": [
+     {
+      "t": "bal",
+      "p": [
+       [
+        50,
+        55
+       ],
+       [
+        45,
+        12
+       ]
+      ],
+      "s": 1
+     },
+     {
+      "t": "bal",
+      "p": [
+       [
+        87,
+        32
+       ],
+       [
+        65,
+        18
+       ],
+       [
+        53,
+        16
+       ]
+      ],
+      "s": 2
+     },
+     {
+      "t": "dribbel",
+      "p": [
+       [
+        40,
+        72
+       ],
+       [
+        45,
+        40
+       ]
+      ],
+      "s": 3
+     }
+    ]
+   }
+  },
+  {
+   "ages": [
+    "u13_15",
+    "u16_19",
+    "senioren"
+   ],
+   "levels": [
+    "beginner",
+    "gevorderd",
+    "elite"
+   ],
+   "intensity": "gemiddeld",
+   "materials": [
+    "ballen"
+   ],
+   "keepers": {
+    "min": 2,
+    "max": 6
+   },
+   "trainers": 1,
+   "zone": "Strafschopgebied",
+   "duration": 8,
+   "sets": 1,
+   "reps": 5,
+   "rest": 45,
+   "divesPerRep": 1,
+   "explosive": true,
+   "blockTypes": [
+    "afsluiting",
+    "kern"
+   ],
+   "complexity": 3,
+   "id": "wedstrijd-penaltyreeks",
+   "name": "Strafschoppenreeks",
+   "summary": "Wedstrijdecht: vijf strafschoppen na elkaar met de routine en de druk van een echte reeks.",
+   "description": "Vijf schutters trappen om beurt een strafschop, zoals in een echte reeks. De keeper volgt zijn routine: water, handschoenen, positie op de lijn. De andere keepers moedigen aan of storen (lawaai). Tel de reddingen en bespreek de keuzes.",
+   "themes": [
+    "wedstrijd"
+   ],
+   "coaching": [
+    "Vaste routine",
+    "Lang wachten",
+    "Explosief vertrekken"
+   ],
+   "mistakes": [
+    {
+     "fault": "Routine overslaan onder druk",
+     "fix": "Juist onder druk houdt de routine je rustig."
+    },
+    {
+     "fault": "Te vroeg vertrekken",
+     "fix": "Wacht tot het standbeen van de schutter staat."
+    }
+   ],
+   "variants": {
+    "easier": "Strafschop vanop 8 meter.",
+    "harder": "Schutters mogen kiezen voor een panenka of stop in de aanloop."
+   },
+   "diagram": {
+    "field": "zestien",
+    "elements": [
+     {
+      "t": "keeper",
+      "x": 50,
+      "y": 6
+     },
+     {
+      "t": "speler",
+      "x": 45,
+      "y": 45,
+      "label": "1"
+     },
+     {
+      "t": "speler",
+      "x": 50,
+      "y": 45,
+      "label": "2"
+     },
+     {
+      "t": "speler",
+      "x": 55,
+      "y": 45,
+      "label": "3"
+     },
+     {
+      "t": "bal",
+      "x": 50,
+      "y": 37.1
+     }
+    ],
+    "lines": [
+     {
+      "t": "bal",
+      "p": [
+       [
+        50,
+        35
+       ],
+       [
+        56,
+        6
+       ]
+      ],
+      "s": 1
+     },
+     {
+      "t": "loop",
+      "p": [
+       [
+        52,
+        7
+       ],
+       [
+        56,
+        7
+       ]
+      ],
+      "s": 2
+     }
+    ]
+   }
+  },
+  {
+   "ages": [
+    "u13_15",
+    "u16_19",
+    "senioren"
+   ],
+   "levels": [
+    "beginner",
+    "gevorderd",
+    "elite"
+   ],
+   "intensity": "laag",
+   "materials": [
+    "ballen"
+   ],
+   "keepers": {
+    "min": 1,
+    "max": 3
+   },
+   "trainers": 1,
+   "zone": "Doel en doelgebied",
+   "duration": 8,
+   "sets": 2,
+   "reps": 6,
+   "rest": 30,
+   "divesPerRep": 0.5,
+   "explosive": false,
+   "blockTypes": [
+    "kern",
+    "afsluiting"
+   ],
+   "complexity": 2,
+   "id": "wedstrijd-mentale-routine",
+   "name": "Na een fout: reset-routine",
+   "summary": "De keeper oefent een korte routine om na een tegendoelpunt of fout meteen terug te focussen.",
+   "description": "De trainer laat bewust een paar ballen binnengaan (onhoudbaar schot of een bewuste \"fout\"). Na elk doelpunt doet de keeper zijn reset: bal uit het net, diep ademhalen, handschoenen aantrekken, een kernwoord zeggen. Daarna meteen een nieuwe actie die goed moet gaan.",
+   "themes": [
+    "wedstrijd",
+    "communicatie"
+   ],
+   "coaching": [
+    "Eén ademhaling, één kernwoord",
+    "Volgende bal is de belangrijkste",
+    "Coach meteen weer"
+   ],
+   "mistakes": [
+    {
+     "fault": "Blijven hangen in de fout",
+     "fix": "Gebruik de routine om te resetten."
+    },
+    {
+     "fault": "Te lang treuzelen",
+     "fix": "Max. 10 seconden, dan sta je weer klaar."
+    }
+   ],
+   "variants": {
+    "easier": "Rustig tempo en veel tijd voor de routine.",
+    "harder": "Meteen na het doelpunt volgt een schot."
+   },
+   "diagram": {
+    "field": "doel",
+    "elements": [
+     {
+      "t": "keeper",
+      "x": 50,
+      "y": 12
+     },
+     {
+      "t": "trainer",
+      "x": 50,
+      "y": 60
+     },
+     {
+      "t": "bal",
+      "x": 50,
+      "y": 55
+     }
+    ],
+    "lines": [
+     {
+      "t": "bal",
+      "p": [
+       [
+        50,
+        54
+       ],
+       [
+        60,
+        7
+       ]
+      ],
+      "s": 1
+     },
+     {
+      "t": "loop",
+      "p": [
+       [
+        56,
+        9
+       ],
+       [
+        50,
+        12
+       ]
+      ],
+      "s": 2
+     },
+     {
+      "t": "bal",
+      "p": [
+       [
+        50,
+        54
+       ],
+       [
+        50,
+        17
+       ]
+      ],
+      "s": 3
+     }
+    ]
+   }
+  },
+  {
+   "ages": [
+    "u16_19",
+    "senioren"
+   ],
+   "levels": [
+    "gevorderd",
+    "elite"
+   ],
+   "intensity": "gemiddeld",
+   "materials": [
+    "ballen"
+   ],
+   "keepers": {
+    "min": 2,
+    "max": 6
+   },
+   "trainers": 1,
+   "zone": "Strafschopgebied",
+   "duration": 8,
+   "sets": 3,
+   "reps": 8,
+   "rest": 45,
+   "divesPerRep": 0.5,
+   "explosive": false,
+   "blockTypes": [
+    "kern"
+   ],
+   "complexity": 2,
+   "id": "wedstrijd-tegenstander-scouten",
+   "name": "Schutters lezen",
+   "summary": "De keeper leert de schotvoorbereiding van een schutter te lezen: aanloop, standbeen en lichaamshouding.",
+   "description": "Verschillende schutters schieten van op 16 meter. Voor elk schot zegt de keeper luidop waar hij de bal verwacht (op basis van aanloop, standbeen en heupen). Daarna verwerkt hij het schot. Na de reeks bespreken welke signalen klopten.",
+   "themes": [
+    "wedstrijd",
+    "reflexen"
+   ],
+   "coaching": [
+    "Kijk naar het standbeen",
+    "Lees de heupen",
+    "Pas dan reageren"
+   ],
+   "mistakes": [
+    {
+     "fault": "Naar de bal staren",
+     "fix": "Kijk eerst naar het lichaam van de schutter."
+    },
+    {
+     "fault": "Gokken op gevoel",
+     "fix": "Zeg luidop wat je ziet, zo train je het lezen."
+    }
+   ],
+   "variants": {
+    "easier": "Schutters schieten traag en voorspelbaar.",
+    "harder": "Schutters maken bewust schijnbewegingen."
+   },
+   "diagram": {
+    "field": "zestien",
+    "elements": [
+     {
+      "t": "keeper",
+      "x": 50,
+      "y": 10
+     },
+     {
+      "t": "speler",
+      "x": 40,
+      "y": 60,
+      "label": "K2"
+     },
+     {
+      "t": "trainer",
+      "x": 60,
+      "y": 60
+     },
+     {
+      "t": "bal",
+      "x": 42,
+      "y": 56
+     }
+    ],
+    "lines": [
+     {
+      "t": "bal",
+      "p": [
+       [
+        43,
+        55
+       ],
+       [
+        56,
+        8
+       ]
+      ],
+      "s": 1
+     }
+    ]
+   }
+  },
+  {
+   "ages": [
+    "u6_9",
+    "u10_12",
+    "u13_15",
+    "u16_19",
+    "senioren"
+   ],
+   "levels": [
+    "beginner",
+    "gevorderd",
+    "elite"
+   ],
+   "intensity": "laag",
+   "materials": [
+    "pionnen"
+   ],
+   "keepers": {
+    "min": 1,
+    "max": 6
+   },
+   "trainers": 1,
+   "zone": "10 × 10 m",
+   "duration": 6,
+   "sets": 6,
+   "reps": 1,
+   "rest": 10,
+   "divesPerRep": 0,
+   "explosive": false,
+   "blockTypes": [
+    "opwarming"
+   ],
+   "complexity": 1,
+   "id": "opwarming-dynamische-mobiliteit",
+   "name": "Dynamische mobiliteit voor keepers",
+   "summary": "Heupen, schouders en polsen los maken met oefeningen die keepers nodig hebben voor het duiken.",
+   "description": "Op de plaats of over 10 meter: heupcirkels, wereldse stretch (lunge met draai), armzwaai, polscirkels, zijwaartse lunges en inchworm. Elke oefening een tiental herhalingen. Basis voor elke keepertraining.",
+   "themes": [
+    "voetenwerk"
+   ],
+   "warmup": [
+    "mobiliteit"
+   ],
+   "coaching": [
+    "Rustig en gecontroleerd",
+    "Volledige bewegingsuitslag",
+    "Ademen"
+   ],
+   "mistakes": [
+    {
+     "fault": "Te snel en verend",
+     "fix": "Elke beweging rustig, tot het einde van de uitslag."
+    },
+    {
+     "fault": "Polsen en vingers vergeten",
+     "fix": "Keepers hebben sterke polsen nodig: draai ze los."
+    }
+   ],
+   "variants": {
+    "easier": "Vier oefeningen op de plaats.",
+    "harder": "Combineer met een korte sprint na elke oefening."
+   },
+   "diagram": {
+    "field": "vrij",
+    "elements": [
+     {
+      "t": "pion",
+      "x": 20,
+      "y": 30
+     },
+     {
+      "t": "pion",
+      "x": 80,
+      "y": 30
+     },
+     {
+      "t": "pion",
+      "x": 20,
+      "y": 70
+     },
+     {
+      "t": "pion",
+      "x": 80,
+      "y": 70
+     },
+     {
+      "t": "keeper",
+      "x": 20,
+      "y": 50
+     }
+    ],
+    "lines": [
+     {
+      "t": "loop",
+      "p": [
+       [
+        22,
+        50
+       ],
+       [
+        78,
+        50
+       ]
+      ],
+      "s": 1
+     },
+     {
+      "t": "loop",
+      "p": [
+       [
+        78,
+        56
+       ],
+       [
+        24,
+        56
+       ]
+      ],
+      "s": 2
+     }
+    ]
+   }
+  },
+  {
+   "ages": [
+    "u6_9",
+    "u10_12",
+    "u13_15"
+   ],
+   "levels": [
+    "beginner",
+    "gevorderd"
+   ],
+   "intensity": "laag",
+   "materials": [
+    "ballen",
+    "pionnen"
+   ],
+   "keepers": {
+    "min": 3,
+    "max": 6
+   },
+   "trainers": 1,
+   "zone": "15 × 15 m",
+   "duration": 6,
+   "sets": 3,
+   "reps": 1,
+   "rest": 30,
+   "divesPerRep": 0,
+   "explosive": false,
+   "blockTypes": [
+    "opwarming"
+   ],
+   "complexity": 1,
+   "id": "opwarming-tikkertje",
+   "name": "Keeperstikkertje",
+   "summary": "Speelse opwarming: tikkertje waarbij je veilig bent door te gaan liggen en een bal te vangen.",
+   "description": "In een vak van pionnen speelt de groep tikkertje. Wie dreigt getikt te worden, roept \"bal!\" en krijgt van de trainer een bal toegeworpen. Met de bal in de handen ben je veilig. Wie getikt wordt, is de nieuwe tikker. Ideaal voor de jongsten.",
+   "themes": [
+    "vangen",
+    "communicatie"
+   ],
+   "warmup": [
+    "balgewenning"
+   ],
+   "coaching": [
+    "Roepen om de bal",
+    "Vangen in beweging",
+    "Kijk om je heen"
+   ],
+   "mistakes": [
+    {
+     "fault": "Niet roepen",
+     "fix": "Wie roept, krijgt de bal."
+    },
+    {
+     "fault": "Bal laten vallen",
+     "fix": "Vang met beide handen tegen de borst."
+    }
+   ],
+   "variants": {
+    "easier": "Groter vak en twee ballen in het spel.",
+    "harder": "Kleiner vak en één bal."
+   },
+   "diagram": {
+    "field": "vrij",
+    "elements": [
+     {
+      "t": "pion",
+      "x": 15,
+      "y": 15
+     },
+     {
+      "t": "pion",
+      "x": 85,
+      "y": 15
+     },
+     {
+      "t": "pion",
+      "x": 85,
+      "y": 85
+     },
+     {
+      "t": "pion",
+      "x": 15,
+      "y": 85
+     },
+     {
+      "t": "keeper",
+      "x": 40,
+      "y": 40,
+      "label": "K1"
+     },
+     {
+      "t": "aanvaller",
+      "x": 55,
+      "y": 60,
+      "label": "K2"
+     },
+     {
+      "t": "keeper",
+      "x": 70,
+      "y": 30,
+      "label": "K3"
+     },
+     {
+      "t": "trainer",
+      "x": 50,
+      "y": 95
+     },
+     {
+      "t": "bal",
+      "x": 50,
+      "y": 90
+     }
+    ],
+    "lines": [
+     {
+      "t": "loop",
+      "p": [
+       [
+        55,
+        58
+       ],
+       [
+        45,
+        45
+       ]
+      ],
+      "s": 1
+     },
+     {
+      "t": "bal",
+      "p": [
+       [
+        50,
+        89
+       ],
+       [
+        41,
+        44
+       ]
+      ],
+      "s": 2
+     }
+    ]
+   }
+  },
+  {
+   "ages": [
+    "u6_9",
+    "u10_12",
+    "u13_15",
+    "u16_19",
+    "senioren"
+   ],
+   "levels": [
+    "beginner",
+    "gevorderd",
+    "elite"
+   ],
+   "intensity": "laag",
+   "materials": [
+    "ballen"
+   ],
+   "keepers": {
+    "min": 1,
+    "max": 6
+   },
+   "trainers": 1,
+   "zone": "Strafschopgebied",
+   "duration": 6,
+   "sets": 1,
+   "reps": 10,
+   "rest": 0,
+   "divesPerRep": 0,
+   "explosive": false,
+   "blockTypes": [
+    "afsluiting"
+   ],
+   "complexity": 1,
+   "id": "afsluiting-latje-trap",
+   "name": "Lattrappen",
+   "summary": "Speelse afsluiter: vanaf de rand van de zestien proberen de lat te raken.",
+   "description": "De keepers trappen om beurt vanaf de rand van de zestien en proberen de lat te raken. Een raak is een punt. Wie eerst aan drie punten zit, wint. De verliezer raapt de ballen op. Een goed moment voor een korte nabespreking.",
+   "themes": [
+    "distributie"
+   ],
+   "coaching": [
+    "Rustig mikken",
+    "Wreef onder de bal",
+    "Plezier"
+   ],
+   "mistakes": [
+    {
+     "fault": "Te hard willen trappen",
+     "fix": "Mikken is belangrijker dan kracht."
+    },
+    {
+     "fault": "Achteroverleunen te veel",
+     "fix": "Een beetje, net genoeg om de bal te laten stijgen."
+    }
+   ],
+   "variants": {
+    "easier": "Dichter bij het doel of het doel raken.",
+    "harder": "Enkel met de zwakke voet."
+   },
+   "diagram": {
+    "field": "zestien",
+    "elements": [
+     {
+      "t": "keeper",
+      "x": 50,
+      "y": 55
+     },
+     {
+      "t": "bal",
+      "x": 50,
+      "y": 52
+     },
+     {
+      "t": "pion",
+      "x": 40,
+      "y": 54
+     },
+     {
+      "t": "pion",
+      "x": 60,
+      "y": 54
+     }
+    ],
+    "lines": [
+     {
+      "t": "bal",
+      "p": [
+       [
+        50,
+        50
+       ],
+       [
+        50,
+        20
+       ],
+       [
+        50,
+        4
+       ]
+      ],
+      "s": 1
+     }
+    ]
+   }
+  },
+  {
+   "ages": [
+    "u6_9",
+    "u10_12",
+    "u13_15",
+    "u16_19",
+    "senioren"
+   ],
+   "levels": [
+    "beginner",
+    "gevorderd",
+    "elite"
+   ],
+   "intensity": "laag",
+   "materials": [
+    "pionnen"
+   ],
+   "keepers": {
+    "min": 1,
+    "max": 6
+   },
+   "trainers": 1,
+   "zone": "Kring",
+   "duration": 5,
+   "sets": 1,
+   "reps": 1,
+   "rest": 0,
+   "divesPerRep": 0,
+   "explosive": false,
+   "blockTypes": [
+    "afsluiting"
+   ],
+   "complexity": 1,
+   "id": "afsluiting-ademhaling-evaluatie",
+   "name": "Afsluiter: ademhaling en evaluatie",
+   "summary": "Rustige afsluiting met ademhaling, lichte stretch en een korte evaluatie per keeper.",
+   "description": "De keepers zitten in een kring. Drie minuten rustige ademhaling en lichte stretch. Daarna vertelt elke keeper één ding dat goed ging en één ding om te verbeteren. De trainer vult aan en noteert per keeper.",
+   "themes": [
+    "communicatie",
+    "wedstrijd"
+   ],
+   "warmup": [
+    "mobiliteit"
+   ],
+   "coaching": [
+    "Eén ding goed, één ding beter",
+    "Rustig ademen",
+    "Luister naar elkaar"
+   ],
+   "mistakes": [
+    {
+     "fault": "Alleen het negatieve benoemen",
+     "fix": "Begin altijd met wat goed ging."
+    },
+    {
+     "fault": "Te lang praten",
+     "fix": "Kort: één zin per punt."
+    }
+   ],
+   "variants": {
+    "easier": "De trainer stelt de vragen.",
+    "harder": "Keepers geven elkaar feedback."
+   },
+   "diagram": {
+    "field": "vrij",
+    "elements": [
+     {
+      "t": "pion",
+      "x": 50,
+      "y": 20
+     },
+     {
+      "t": "pion",
+      "x": 75,
+      "y": 50
+     },
+     {
+      "t": "pion",
+      "x": 50,
+      "y": 80
+     },
+     {
+      "t": "pion",
+      "x": 25,
+      "y": 50
+     },
+     {
+      "t": "keeper",
+      "x": 50,
+      "y": 35,
+      "label": "K1"
+     },
+     {
+      "t": "keeper",
+      "x": 62,
+      "y": 50,
+      "label": "K2"
+     },
+     {
+      "t": "keeper",
+      "x": 50,
+      "y": 65,
+      "label": "K3"
+     },
+     {
+      "t": "keeper",
+      "x": 38,
+      "y": 50,
+      "label": "K4"
+     },
+     {
+      "t": "trainer",
+      "x": 50,
+      "y": 50
+     }
+    ],
+    "lines": [
+     {
+      "t": "loop",
+      "p": [
+       [
+        52,
+        35
+       ],
+       [
+        60,
+        47
+       ]
+      ],
+      "s": 1
+     }
+    ]
+   }
+  },
+  {
+   "ages": [
+    "u6_9",
+    "u10_12",
+    "u13_15",
+    "u16_19",
+    "senioren"
+   ],
+   "levels": [
+    "beginner",
+    "gevorderd",
+    "elite"
+   ],
+   "intensity": "gemiddeld",
+   "materials": [
+    "ballen",
+    "minigoals"
+   ],
+   "keepers": {
+    "min": 2,
+    "max": 6
+   },
+   "trainers": 1,
+   "zone": "20 × 10 m",
+   "duration": 8,
+   "sets": 1,
+   "reps": 10,
+   "rest": 0,
+   "divesPerRep": 0.5,
+   "explosive": false,
+   "blockTypes": [
+    "afsluiting"
+   ],
+   "complexity": 2,
+   "id": "afsluiting-doelpuntenwedstrijd",
+   "name": "Keepersduel: wie houdt de nul?",
+   "summary": "Twee keepers verdedigen elk een doel en schieten om beurt op elkaar van op 20 meter.",
+   "description": "Twee doelen (of mini-goals voor de jongsten) staan op 20 meter van elkaar. De keepers werpen, trappen of schieten om beurt op het doel van de ander. Na tien beurten wint wie het minst tegendoelpunten kreeg. Een leuke, intense afsluiter.",
+   "themes": [
+    "wedstrijd",
+    "distributie"
+   ],
+   "coaching": [
+    "Snel terug in positie",
+    "Precies schieten",
+    "Plezier"
+   ],
+   "mistakes": [
+    {
+     "fault": "Na het schieten niet terug in doel",
+     "fix": "Meteen terug, de ander reageert snel."
+    },
+    {
+     "fault": "Alles hard schieten",
+     "fix": "Een geplaatste bal is moeilijker dan een harde."
+    }
+   ],
+   "variants": {
+    "easier": "Enkel werpen en kortere afstand.",
+    "harder": "Enkel volleys uit de hand of grotere afstand."
+   },
+   "diagram": {
+    "field": "vrij",
+    "elements": [
+     {
+      "t": "minigoal",
+      "x": 50,
+      "y": 6,
+      "r": 0
+     },
+     {
+      "t": "minigoal",
+      "x": 50,
+      "y": 94,
+      "r": 180
+     },
+     {
+      "t": "keeper",
+      "x": 50,
+      "y": 14,
+      "label": "K1"
+     },
+     {
+      "t": "keeper",
+      "x": 50,
+      "y": 86,
+      "label": "K2"
+     },
+     {
+      "t": "bal",
+      "x": 50,
+      "y": 82
+     }
+    ],
+    "lines": [
+     {
+      "t": "bal",
+      "p": [
+       [
+        50,
+        81
+       ],
+       [
+        46,
+        18
+       ]
+      ],
+      "s": 1
+     },
+     {
+      "t": "bal",
+      "p": [
+       [
+        52,
+        18
+       ],
+       [
+        56,
+        82
+       ]
+      ],
+      "s": 2
+     }
+    ]
+   }
+  },
+  {
+   "ages": [
+    "u6_9",
+    "u10_12",
+    "u13_15",
+    "u16_19",
+    "senioren"
+   ],
+   "levels": [
+    "beginner",
+    "gevorderd",
+    "elite"
+   ],
+   "intensity": "laag",
+   "materials": [
+    "ballen"
+   ],
+   "keepers": {
+    "min": 1,
+    "max": 3
+   },
+   "trainers": 1,
+   "zone": "Doel en doelgebied",
+   "duration": 8,
+   "sets": 3,
+   "reps": 8,
+   "rest": 30,
+   "divesPerRep": 0,
+   "explosive": false,
+   "blockTypes": [
+    "kern"
+   ],
+   "complexity": 1,
+   "id": "vangen-lage-bal-schuiven",
+   "name": "Lage bal naast het lichaam: schuiven en oprapen",
+   "summary": "Lage ballen net naast de keeper: bijzetpas, knielvorm en de bal oprapen zonder duik.",
+   "description": "De trainer speelt laag op een meter naast de keeper. In plaats van te duiken zet de keeper een bijzetpas en raapt de bal op in de knielvorm, zodat hij achter de bal zit. Leert dat een duik niet altijd nodig is.",
+   "themes": [
+    "vangen",
+    "voetenwerk"
+   ],
+   "coaching": [
+    "Eerst de voeten",
+    "Achter de bal komen",
+    "Geen gat tussen de benen"
+   ],
+   "mistakes": [
+    {
+     "fault": "Duiken voor een makkelijke bal",
+     "fix": "Verplaats en kom achter de bal."
+    },
+    {
+     "fault": "Bal naast het lichaam oprapen",
+     "fix": "Een extra pas, zodat de bal voor je komt."
+    }
+   ],
+   "variants": {
+    "easier": "Rollende bal op een halve meter.",
+    "harder": "Bal op 1,5 meter en sneller."
+   },
+   "diagram": {
+    "field": "doel",
+    "elements": [
+     {
+      "t": "keeper",
+      "x": 50,
+      "y": 12
+     },
+     {
+      "t": "trainer",
+      "x": 50,
+      "y": 60
+     },
+     {
+      "t": "bal",
+      "x": 50,
+      "y": 55
+     }
+    ],
+    "lines": [
+     {
+      "t": "bal",
+      "p": [
+       [
+        49,
+        54
+       ],
+       [
+        44,
+        15
+       ]
+      ],
+      "s": 1
+     },
+     {
+      "t": "loop",
+      "p": [
+       [
+        50,
+        12
+       ],
+       [
+        45,
+        13
+       ]
+      ],
+      "s": 2
+     }
+    ]
+   }
+  },
+  {
+   "ages": [
+    "u13_15",
+    "u16_19",
+    "senioren"
+   ],
+   "levels": [
+    "beginner",
+    "gevorderd",
+    "elite"
+   ],
+   "intensity": "gemiddeld",
+   "materials": [
+    "ballen",
+    "pionnen"
+   ],
+   "keepers": {
+    "min": 1,
+    "max": 3
+   },
+   "trainers": 1,
+   "zone": "Doel en doelgebied",
+   "duration": 8,
+   "sets": 3,
+   "reps": 6,
+   "rest": 60,
+   "divesPerRep": 1,
+   "explosive": false,
+   "blockTypes": [
+    "kern"
+   ],
+   "complexity": 2,
+   "id": "duik-schot-door-poort",
+   "name": "Duik na een schot door een poortje",
+   "summary": "Het schot gaat door een poortje van pionnen, zodat de keeper weet waar de bal komt en volle technieken kan oefenen.",
+   "description": "Twee poortjes van pionnen staan op 8 meter, naar de linker- en rechterhoek. De trainer schiet door een van de poortjes. Omdat de richting beperkt is, kan de keeper volledig focussen op een perfecte duik met afzet, vangen en landing.",
+   "themes": [
+    "duiken"
+   ],
+   "coaching": [
+    "Afzet naar voren",
+    "Vangen in de lucht",
+    "Landen op de zijkant"
+   ],
+   "mistakes": [
+    {
+     "fault": "Te vroeg vertrekken",
+     "fix": "Wacht tot de bal vertrekt, ook al weet je de kant."
+    },
+    {
+     "fault": "Landen op de elleboog",
+     "fix": "Armen bij de bal, zijkant landt eerst."
+    }
+   ],
+   "variants": {
+    "easier": "Werpen door de poortjes.",
+    "harder": "De trainer kiest pas bij het schot het poortje."
+   },
+   "diagram": {
+    "field": "doel",
+    "elements": [
+     {
+      "t": "keeper",
+      "x": 50,
+      "y": 12
+     },
+     {
+      "t": "pion",
+      "x": 38,
+      "y": 40
+     },
+     {
+      "t": "pion",
+      "x": 43,
+      "y": 40
+     },
+     {
+      "t": "pion",
+      "x": 57,
+      "y": 40
+     },
+     {
+      "t": "pion",
+      "x": 62,
+      "y": 40
+     },
+     {
+      "t": "trainer",
+      "x": 50,
+      "y": 66
+     },
+     {
+      "t": "bal",
+      "x": 50,
+      "y": 61
+     }
+    ],
+    "lines": [
+     {
+      "t": "bal",
+      "p": [
+       [
+        49,
+        60
+       ],
+       [
+        40,
+        40
+       ],
+       [
+        40,
+        12
+       ]
+      ],
+      "s": 1
+     },
+     {
+      "t": "loop",
+      "p": [
+       [
+        48,
+        12
+       ],
+       [
+        41,
+        12
+       ]
+      ],
+      "s": 2
+     }
+    ]
+   }
+  },
+  {
+   "ages": [
+    "u6_9",
+    "u10_12",
+    "u13_15",
+    "u16_19",
+    "senioren"
+   ],
+   "levels": [
+    "beginner",
+    "gevorderd"
+   ],
+   "intensity": "laag",
+   "materials": [
+    "ballen"
+   ],
+   "keepers": {
+    "min": 1,
+    "max": 6
+   },
+   "trainers": 1,
+   "zone": "4 × 4 m",
+   "duration": 6,
+   "sets": 3,
+   "reps": 8,
+   "rest": 20,
+   "divesPerRep": 0,
+   "explosive": false,
+   "blockTypes": [
+    "opwarming",
+    "kern"
+   ],
+   "complexity": 1,
+   "id": "reflex-spelvorm-jong",
+   "name": "Spelvorm: vang de vallende bal",
+   "summary": "Speelse reactievorm: de trainer laat een bal vallen, de keeper moet hem vangen voor de tweede stuit.",
+   "description": "De trainer houdt een bal op schouderhoogte, de keeper staat op 2 meter. Zonder waarschuwing laat de trainer de bal vallen; de keeper vangt hem voor hij een tweede keer stuit. Met twee ballen kiest de trainer welke valt. Leuk voor de jongsten.",
+   "themes": [
+    "reflexen"
+   ],
+   "warmup": [
+    "balgewenning"
+   ],
+   "coaching": [
+    "Klaar op de voorvoeten",
+    "Snel eerste stap",
+    "Handen naar de bal"
+   ],
+   "mistakes": [
+    {
+     "fault": "Op de hielen staan",
+     "fix": "Gewicht vooraan, dan ben je sneller."
+    },
+    {
+     "fault": "Te ver weg staan",
+     "fix": "Begin dichtbij en vergroot de afstand als het lukt."
+    }
+   ],
+   "variants": {
+    "easier": "Twee stuiten toegestaan.",
+    "harder": "Twee ballen en de trainer laat er één vallen."
+   },
+   "diagram": {
+    "field": "vrij",
+    "elements": [
+     {
+      "t": "keeper",
+      "x": 50,
+      "y": 60
+     },
+     {
+      "t": "trainer",
+      "x": 50,
+      "y": 30
+     },
+     {
+      "t": "bal",
+      "x": 46,
+      "y": 34
+     }
+    ],
+    "lines": [
+     {
+      "t": "bal",
+      "p": [
+       [
+        46,
+        35
+       ],
+       [
+        46,
+        48
+       ]
+      ],
+      "s": 1
+     },
+     {
+      "t": "loop",
+      "p": [
+       [
+        50,
+        58
+       ],
+       [
+        47,
+        50
+       ]
+      ],
+      "s": 2
+     }
+    ]
+   }
+  },
+  {
+   "ages": [
+    "u16_19",
+    "senioren"
+   ],
+   "levels": [
+    "gevorderd",
+    "elite"
+   ],
+   "intensity": "hoog",
+   "materials": [
+    "ballen"
+   ],
+   "keepers": {
+    "min": 2,
+    "max": 3
+   },
+   "trainers": 1,
+   "zone": "Doel en doelgebied",
+   "duration": 8,
+   "sets": 3,
+   "reps": 6,
+   "rest": 60,
+   "divesPerRep": 0,
+   "explosive": true,
+   "blockTypes": [
+    "kern"
+   ],
+   "complexity": 3,
+   "id": "hoge-bal-onder-druk-duo",
+   "name": "Hoge bal met lichaamscontact",
+   "summary": "De keeper vangt hoge ballen terwijl een tweede keeper met een stootkussen licht duwt.",
+   "description": "De trainer werpt hoge ballen in het doelgebied. Een tweede keeper geeft met een kussen of de schouder een licht duwtje op het moment van afzet. De keeper leert zijn knie hoog te houden en de bal toch te vangen. Enkel voor oudere keepers, gecontroleerd.",
+   "themes": [
+    "hogeballen"
+   ],
+   "coaching": [
+    "Knie omhoog",
+    "Lichaam stevig",
+    "Vangen op het hoogste punt"
+   ],
+   "mistakes": [
+    {
+     "fault": "Wegdraaien van het contact",
+     "fix": "Blijf naar de bal gericht, het contact hoort erbij."
+    },
+    {
+     "fault": "Bal laten vallen bij contact",
+     "fix": "Bal meteen tegen de borst klemmen na het vangen."
+    }
+   ],
+   "variants": {
+    "easier": "Zonder contact, enkel aanwezigheid.",
+    "harder": "Contact tijdens de sprong en ballen met effect."
+   },
+   "diagram": {
+    "field": "doel",
+    "elements": [
+     {
+      "t": "keeper",
+      "x": 50,
+      "y": 12
+     },
+     {
+      "t": "aanvaller",
+      "x": 56,
+      "y": 20,
+      "label": "K2"
+     },
+     {
+      "t": "trainer",
+      "x": 50,
+      "y": 62
+     },
+     {
+      "t": "bal",
+      "x": 50,
+      "y": 57
+     }
+    ],
+    "lines": [
+     {
+      "t": "bal",
+      "p": [
+       [
+        50,
+        56
+       ],
+       [
+        50,
+        35
+       ],
+       [
+        51,
+        22
+       ]
+      ],
+      "s": 1
+     },
+     {
+      "t": "loop",
+      "p": [
+       [
+        50,
+        13
+       ],
+       [
+        51,
+        20
+       ]
+      ],
+      "s": 2
+     }
+    ]
+   }
+  },
+  {
+   "ages": [
+    "u13_15",
+    "u16_19",
+    "senioren"
+   ],
+   "levels": [
+    "gevorderd",
+    "elite"
+   ],
+   "intensity": "hoog",
+   "materials": [
+    "ballen",
+    "pionnen"
+   ],
+   "keepers": {
+    "min": 2,
+    "max": 4
+   },
+   "trainers": 1,
+   "zone": "Strafschopgebied",
+   "duration": 8,
+   "sets": 3,
+   "reps": 6,
+   "rest": 60,
+   "divesPerRep": 0,
+   "explosive": false,
+   "blockTypes": [
+    "kern"
+   ],
+   "complexity": 3,
+   "id": "opbouw-druk-zetten-keeper",
+   "name": "Keeper onder druk: weg van de aanvaller",
+   "summary": "Een aanvaller zet druk op de keeper bij elke terugspeelbal; de keeper moet hem uitspelen of veilig wegtrappen.",
+   "description": "De trainer speelt terug naar de keeper, een aanvaller sprint vanop 12 meter op de keeper af. De keeper beslist: een korte pass naar een vrije medespeler, een aanname weg van de aanvaller, of een veilige lange bal. Nooit risico in de eigen zestien.",
+   "themes": [
+    "opbouw"
+   ],
+   "coaching": [
+    "Vooraf scannen",
+    "Eerste aanname weg van de druk",
+    "Twijfel? Lang en veilig"
+   ],
+   "mistakes": [
+    {
+     "fault": "Een aanvaller proberen te omspelen in de zestien",
+     "fix": "Kies de veilige optie."
+    },
+    {
+     "fault": "Te laat beslissen",
+     "fix": "Weet wat je gaat doen voor de bal aankomt."
+    }
+   ],
+   "variants": {
+    "easier": "Aanvaller start verder weg.",
+    "harder": "Aanvaller start op 8 meter en één contact."
+   },
+   "diagram": {
+    "field": "zestien",
+    "elements": [
+     {
+      "t": "pion",
+      "x": 65,
+      "y": 40
+     },
+     {
+      "t": "keeper",
+      "x": 50,
+      "y": 10
+     },
+     {
+      "t": "trainer",
+      "x": 50,
+      "y": 55
+     },
+     {
+      "t": "aanvaller",
+      "x": 65,
+      "y": 35
+     },
+     {
+      "t": "speler",
+      "x": 15,
+      "y": 40,
+      "label": "K2"
+     },
+     {
+      "t": "bal",
+      "x": 50,
+      "y": 51
+     }
+    ],
+    "lines": [
+     {
+      "t": "bal",
+      "p": [
+       [
+        50,
+        50
+       ],
+       [
+        50,
+        14
+       ]
+      ],
+      "s": 1
+     },
+     {
+      "t": "bal",
+      "p": [
+       [
+        47,
+        12
+       ],
+       [
+        17,
+        37
+       ]
+      ],
+      "s": 2
+     }
+    ]
+   }
+  },
+  {
+   "ages": [
+    "u13_15",
+    "u16_19",
+    "senioren"
+   ],
+   "levels": [
+    "gevorderd",
+    "elite"
+   ],
+   "intensity": "hoog",
+   "materials": [
+    "ballen"
+   ],
+   "keepers": {
+    "min": 2,
+    "max": 3
+   },
+   "trainers": 1,
+   "zone": "Doel en doelgebied",
+   "duration": 8,
+   "sets": 3,
+   "reps": 5,
+   "rest": 75,
+   "divesPerRep": 0.5,
+   "explosive": true,
+   "blockTypes": [
+    "kern"
+   ],
+   "complexity": 3,
+   "id": "eentegeneen-kort-op-de-lijn",
+   "name": "Aanvaller op 6 meter: blijven staan",
+   "summary": "Een aanvaller krijgt de bal in het doelgebied; de keeper blijft staan en maakt zich groot in plaats van te springen.",
+   "description": "De trainer speelt de bal naar een aanvaller die op 6 meter staat. De keeper sluit in twee passen af, blijft groot staan en reageert op het schot met een stervorm of knielblok. De aanvaller heeft maar twee contacten.",
+   "themes": [
+    "eentegeneen",
+    "reflexen"
+   ],
+   "coaching": [
+    "Twee passen afsluiten",
+    "Blijf staan",
+    "Groot maken"
+   ],
+   "mistakes": [
+    {
+     "fault": "Duiken voor het schot",
+     "fix": "Blijf staan tot de bal vertrekt."
+    },
+    {
+     "fault": "Te klein blijven",
+     "fix": "Armen breed, borst vooruit."
+    }
+   ],
+   "variants": {
+    "easier": "Aanvaller staat op 9 meter en schiet meteen.",
+    "harder": "Aanvaller mag de bal eerst aannemen en draaien."
+   },
+   "diagram": {
+    "field": "doel",
+    "elements": [
+     {
+      "t": "keeper",
+      "x": 50,
+      "y": 12
+     },
+     {
+      "t": "aanvaller",
+      "x": 50,
+      "y": 34,
+      "label": "K2"
+     },
+     {
+      "t": "trainer",
+      "x": 80,
+      "y": 45
+     },
+     {
+      "t": "bal",
+      "x": 78,
+      "y": 42
+     }
+    ],
+    "lines": [
+     {
+      "t": "bal",
+      "p": [
+       [
+        77,
+        42
+       ],
+       [
+        53,
+        35
+       ]
+      ],
+      "s": 1
+     },
+     {
+      "t": "loop",
+      "p": [
+       [
+        50,
+        13
+       ],
+       [
+        50,
+        22
+       ]
+      ],
+      "s": 2
+     },
+     {
+      "t": "bal",
+      "p": [
+       [
+        50,
+        32
+       ],
+       [
+        43,
+        12
+       ]
+      ],
+      "s": 3
+     }
+    ]
+   }
+  },
+  {
+   "ages": [
+    "u10_12",
+    "u13_15",
+    "u16_19",
+    "senioren"
+   ],
+   "levels": [
+    "beginner",
+    "gevorderd",
+    "elite"
+   ],
+   "intensity": "gemiddeld",
+   "materials": [
+    "ballen",
+    "pionnen"
+   ],
+   "keepers": {
+    "min": 2,
+    "max": 4
+   },
+   "trainers": 1,
+   "zone": "Halve veld",
+   "duration": 8,
+   "sets": 3,
+   "reps": 8,
+   "rest": 30,
+   "divesPerRep": 0,
+   "explosive": false,
+   "blockTypes": [
+    "kern"
+   ],
+   "complexity": 2,
+   "id": "distributie-uitworp-zones",
+   "name": "Werpen naar drie zones",
+   "summary": "De trainer roept een zone en de keeper werpt zo snel mogelijk naar de juiste medespeler.",
+   "description": "Drie medespelers staan in drie zones (links, midden, rechts). De keeper vangt een bal van de trainer; tijdens het vangen roept de trainer een zone. De keeper werpt naar die zone met de juiste worp (rollen, zijwaarts of bovenhands).",
+   "themes": [
+    "distributie",
+    "communicatie"
+   ],
+   "coaching": [
+    "Juiste worp per afstand",
+    "Snel na de vangbal",
+    "Precies"
+   ],
+   "mistakes": [
+    {
+     "fault": "Altijd dezelfde worp",
+     "fix": "Kort = rollen, ver = bovenhands."
+    },
+    {
+     "fault": "Te lang wachten",
+     "fix": "Na het vangen is de bal binnen 3 seconden weg."
+    }
+   ],
+   "variants": {
+    "easier": "Zone aangekondigd voor het vangen.",
+    "harder": "Zone pas na het vangen en een verdediger in één zone."
+   },
+   "diagram": {
+    "field": "halfveld",
+    "elements": [
+     {
+      "t": "pion",
+      "x": 8,
+      "y": 40
+     },
+     {
+      "t": "pion",
+      "x": 22,
+      "y": 40
+     },
+     {
+      "t": "pion",
+      "x": 43,
+      "y": 55
+     },
+     {
+      "t": "pion",
+      "x": 57,
+      "y": 55
+     },
+     {
+      "t": "pion",
+      "x": 78,
+      "y": 40
+     },
+     {
+      "t": "pion",
+      "x": 92,
+      "y": 40
+     },
+     {
+      "t": "keeper",
+      "x": 50,
+      "y": 8
+     },
+     {
+      "t": "trainer",
+      "x": 50,
+      "y": 30
+     },
+     {
+      "t": "bal",
+      "x": 50,
+      "y": 27
+     },
+     {
+      "t": "speler",
+      "x": 15,
+      "y": 45,
+      "label": "1"
+     },
+     {
+      "t": "speler",
+      "x": 50,
+      "y": 60,
+      "label": "2"
+     },
+     {
+      "t": "speler",
+      "x": 85,
+      "y": 45,
+      "label": "3"
+     }
+    ],
+    "lines": [
+     {
+      "t": "bal",
+      "p": [
+       [
+        50,
+        26
+       ],
+       [
+        50,
+        11
+       ]
+      ],
+      "s": 1
+     },
+     {
+      "t": "bal",
+      "p": [
+       [
+        52,
+        10
+       ],
+       [
+        83,
+        43
+       ]
+      ],
+      "s": 2
+     }
+    ]
+   }
+  },
+  {
+   "ages": [
+    "u13_15",
+    "u16_19",
+    "senioren"
+   ],
+   "levels": [
+    "gevorderd",
+    "elite"
+   ],
+   "intensity": "hoog",
+   "materials": [
+    "ballen",
+    "pionnen"
+   ],
+   "keepers": {
+    "min": 1,
+    "max": 3
+   },
+   "trainers": 1,
+   "zone": "Doel en doelgebied",
+   "duration": 8,
+   "sets": 3,
+   "reps": 5,
+   "rest": 75,
+   "divesPerRep": 0.5,
+   "explosive": true,
+   "blockTypes": [
+    "kern"
+   ],
+   "complexity": 2,
+   "id": "voetenwerk-reactie-sprint",
+   "name": "Reactiesprint en terug in doel",
+   "summary": "Na een korte sprint naar een pion op signaal snel terug in doel om een schot te verwerken.",
+   "description": "De keeper staat in doel. Op het signaal sprint hij naar een pion op de rand van het doelgebied, tikt hem aan, loopt achterwaarts-zijwaarts terug naar zijn positie en verwerkt het schot. Combineert snelheid, oriëntatie en techniek.",
+   "themes": [
+    "voetenwerk",
+    "reflexen"
+   ],
+   "coaching": [
+    "Explosieve start",
+    "Terug zonder je om te draaien",
+    "Klaar voor het schot"
+   ],
+   "mistakes": [
+    {
+     "fault": "Met de rug naar het veld teruglopen",
+     "fix": "Achterwaarts-zijwaarts, je ziet de bal altijd."
+    },
+    {
+     "fault": "Niet klaar bij het schot",
+     "fix": "Sprongstop in de goal voor het schot."
+    }
+   ],
+   "variants": {
+    "easier": "Pion dichterbij en geen schot.",
+    "harder": "Twee pionnen en het schot volgt meteen."
+   },
+   "diagram": {
+    "field": "doel",
+    "elements": [
+     {
+      "t": "keeper",
+      "x": 50,
+      "y": 12
+     },
+     {
+      "t": "pion",
+      "x": 50,
+      "y": 32
+     },
+     {
+      "t": "trainer",
+      "x": 50,
+      "y": 66
+     },
+     {
+      "t": "bal",
+      "x": 50,
+      "y": 61
+     }
+    ],
+    "lines": [
+     {
+      "t": "loop",
+      "p": [
+       [
+        50,
+        13
+       ],
+       [
+        50,
+        29
+       ]
+      ],
+      "s": 1
+     },
+     {
+      "t": "loop",
+      "p": [
+       [
+        50,
+        29
+       ],
+       [
+        50,
+        14
+       ]
+      ],
+      "s": 2
+     },
+     {
+      "t": "bal",
+      "p": [
+       [
+        50,
+        60
+       ],
+       [
+        57,
+        14
+       ]
+      ],
+      "s": 3
+     }
+    ]
+   }
+  },
+  {
+   "ages": [
+    "u10_12",
+    "u13_15",
+    "u16_19",
+    "senioren"
+   ],
+   "levels": [
+    "beginner",
+    "gevorderd",
+    "elite"
+   ],
+   "intensity": "gemiddeld",
+   "materials": [
+    "ballen",
+    "pionnen"
+   ],
+   "keepers": {
+    "min": 2,
+    "max": 6
+   },
+   "trainers": 1,
+   "zone": "30 × 20 m",
+   "duration": 12,
+   "sets": 3,
+   "reps": 1,
+   "rest": 60,
+   "divesPerRep": 0,
+   "explosive": false,
+   "blockTypes": [
+    "kern",
+    "afsluiting"
+   ],
+   "complexity": 3,
+   "id": "communicatie-coach-de-coach",
+   "name": "De keeper als coach van een kleine partij",
+   "summary": "In een kleine partij krijgt de keeper de opdracht om zijn ploeg actief te coachen; punten voor goede coaching.",
+   "description": "Partij 3-tegen-3 plus keepers. De trainer geeft een extra punt telkens de keeper een coachend commando geeft dat de ploeg helpt (dekken, druk, opbouw). Leert de keeper actief te zijn in het spel, ook als de bal ver weg is.",
+   "themes": [
+    "communicatie",
+    "wedstrijd"
+   ],
+   "coaching": [
+    "Coach ook als de bal ver is",
+    "Naam plus opdracht",
+    "Positief en kort"
+   ],
+   "mistakes": [
+    {
+     "fault": "Enkel coachen bij gevaar",
+     "fix": "Coach elke fase, ook bij balbezit."
+    },
+    {
+     "fault": "Negatief roepen",
+     "fix": "Opdrachten, geen kritiek."
+    }
+   ],
+   "variants": {
+    "easier": "Trainer helpt met voorbeelden van commando's.",
+    "harder": "Enkel punten voor commando's vóór de actie."
+   },
+   "diagram": {
+    "field": "vrij",
+    "elements": [
+     {
+      "t": "pion",
+      "x": 4,
+      "y": 4
+     },
+     {
+      "t": "pion",
+      "x": 96,
+      "y": 4
+     },
+     {
+      "t": "pion",
+      "x": 96,
+      "y": 96
+     },
+     {
+      "t": "pion",
+      "x": 4,
+      "y": 96
+     },
+     {
+      "t": "minigoal",
+      "x": 50,
+      "y": 5,
+      "r": 0
+     },
+     {
+      "t": "minigoal",
+      "x": 50,
+      "y": 95,
+      "r": 180
+     },
+     {
+      "t": "keeper",
+      "x": 50,
+      "y": 12,
+      "label": "K1"
+     },
+     {
+      "t": "keeper",
+      "x": 50,
+      "y": 88,
+      "label": "K2"
+     },
+     {
+      "t": "speler",
+      "x": 35,
+      "y": 35
+     },
+     {
+      "t": "speler",
+      "x": 65,
+      "y": 40
+     },
+     {
+      "t": "aanvaller",
+      "x": 40,
+      "y": 60
+     },
+     {
+      "t": "aanvaller",
+      "x": 60,
+      "y": 65
+     },
+     {
+      "t": "bal",
+      "x": 36,
+      "y": 38
+     }
+    ],
+    "lines": [
+     {
+      "t": "dribbel",
+      "p": [
+       [
+        37,
+        38
+       ],
+       [
+        45,
+        50
+       ]
+      ],
+      "s": 1
+     },
+     {
+      "t": "bal",
+      "p": [
+       [
+        46,
+        52
+       ],
+       [
+        58,
+        63
+       ]
+      ],
+      "s": 2
+     }
+    ]
+   }
+  },
+  {
+   "ages": [
+    "u6_9",
+    "u10_12"
+   ],
+   "levels": [
+    "beginner",
+    "gevorderd"
+   ],
+   "intensity": "laag",
+   "materials": [
+    "ballen"
+   ],
+   "keepers": {
+    "min": 1,
+    "max": 6
+   },
+   "trainers": 1,
+   "zone": "Doel en doelgebied",
+   "duration": 8,
+   "sets": 2,
+   "reps": 5,
+   "rest": 30,
+   "divesPerRep": 0.5,
+   "explosive": false,
+   "blockTypes": [
+    "afsluiting"
+   ],
+   "complexity": 1,
+   "id": "wedstrijd-penalty-routine-jong",
+   "name": "Strafschoppen voor de jeugd",
+   "summary": "Strafschoppen als spel voor jonge keepers: op de lijn blijven, groot maken en naar de bal duiken.",
+   "description": "Vanop 6 tot 8 meter trappen de andere keepers of de trainer om beurt strafschoppen. De jonge keeper leert op de lijn te staan, zich groot te maken en zijn keuze pas te maken bij de trap. Elke redding is een punt.",
+   "themes": [
+    "wedstrijd",
+    "duiken"
+   ],
+   "coaching": [
+    "Op de lijn",
+    "Groot maken",
+    "Wachten op de trap"
+   ],
+   "mistakes": [
+    {
+     "fault": "Van de lijn lopen",
+     "fix": "Eén voet op de lijn tot de bal getrapt is."
+    },
+    {
+     "fault": "Te vroeg gaan liggen",
+     "fix": "Wacht tot de bal vertrekt."
+    }
+   ],
+   "variants": {
+    "easier": "Rollende strafschoppen.",
+    "harder": "Afstand 9 meter en harder."
+   },
+   "diagram": {
+    "field": "doel",
+    "elements": [
+     {
+      "t": "keeper",
+      "x": 50,
+      "y": 8
+     },
+     {
+      "t": "trainer",
+      "x": 50,
+      "y": 45
+     },
+     {
+      "t": "bal",
+      "x": 50,
+      "y": 40
+     }
+    ],
+    "lines": [
+     {
+      "t": "bal",
+      "p": [
+       [
+        50,
+        39
+       ],
+       [
+        43,
+        7
+       ]
+      ],
+      "s": 1
+     },
+     {
+      "t": "loop",
+      "p": [
+       [
+        49,
+        8
+       ],
+       [
+        43,
+        8
        ]
       ],
       "s": 2
