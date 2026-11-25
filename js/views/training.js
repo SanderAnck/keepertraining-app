@@ -14,6 +14,7 @@ import { generateSession, swapItem, seededRandom } from '../logic/generator.js';
 let freshId = null;
 export const markNew = (id) => { freshId = id; };
 import { renderDiagram } from '../diagram/render.js';
+import { openRating } from './keepers.js';
 
 let session = null;
 let main = null;
@@ -144,8 +145,19 @@ function draw() {
       <label class="field"><span class="label">Wat ging goed?</span><textarea name="good" rows="3">${session.notes?.good || ''}</textarea></label>
       <label class="field"><span class="label">Wat kan beter?</span><textarea name="better" rows="3">${session.notes?.better || ''}</textarea></label>
       <label class="field"><span class="label">Per keeper</span><textarea name="perKeeper" rows="3" placeholder="Bv. Lotte: mooi uitgekomen. Tom: handen te laat.">${session.notes?.perKeeper || ''}</textarea></label>
+      ${keeperRatings()}
       ${fieldNotes()}
     </section>`}`.s;
+}
+
+function keeperRatings() {
+  const ks = state.keepers.filter((k) => !k.archived).sort((a, b) => a.name.localeCompare(b.name, 'nl'));
+  if (!ks.length) return html`<p class="hint">Voeg je keepers toe bij <a href="#/keepers">Keepers</a> om ze na de training te beoordelen.</p>`;
+  return html`<h3 class="h small">Keepers beoordelen</h3>
+    <div class="chips">${ks.map((k) => {
+      const done = (k.ratings || []).some((r) => r.sessionId === session.id);
+      return html`<button class="chip toggle ${done ? 'on' : ''}" data-act="rateKeeper" data-id="${k.id}">${done ? '✓ ' : ''}${k.name}</button>`;
+    })}</div>`;
 }
 
 function fieldNotes() {
@@ -177,6 +189,11 @@ async function onClick(e) {
   const id = b.dataset.id;
   switch (b.dataset.act) {
     case 'params': return openParams();
+    case 'rateKeeper': {
+      const k = state.keepers.find((x) => x.id === id);
+      const p = session.parameters;
+      return k && openRating(k, { sessionId: session.id, date: session.date || isoDate(), focus: [...new Set([p.mainTheme, ...(p.themes || [])])], onSaved: () => draw() });
+    }
     case 'propose': return propose();
     case 'lock': {
       const it = flattenSession(session).find((f) => f.item.id === id)?.item;

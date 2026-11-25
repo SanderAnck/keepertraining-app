@@ -18,13 +18,14 @@ export const DEFAULT_SETTINGS = {
   backupReminderAt: null
 };
 
-const state = { settings: null, seed: [], own: [], exercises: [], byId: new Map(), sessions: [] };
+const state = { settings: null, seed: [], own: [], exercises: [], byId: new Map(), sessions: [], keepers: [] };
 export default state;
 
 export async function loadAll() {
-  const [settings, own, sessions, seed] = await Promise.all([
-    db.get('settings', 'me'), db.getAll('exercises'), db.getAll('sessions'), loadSeed()
+  const [settings, own, sessions, seed, keepers] = await Promise.all([
+    db.get('settings', 'me'), db.getAll('exercises'), db.getAll('sessions'), loadSeed(), db.getAll('keepers')
   ]);
+  state.keepers = keepers || [];
   state.settings = { ...structuredCopy(DEFAULT_SETTINGS), ...(settings || {}) };
   state.settings.defaults = { ...DEFAULT_PARAMS, ...(state.settings.defaults || {}) };
   state.seed = seed;
@@ -96,6 +97,20 @@ export async function saveSession(session) {
 export async function deleteSession(id) {
   await db.del('sessions', id);
   state.sessions = state.sessions.filter((s) => s.id !== id);
+}
+
+export const getKeeper = (id) => state.keepers.find((k) => k.id === id);
+
+export async function saveKeeper(keeper) {
+  const rec = { ...structuredCopy(keeper), updatedAt: Date.now() };
+  await db.put('keepers', rec);
+  state.keepers = state.keepers.filter((k) => k.id !== rec.id).concat(rec);
+  return rec;
+}
+
+export async function deleteKeeper(id) {
+  await db.del('keepers', id);
+  state.keepers = state.keepers.filter((k) => k.id !== id);
 }
 
 export const getFieldState = () => db.get('fieldState', 'active');

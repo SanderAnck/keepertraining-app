@@ -9,6 +9,18 @@ toestel (IndexedDB).
 
 Huidige versie: zie `js/version.js` (fase 1 = `0.1.x`).
 
+## Nieuw in 0.4.0: keeperskaart
+
+- **Keepers** (`#/keepers`): keepers toevoegen met naam, leeftijdsgroep, niveau en notitie; archiveren of verwijderen.
+- **Beoordelen**: per thema een score van 1 (werkpunt) tot 5 (sterk). Vanuit een training (Notities achteraf →
+  Keepers beoordelen) staan de thema's van die training bovenaan en wordt de beoordeling aan de training gekoppeld.
+- **Keeperskaart** (`#/keeper/<id>`): spinnenweb met de recentste scores tegenover de vorige beoordeling, scores met
+  vooruitgang (▲/▼), groeicurve van het gemiddelde of per thema (tik op een punt voor de score), werkpunten (de
+  twee laagste scores, bij gelijke stand het dalende thema eerst) met passende oefeningen, en de knop
+  "Plan training rond werkpunten" die meteen een volledige training voorstelt.
+- Gegevens staan in de bestaande store `keepers` (beoordelingen in het keeperrecord, geen migratie nodig) en
+  zitten in de back-up. Logica in `js/logic/keepers.js`, getest in `tests/keepers.test.js`; grafieken in `js/views/charts.js`.
+
 ## Nieuw in 0.3.2
 
 - "Oefening bekijken" vanuit een training opent de oefening weer (het venster bleef erover hangen).
@@ -103,7 +115,7 @@ Huidige versie: zie `js/version.js` (fase 1 = `0.1.x`).
   `variantManual`, `duration` in min, `sets`, `reps`, `rest` in s, `note`), `status`, `isTemplate`,
   `notes` (good, better, perKeeper).
 - `exercises`: eigen oefeningen en aanpassingen van seedoefeningen (zelfde id = aanpassing wint).
-- `keepers`: leeg tot fase 3.
+- `keepers`: `id`, `name`, `age`, `level`, `note`, `archived`, `ratings[]` (`id`, `date`, `sessionId`, `scores` {thema: 1–5}, `note`).
 - `settings`: één record met sleutel `'me'` (geluid, thema, standaardparameters, favorieten, laatste back-up).
 - `fieldState`: één record `'active'` met training, oefening-index en timerstatus (tijdstempels).
 - Diagram: `{ field, elements: [{ t, x, y, r?, label? }], lines: [{ t: 'loop'|'bal'|'dribbel', p: [[x,y],…], s }] }`
@@ -158,7 +170,7 @@ Geïnstalleerde apps tonen dan "Nieuwe versie beschikbaar, tik om te vernieuwen"
 ## Volgende fases
 
 - **Fase 2**: diagrameditor, animatiemodus, afdruk-/PDF-export (de generator is er al).
-- **Fase 3**: keepersbeheer, aanwezigheid, evaluaties, delen en importeren van trainingen en oefeningen.
+- **Fase 3**: aanwezigheid, delen en importeren van trainingen en oefeningen (keepersbeheer en evaluaties zitten er sinds 0.4.0 in).
 
 ## Open vragen
 

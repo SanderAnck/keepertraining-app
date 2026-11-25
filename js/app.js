@@ -19,6 +19,7 @@ const routes = [
   [/^\/oefening\/([^/]+)$/, oefening, 'oefeningen'],
   [/^\/oefening\/([^/]+)\/(bewerk)$/, oefening, 'oefeningen'],
   [/^\/keepers$/, keepers, 'keepers'],
+  [/^\/keeper\/([^/]+)$/, keepers, 'keepers'],
   [/^\/instellingen$/, instellingen, 'instellingen'],
   [/^\/veld\/([^/]+)$/, field, null]
 ];
