@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8">
+  <!-- App-shell van KeeperCoach: topbalk, inhoud en onderste tabbalk, met iOS-meta-tags voor de beginschermapp. -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="description" content="KeeperCoach: keepertrainingen voorbereiden en geven op het veld, volledig offline.">
+  <meta name="theme-color" content="#f2f3f5" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0f1113" media="(prefers-color-scheme: dark)">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="KeeperCoach">
+  <meta name="format-detection" content="telephone=no">
+  <title>KeeperCoach</title>
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" type="image/png" sizes="64x64" href="icons/favicon-64.png">
+  <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+  <link rel="stylesheet" href="css/app.css">
+  <script src="js/version.js"></script>
+  <script type="module" src="js/app.js"></script>
+</head>
+<body>
+  <a class="skip" href="#main">Naar inhoud</a>
+  <header class="topbar">
+    <a id="topBack" class="btn ghost back" href="#/trainingen" hidden aria-label="Terug">‹ Terug</a>
+    <h1 id="topTitle">KeeperCoach</h1>
+    <div id="topActions" class="top-actions"></div>
+  </header>
+  <main id="main" tabindex="-1">
+    <div class="empty"><p>KeeperCoach laden…</p></div>
+  </main>
+  <nav class="tabbar" aria-label="Hoofdnavigatie">
+    <a href="#/trainingen" data-tab="trainingen">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v15H4zM4 9h16M9 3v4M15 3v4"/></svg><span>Trainingen</span></a>
+    <a href="#/oefeningen" data-tab="oefeningen">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 20V7h18v13M3 7l3 3h12l3-3"/><circle cx="12" cy="15" r="2.5"/></svg><span>Oefeningen</span></a>
+    <a href="#/keepers" data-tab="keepers">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-7 8-7s8 3 8 7"/></svg><span>Keepers</span></a>
+    <a href="#/instellingen" data-tab="instellingen">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1M2 12h3M19 12h3M4.2 19.8l2.1-2.1M17.7 6.3l2.1-2.1"/></svg><span>Instellingen</span></a>
+  </nav>
+  <span id="version" class="sr-only"></span>
+  <noscript>KeeperCoach heeft JavaScript nodig.</noscript>
+</body>
+</html>

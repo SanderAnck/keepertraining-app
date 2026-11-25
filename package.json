@@ -1,0 +1,9 @@
+{
+  "name": "keepercoach",
+  "private": true,
+  "description": "KeeperCoach: keepertrainings-PWA. Geen dependencies; dit bestand zorgt enkel dat node de ES-modules herkent voor de tests.",
+  "type": "module",
+  "scripts": {
+    "test": "node --test tests/"
+  }
+}
