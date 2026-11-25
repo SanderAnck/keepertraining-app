@@ -7,7 +7,7 @@ toestel (IndexedDB).
 
 **Live:** https://sanderanck.github.io/keepertraining-app/
 
-Huidige versie: zie `js/version.js` (fase 1 = `0.1.x`).
+Huidige versie: zie `js/version.js` (nu 0.5.0; fase 1 was `0.1.x`).
 
 ## Nieuw in 0.5.0
 
