@@ -75,3 +75,11 @@ for (const e of exercises) {
     assert.match(renderDiagram(d), /^<svg/);
   });
 }
+
+test('250 oefeningen met unieke namen, de meeste geschikt voor senioren op gevorderd niveau', () => {
+  assert.ok(exercises.length >= 250, `${exercises.length}`);
+  assert.equal(new Set(exercises.map((e) => e.name.toLowerCase())).size, exercises.length, 'namen uniek');
+  const senior = exercises.filter((e) => e.ages.includes('senioren') && e.levels.includes('gevorderd'));
+  assert.ok(senior.length >= 200, `${senior.length}`);
+  for (const t of THEMES) assert.ok(senior.filter((e) => e.themes[0] === t.id).length >= 15, t.id);
+});

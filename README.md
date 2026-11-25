@@ -9,6 +9,15 @@ toestel (IndexedDB).
 
 Huidige versie: zie `js/version.js` (fase 1 = `0.1.x`).
 
+## Nieuw in 0.5.0
+
+- Bibliotheek uitgebreid naar **250 oefeningen**. De 135 nieuwe oefeningen zijn vooral voor senioren en U16–U19 op
+  gevorderd niveau (242 van de 250 passen nu bij senioren/gevorderd), met 22 tot 27 per hoofdthema, plus extra
+  opwarmingen (o.a. een volledige wedstrijdopwarming) en afsluitingen.
+- Bron: `tools/senior-a.mjs` (vangen, duiken, voetenwerk), `tools/senior-b.mjs` (hoge ballen, 1-tegen-1,
+  reflexen) en `tools/senior-c.mjs` (distributie, opbouw, communicatie, wedstrijd), met hulpfuncties in
+  `tools/senior-helpers.mjs`. Eigen oefeningen en aanpassingen blijven behouden.
+
 ## Nieuw in 0.4.0: keeperskaart
 
 - **Keepers** (`#/keepers`): keepers toevoegen met naam, leeftijdsgroep, niveau en notitie; archiveren of verwijderen.
@@ -65,7 +74,7 @@ Huidige versie: zie `js/version.js` (fase 1 = `0.1.x`).
   ondergrond. Bij elke wijziging worden ongeschikte oefeningen rood gemarkeerd (leeftijd, te
   intensief, materiaal, keepers, trainers), krijgt elke oefening een voorgestelde variant
   (makkelijker/basis/moeilijker) en worden duur, belasting en aantal duiken herberekend.
-- **Oefeningenbibliotheek**: startoefeningen (nu 115) over alle tien thema's, elk met uitleg,
+- **Oefeningenbibliotheek**: startoefeningen (nu 250) over alle tien thema's, elk met uitleg,
   coachingspunten, fouten met correctie, varianten en een veldtekening. Zoeken, filteren (thema,
   leeftijd, niveau, intensiteit, materiaal) en favorieten. Eigen oefeningen toevoegen, bewerken en
   dupliceren; aanpassingen aan meegeleverde oefeningen worden apart bewaard.
@@ -102,10 +111,10 @@ Huidige versie: zie `js/version.js` (fase 1 = `0.1.x`).
 | `js/field.js` | Veldmodus en timer |
 | `js/logic/` | Pure logica zonder DOM: `constants`, `load` (belastingsregels, varianten), `generator` (trainingsvoorstel), `timer`, `session`, `library`, `backupFormat` |
 | `js/diagram/render.js` | Rendering van de veldtekeningen en legende (SVG) |
-| `data/exercises.json` | Seedbibliotheek met 115 oefeningen |
+| `data/exercises.json` | Seedbibliotheek met 250 oefeningen |
 | `icons/` | `icon-192.png`, `icon-512.png`, `icon-maskable-512.png`, `apple-touch-icon.png`, `favicon-64.png` |
 | `tests/` | Tests voor `js/logic/`, de diagrammen, de seeddata en de precache-lijst |
-| `tools/build-exercises.mjs`, `tools/exercises-extra.mjs` | Bron van `data/exercises.json` (geen onderdeel van de app) |
+| `tools/build-exercises.mjs`, `tools/exercises-extra.mjs`, `tools/senior-*.mjs` | Bron van `data/exercises.json` (geen onderdeel van de app) |
 | `package.json` | Enkel `"type": "module"` zodat node de ES-modules herkent; geen dependencies |
 
 ## Datamodel (IndexedDB `keepercoach`, `DB_VERSION` 1)
