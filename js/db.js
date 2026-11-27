@@ -26,15 +26,26 @@ function upgrade(db, oldVersion) {
 export function openDB() {
   if (dbPromise) return dbPromise;
   dbPromise = new Promise((resolve, reject) => {
+    let blocked = false;
+    // iOS laat het openen soms eindeloos wachten (bv. tijdens een omzetting naar een nieuwe versie terwijl een ander
+    // venster de opslag nog openhoudt). Na 8 s geven we een duidelijke melding in plaats van te blijven laden.
+    const timer = setTimeout(() => {
+      dbPromise = null;
+      reject(new Error(blocked
+        ? 'De opslag wordt nog gebruikt door een ander venster van KeeperCoach. Sluit de app en andere tabbladen met KeeperCoach volledig af en open opnieuw'
+        : 'De opslag reageert niet. Sluit de app volledig af en open ze opnieuw'));
+    }, 8000);
     const req = indexedDB.open(DB_NAME, DB_VERSION);
     req.onupgradeneeded = (e) => upgrade(req.result, e.oldVersion);
     req.onsuccess = () => {
+      clearTimeout(timer);
       const db = req.result;
       db.onversionchange = () => { db.close(); dbPromise = null; };
       resolve(db);
     };
-    req.onerror = () => reject(req.error);
-    req.onblocked = () => reject(new Error('De database is geblokkeerd door een ander tabblad.'));
+    req.onerror = () => { clearTimeout(timer); dbPromise = null; reject(req.error); };
+    // Geblokkeerd: niet meteen opgeven, de omzetting gaat door zodra het andere venster de opslag sluit.
+    req.onblocked = () => { blocked = true; };
   });
   return dbPromise;
 }

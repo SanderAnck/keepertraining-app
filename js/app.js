@@ -134,7 +134,8 @@ async function boot() {
   try {
     await loadAll();
   } catch (e) {
-    $('#main').innerHTML = html`<div class="empty"><h2>Opslag niet beschikbaar</h2><p>${e.message}. In een privévenster werkt de opslag niet.</p></div>`.s;
+    $('#main').innerHTML = html`<div class="empty"><h2>Opslag niet beschikbaar</h2><p>${e.message}.</p><p class="hint">In een privévenster werkt de opslag niet.</p><button class="btn primary big" onclick="location.reload()">Opnieuw proberen</button></div>`.s;
+    registerSW();
     return;
   }
   applyAppearance();
