@@ -1,5 +1,5 @@
 // Service worker: precachet de volledige app-shell (cachenaam bevat de versie), serveert offline en wacht op "vernieuwen".
-// Versie van dit bestand: 0.7.0 (moet gelijk zijn aan js/version.js, zodat de browser elke update ziet).
+// Versie van dit bestand: 0.7.1 (moet gelijk zijn aan js/version.js, zodat de browser elke update ziet).
 importScripts('js/version.js');
 
 const CACHE = 'keepercoach-' + self.KEEPER_VERSION;

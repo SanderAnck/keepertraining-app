@@ -8,7 +8,13 @@ dezelfde gegevens hebben.
 
 **Live:** https://sanderanck.github.io/keepertraining-app/
 
-Huidige versie: zie `js/version.js` (nu 0.7.0; fase 1 was `0.1.x`).
+Huidige versie: zie `js/version.js` (nu 0.7.1; fase 1 was `0.1.x`).
+
+## Nieuw in 0.7.1
+
+- Blijft de opslag hangen bij het openen (iOS, tijdens de omzetting naar databaseversie 2 terwijl een ander venster
+  KeeperCoach nog openhoudt), dan toont de app na 8 s een uitleg en een knop "Opnieuw proberen" in plaats van
+  eindeloos "KeeperCoach laden…". Updates blijven dan ook binnenkomen.
 
 ## Nieuw in 0.7.0: cloud-sync met Supabase
 
