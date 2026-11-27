@@ -128,6 +128,9 @@ body.in-field main { padding: 0; max-width: none; }
 .card h3 { font-size: 1.2rem; margin: .2rem 0 .4rem; }
 .card.session.today { border: 2px solid var(--accent-strong); }
 .card.session .btn.huge { margin-top: .8rem; }
+.card.session.has-del { position: relative; }
+.card.session.has-del .card-link { padding-right: 2.8rem; }
+.card-del { position: absolute; top: .45rem; right: .45rem; width: 44px; height: 44px; }
 .tpl { margin-bottom: 1rem; }
 .tpl .card { margin-bottom: .4rem; }
 .tpl > .btn { width: 100%; }

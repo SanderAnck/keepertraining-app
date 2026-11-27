@@ -8,7 +8,13 @@ dezelfde gegevens hebben.
 
 **Live:** https://sanderanck.github.io/keepertraining-app/
 
-Huidige versie: zie `js/version.js` (nu 0.7.1; fase 1 was `0.1.x`).
+Huidige versie: zie `js/version.js` (nu 0.7.2; fase 1 was `0.1.x`).
+
+## Nieuw in 0.7.2
+
+- In het overzicht "Trainingen" heeft elke kaart (vandaag, gepland, eerder en sjablonen) een prullenbakknop
+  rechtsboven. Na bevestiging wordt de training meteen verwijderd, zonder ze eerst te openen. Het verwijderen gaat
+  via dezelfde weg als in het trainingsscherm, dus het wordt ook naar de cloud gesynchroniseerd.
 
 ## Nieuw in 0.7.1
 
