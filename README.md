@@ -12,8 +12,8 @@ Huidige versie: zie `js/version.js` (nu 0.7.0; fase 1 was `0.1.x`).
 
 ## Nieuw in 0.7.0: cloud-sync met Supabase
 
-- **Instellingen → Cloud-sync**: inloggen met een code per e-mail (geen wachtwoord; werkt binnen de beginscherm-app op
-  iOS). Trainingen, oefeningen en keepers worden gesynchroniseerd tussen al je toestellen. Instellingen en de
+- **Instellingen → Cloud-sync**: inloggen met e-mail en wachtwoord (het account maak je zelf aan in Supabase; er
+  worden geen mails verstuurd, en de iPhone kan het wachtwoord onthouden). Trainingen, oefeningen en keepers worden gesynchroniseerd tussen al je toestellen. Instellingen en de
   veldmodus blijven per toestel.
 - **Local-first**: de app werkt altijd met IndexedDB. Elke wijziging komt in de wachtrij `outbox` en gaat naar de
   server zodra er verbinding is: bij openen, 2 s na een wijziging, bij terugkeren naar de app, bij verbinding en
@@ -141,7 +141,7 @@ Huidige versie: zie `js/version.js` (nu 0.7.0; fase 1 was `0.1.x`).
 | `js/state.js` | Gedeelde toestand: instellingen, bibliotheek (seed + eigen), trainingen |
 | `js/db.js` | Promise-wrapper rond IndexedDB, migraties, export/import |
 | `js/backup.js` | Back-up en herstel als JSON-bestand, herinnering |
-| `js/cloud.js` | Cloud-sync met Supabase: inloggen met e-mailcode, wachtrij versturen, wijzigingen ophalen |
+| `js/cloud.js` | Cloud-sync met Supabase: inloggen met e-mail en wachtwoord, wachtrij versturen, wijzigingen ophalen |
 | `js/cloud-config.js` | Project-URL en publieke sleutel van Supabase (leeg = sync uit) |
 | `supabase/` | `schema.sql` (tabel, trigger, RLS) en `README.md` (stappenplan om sync in te stellen) |
 | `js/ui.js` | Gedeelde UI-helpers (veilige HTML, toast, sheets, geluid, flits) |

@@ -7,12 +7,12 @@ import { paramsForm, bindParams } from './params.js';
 import { paramsChips } from './common.js';
 import { DB_VERSION } from '../db.js';
 import * as cloud from '../cloud.js';
-import { validEmail, cleanCode } from '../logic/sync.js';
+import { validEmail } from '../logic/sync.js';
 
 let onSynced = null;
 const fmt = (t) => new Date(t).toLocaleString('nl-BE', { dateStyle: 'medium', timeStyle: 'short' });
 
-/** Inhoud van de kaart "Cloud-sync", afhankelijk van de toestand (niet ingesteld, uitgelogd, code gestuurd, ingelogd). */
+/** Inhoud van de kaart "Cloud-sync", afhankelijk van de toestand (niet ingesteld, uitgelogd, ingelogd). */
 async function fillCloud(main) {
   const el = main.querySelector('#cloudCard');
   if (!el) return;
@@ -28,13 +28,11 @@ async function fillCloud(main) {
       <div class="grid2"><button class="btn big primary" data-act="sync">Nu synchroniseren</button><button class="btn big" data-act="logout">Uitloggen</button></div>
       <p class="hint">Trainingen, oefeningen en keepers staan in de cloud en op elk toestel waar je inlogt. Instellingen en de veldmodus blijven per toestel. Zonder verbinding werkt alles gewoon verder; wijzigingen gaan mee zodra je weer online bent.</p>`;
   } else {
-    const email = st.pendingEmail || '';
     body = html`${st.lastError ? html`<p class="warn-text">${st.lastError}</p>` : ''}
-      <label class="field"><span class="label">E-mailadres</span><input type="email" name="cloudEmail" autocomplete="email" inputmode="email" autocapitalize="off" value="${email}"></label>
-      ${email ? html`<label class="field"><span class="label">Code uit de e-mail</span><input type="text" name="cloudCode" inputmode="numeric" autocomplete="one-time-code" maxlength="12"></label>
-        <div class="grid2"><button class="btn big primary" data-act="verify">Inloggen</button><button class="btn big" data-act="code">Nieuwe code</button></div>`
-      : html`<button class="btn big primary" data-act="code">Stuur inlogcode</button>`}
-      <p class="hint">Je krijgt een code per e-mail, een wachtwoord is niet nodig. Bij de eerste keer gaan je huidige gegevens van dit toestel naar de cloud.</p>`;
+      <label class="field"><span class="label">E-mailadres</span><input type="email" name="cloudEmail" autocomplete="username" inputmode="email" autocapitalize="off" value="${st.lastEmail || ''}"></label>
+      <label class="field"><span class="label">Wachtwoord</span><input type="password" name="cloudPassword" autocomplete="current-password"></label>
+      <button class="btn big primary" data-act="login">Inloggen</button>
+      <p class="hint">Gebruik het account dat je in Supabase aanmaakte. Bij de eerste keer gaan je huidige gegevens van dit toestel naar de cloud.</p>`;
   }
   el.innerHTML = html`<h2 class="h">Cloud-sync</h2>${body}`.s;
 }
@@ -112,21 +110,15 @@ export async function render(main) {
         render(main);
       } catch (err) { toast('Back-up mislukt: ' + err.message, { duration: 6000 }); }
     }
-    if (b.dataset.act === 'code') {
+    if (b.dataset.act === 'login') {
       const email = main.querySelector('[name=cloudEmail]').value.trim();
+      const password = main.querySelector('[name=cloudPassword]').value;
       if (!validEmail(email)) { toast('Vul een geldig e-mailadres in'); return; }
-      b.disabled = true;
-      try { await cloud.requestCode(email); toast('Code verstuurd, kijk in je mailbox'); } catch (err) { toast(err.message, { duration: 6000 }); }
-      await fillCloud(main);
-    }
-    if (b.dataset.act === 'verify') {
-      const email = main.querySelector('[name=cloudEmail]').value.trim();
-      const code = cleanCode(main.querySelector('[name=cloudCode]').value);
-      if (!code) { toast('Vul de code uit de e-mail in (alleen cijfers)'); return; }
+      if (!password) { toast('Vul je wachtwoord in'); return; }
       b.disabled = true;
       toast('Inloggen en synchroniseren…');
       try {
-        const r = await cloud.verifyCode(email, code);
+        const r = await cloud.signIn(email, password);
         toast(r && r.changed ? `Ingelogd, ${r.changed} gegevens opgehaald uit de cloud` : 'Ingelogd en gesynchroniseerd');
       } catch (err) { toast(err.message, { duration: 6000 }); }
       await fillCloud(main);

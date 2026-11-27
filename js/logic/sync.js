@@ -42,11 +42,5 @@ export const maxSeq = (rows, from = 0) => rows.reduce((m, r) => Math.max(m, Numb
 /** Een e-mailadres dat ruwweg klopt. */
 export const validEmail = (s) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(String(s || '').trim());
 
-/** De code uit de e-mail: 6 tot 10 cijfers, spaties worden genegeerd. Geeft de code of null. */
-export function cleanCode(s) {
-  const c = String(s || '').replace(/\s+/g, '');
-  return /^\d{6,10}$/.test(c) ? c : null;
-}
-
 /** Moet het toegangstoken vernieuwd worden? expiresAt in seconden (zoals Supabase het geeft). */
 export const needsRefresh = (auth, nowMs = Date.now()) => !auth || !auth.expires_at || auth.expires_at * 1000 - 60000 < nowMs;

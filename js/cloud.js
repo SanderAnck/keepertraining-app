@@ -1,7 +1,8 @@
 // Cloud-sync met Supabase, zonder bibliotheek (gewone fetch naar de REST-API van Supabase).
 // Local-first: de app werkt altijd met IndexedDB. Wijzigingen staan in de wachtrij 'outbox' en gaan naar de server zodra
 // er verbinding is; nieuwe wijzigingen van andere toestellen worden opgehaald via het volgnummer 'seq'.
-// Inloggen gebeurt met een code per e-mail (geen wachtwoord, en het werkt binnen de beginscherm-app op iOS).
+// Inloggen gebeurt met e-mail en wachtwoord: werkt binnen de beginscherm-app op iOS en vraagt geen eigen mailserver.
+// Het account maak je zelf aan in het Supabase-dashboard (zie supabase/README.md).
 import * as db from './db.js';
 import { SUPABASE_URL, SUPABASE_KEY } from './cloud-config.js';
 import { SYNC_STORES, outboxEntry, outboxKey, toRow, decide, maxSeq, needsRefresh } from './logic/sync.js';
@@ -18,7 +19,8 @@ const setMeta = (key, value) => db.put('syncMeta', { key, value });
 
 function niceError(status, msg) {
   if (status === 429) return 'Te veel pogingen. Wacht even en probeer opnieuw.';
-  if (/expired|invalid/i.test(msg || '') && /token|otp/i.test(msg || '')) return 'De code klopt niet of is verlopen.';
+  if (/invalid login credentials/i.test(msg || '')) return 'E-mailadres of wachtwoord klopt niet.';
+  if (/email not confirmed/i.test(msg || '')) return 'Dit account is nog niet bevestigd. Vink "Auto Confirm User" aan of bevestig het in Supabase.';
   if (/signups? not allowed/i.test(msg || '')) return 'Nieuwe accounts zijn uitgeschakeld in Supabase.';
   return msg || `Serverfout (${status})`;
 }
@@ -56,20 +58,14 @@ async function saveAuth(r) {
   await setMeta('auth', { access_token: r.access_token, refresh_token: r.refresh_token, expires_at, user });
 }
 
-/** Stuurt een inlogcode naar het e-mailadres. */
-export async function requestCode(email) {
-  await api('/auth/v1/otp', { method: 'POST', body: { email: email.trim(), create_user: true } });
-  await setMeta('pendingEmail', email.trim());
-}
-
-/** Controleert de code, logt in en zet alle lokale gegevens klaar voor de eerste sync. */
-export async function verifyCode(email, code) {
-  const r = await api('/auth/v1/verify', { method: 'POST', body: { type: 'email', email: email.trim(), token: code } });
+/** Logt in met e-mail en wachtwoord en zet alle lokale gegevens klaar voor de eerste sync. */
+export async function signIn(email, password) {
+  await setMeta('lastEmail', email.trim());
+  const r = await api('/auth/v1/token?grant_type=password', { method: 'POST', body: { email: email.trim(), password } });
   const prev = await meta('auth');
   await saveAuth(r);
   // Ander account dan vorige keer: alles opnieuw ophalen.
   if (!prev || !prev.user || prev.user.id !== r.user?.id) await setMeta('cursor', 0);
-  await setMeta('pendingEmail', null);
   await setMeta('lastError', null);
   await queueAll();
   return syncNow();
@@ -205,8 +201,8 @@ export function startSync() {
 /** Toestand voor het scherm Instellingen. */
 export async function status() {
   if (!configured()) return { configured: false };
-  const [auth, lastSync, lastError, pendingEmail, outbox] = await Promise.all([
-    meta('auth'), meta('lastSync'), meta('lastError'), meta('pendingEmail'), db.getAll('outbox')
+  const [auth, lastSync, lastError, lastEmail, outbox] = await Promise.all([
+    meta('auth'), meta('lastSync'), meta('lastError'), meta('lastEmail'), db.getAll('outbox')
   ]);
-  return { configured: true, email: auth?.user?.email || null, loggedIn: Boolean(auth), lastSync, lastError, pendingEmail, pending: outbox.length, busy: Boolean(running) };
+  return { configured: true, email: auth?.user?.email || null, loggedIn: Boolean(auth), lastSync, lastError, lastEmail, pending: outbox.length, busy: Boolean(running) };
 }

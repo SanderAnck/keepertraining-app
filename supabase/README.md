@@ -23,21 +23,15 @@ Dit doe je één keer. Reken op ongeveer 15 minuten.
 2. Plak de volledige inhoud van [`schema.sql`](schema.sql) en klik op **Run**.
 3. Je ziet "Success. No rows returned". Het script mag je later gerust opnieuw uitvoeren.
 
-## 3. Inlogcode in de e-mail zetten
+## 3. Je account aanmaken
 
-De app logt in met een code uit de e-mail. Een inloglink werkt niet goed, want op de iPhone opent die in Safari
-en niet in de beginscherm-app.
+De app logt in met e-mail en wachtwoord. Je maakt het account zelf aan, zodat Supabase geen mails hoeft te sturen
+(e-mailsjablonen aanpassen kan alleen met een eigen mailserver).
 
-1. Open **Authentication** en dan **Emails** (of *Email Templates*).
-2. Pas de sjabloon **Magic Link** aan. Vervang de inhoud door:
-
-   ```html
-   <h2>Je KeeperCoach-code</h2>
-   <p>Vul deze code in de app in: <strong>{{ .Token }}</strong></p>
-   ```
-
-3. Doe hetzelfde bij **Confirm signup**. Die mail krijg je de allereerste keer.
-4. Klik telkens op **Save**.
+1. Open **Authentication** en dan **Users**.
+2. Klik op **Add user** → **Create new user**.
+3. Vul je e-mailadres en een sterk wachtwoord in en bewaar het wachtwoord.
+4. Laat **Auto Confirm User** aangevinkt en klik op **Create user**.
 
 ## 4. URL en sleutel doorgeven
 
@@ -53,21 +47,21 @@ Geef **nooit** de `service_role`- of `secret`-sleutel door, die geeft volledige 
 ## 5. Inloggen in de app
 
 1. **Maak eerst een back-up** (Instellingen → Back-up maken), voor de zekerheid.
-2. Begin op het toestel met de meeste gegevens. Open **Instellingen → Cloud-sync**, vul je e-mailadres in en tik op
-   **Stuur inlogcode**. Vul de code uit de mail in en tik op **Inloggen**. Je huidige gegevens gaan naar de cloud.
+2. Begin op het toestel met de meeste gegevens. Open **Instellingen → Cloud-sync**, vul je e-mailadres en wachtwoord
+   in en tik op **Inloggen**. Je huidige gegevens gaan naar de cloud.
 3. Log daarna in op je andere toestellen. Hun gegevens worden samengevoegd met die in de cloud.
 
 ## 6. Afsluiten
 
-Als al je toestellen ingelogd zijn: open **Authentication → Sign In / Providers** (of *Settings*) en zet
-**Allow new users to sign up** uit. Dan kan niemand anders een account maken in jouw project.
+Open **Authentication → Sign In / Providers** en zet **Allow new users to sign up** uit. Dan kan niemand anders een
+account maken in jouw project. Je eigen account blijft gewoon werken.
 
 ## Goed om te weten
 
 - **Gratis plan**: 500 MB database, ruim genoeg voor duizenden trainingen. Een gratis project wordt **gepauzeerd na
   7 dagen zonder gebruik**. Supabase stuurt dan een mail, en met **Restore** in het dashboard staat het weer aan.
   De app werkt intussen gewoon lokaal verder en synchroniseert daarna weer.
-- **E-mails**: de ingebouwde mailserver van Supabase verstuurt maar een paar mails per uur. Voor inloggen is dat genoeg.
+- **Wachtwoord vergeten**: wijzig het in **Authentication → Users** (menu ⋯ naast je account).
 - **Conflicten**: wijzig je hetzelfde record op twee toestellen, dan wint de laatste wijziging.
 - **Verwijderen** op één toestel verwijdert ook op de andere.
 - **Uitloggen** laat de gegevens op het toestel staan.

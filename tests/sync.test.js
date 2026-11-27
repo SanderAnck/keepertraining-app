@@ -1,7 +1,7 @@
 // Tests voor de pure sync-logica: wachtrij-items, rijen voor de server en "laatste wijziging wint".
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { SYNC_STORES, stamp, outboxEntry, toRow, decide, maxSeq, validEmail, cleanCode, needsRefresh } from '../js/logic/sync.js';
+import { SYNC_STORES, stamp, outboxEntry, toRow, decide, maxSeq, validEmail, needsRefresh } from '../js/logic/sync.js';
 import { BACKUP_STORES } from '../js/logic/backupFormat.js';
 
 const rec = (id, updatedAt, extra = {}) => ({ id, title: 't-' + id, updatedAt, ...extra });
@@ -61,14 +61,11 @@ test('onbekende soort wordt genegeerd', () => {
   assert.equal(decide(row('a', 1, { key: 'me' }, { kind: 'settings' })), 'skip');
 });
 
-test('volgnummer, e-mail, code en token', () => {
+test('volgnummer, e-mail en token', () => {
   assert.equal(maxSeq([{ seq: 3 }, { seq: '12' }, { seq: 7 }], 5), 12);
   assert.equal(maxSeq([], 5), 5);
   assert.ok(validEmail(' sander@voorbeeld.be '));
   assert.ok(!validEmail('sander@'));
-  assert.equal(cleanCode('123 456'), '123456');
-  assert.equal(cleanCode('12a456'), null);
-  assert.equal(cleanCode('123'), null);
   const now = 1_000_000_000_000;
   assert.ok(needsRefresh(null, now));
   assert.ok(needsRefresh({ expires_at: now / 1000 + 30 }, now));
