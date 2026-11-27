@@ -24,6 +24,12 @@ test('eigen oefening wordt toegevoegd', () => {
   assert.equal(merged[0].origin, 'eigen');
 });
 
+test('filter eigen toont eigen en aangepaste oefeningen', () => {
+  const all = mergeExercises(seed, [{ id: 'eigen-1', name: 'Eigen', themes: [] }, { ...seed[0], name: 'Aangepast' }]);
+  assert.deepEqual(filterExercises(all, { own: true }).map((e) => e.origin).sort(), ['aangepast', 'eigen']);
+  assert.equal(filterExercises(all, { own: false }).length, 3);
+});
+
 test('filteren op thema, leeftijd, materiaal, favorieten en zoekterm (zonder accenten)', () => {
   const all = mergeExercises(seed, []);
   assert.deepEqual(filterExercises(all, { theme: 'voetenwerk' }).map((e) => e.id), ['s2']);

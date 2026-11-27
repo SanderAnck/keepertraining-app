@@ -8,7 +8,15 @@ dezelfde gegevens hebben.
 
 **Live:** https://sanderanck.github.io/keepertraining-app/
 
-Huidige versie: zie `js/version.js` (nu 0.7.2; fase 1 was `0.1.x`).
+Huidige versie: zie `js/version.js` (nu 0.7.3; fase 1 was `0.1.x`).
+
+## Nieuw in 0.7.3
+
+- Bij "Oefeningen" gaf het open- of dichtklappen van "Enkel met dit materiaal" ineens een lege lijst. Oorzaak: elke
+  klik buiten de themaknoppen zette per ongeluk een onzichtbare themafilter (het licht/donker-thema van de app). De
+  themaknoppen hebben nu een eigen kenmerk (`data-th`), dus klikken op het materiaalblok laat de lijst ongemoeid.
+- Nieuwe filterknop "Eigen" naast ★ Favorieten: toont enkel je eigen oefeningen en de aangepaste versies van
+  standaardoefeningen.
 
 ## Nieuw in 0.7.2
 
@@ -122,7 +130,7 @@ Huidige versie: zie `js/version.js` (nu 0.7.2; fase 1 was `0.1.x`).
   (makkelijker/basis/moeilijker) en worden duur, belasting en aantal duiken herberekend.
 - **Oefeningenbibliotheek**: startoefeningen (nu 250) over alle tien thema's, elk met uitleg,
   coachingspunten, fouten met correctie, varianten en een veldtekening. Zoeken, filteren (thema,
-  leeftijd, niveau, intensiteit, materiaal) en favorieten. Eigen oefeningen toevoegen, bewerken en
+  leeftijd, niveau, intensiteit, materiaal), favorieten en eigen oefeningen. Eigen oefeningen toevoegen, bewerken en
   dupliceren; aanpassingen aan meegeleverde oefeningen worden apart bewaard.
 - **Veldtekeningen (SVG)**: doel, strafschopgebied, halve veld of vrije zone met keeper, trainer,
   medespeler, aanvaller, bal, pion, hoepel, ladder, horde, mini-goal en rebounder. Doorlopende pijl =

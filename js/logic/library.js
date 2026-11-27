@@ -20,12 +20,13 @@ const norm = (s) => String(s || '').toLowerCase().normalize('NFD').replace(/[̀-
 
 /**
  * Filtert op zoekterm en filters. filters: { q, theme, age, level, intensity, materials: [] (alleen dit materiaal),
- * favorites: bool }, favs: lijst id's.
+ * favorites: bool, own: bool (enkel eigen en aangepaste oefeningen) }, favs: lijst id's.
  */
 export function filterExercises(list, filters = {}, favs = []) {
   const q = norm(filters.q).trim();
   return list.filter((ex) => {
     if (filters.favorites && !favs.includes(ex.id)) return false;
+    if (filters.own && ex.origin !== 'eigen' && ex.origin !== 'aangepast') return false;
     if (filters.theme && !(ex.themes || []).includes(filters.theme)) return false;
     if (filters.age && !(ex.ages || []).includes(filters.age)) return false;
     if (filters.level && !(ex.levels || []).includes(filters.level)) return false;
