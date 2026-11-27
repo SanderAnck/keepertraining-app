@@ -2,12 +2,31 @@
 
 Keepertrainingen voorbereiden thuis en geven op het veld. KeeperCoach is een webapp (PWA) die je
 vanuit Safari op je iPhone op het beginscherm zet ("Zet op beginscherm"). Na het eerste bezoek werkt
-hij volledig offline. Er is geen account, geen backend en geen tracking: alle gegevens blijven op je
-toestel (IndexedDB).
+hij volledig offline. Er is geen tracking. Alle gegevens staan op je toestel (IndexedDB); met de optionele
+cloud-sync gaan trainingen, oefeningen en keepers ook naar je eigen Supabase-project, zodat al je toestellen
+dezelfde gegevens hebben.
 
 **Live:** https://sanderanck.github.io/keepertraining-app/
 
-Huidige versie: zie `js/version.js` (nu 0.6.0; fase 1 was `0.1.x`).
+Huidige versie: zie `js/version.js` (nu 0.7.0; fase 1 was `0.1.x`).
+
+## Nieuw in 0.7.0: cloud-sync met Supabase
+
+- **Instellingen → Cloud-sync**: inloggen met een code per e-mail (geen wachtwoord; werkt binnen de beginscherm-app op
+  iOS). Trainingen, oefeningen en keepers worden gesynchroniseerd tussen al je toestellen. Instellingen en de
+  veldmodus blijven per toestel.
+- **Local-first**: de app werkt altijd met IndexedDB. Elke wijziging komt in de wachtrij `outbox` en gaat naar de
+  server zodra er verbinding is: bij openen, 2 s na een wijziging, bij terugkeren naar de app, bij verbinding en
+  elke 5 minuten. Offline werkt alles zoals voorheen.
+- **Laatste wijziging wint** (`updatedAt`), zowel in de app als op de server (trigger in `supabase/schema.sql`).
+  Verwijderen wordt als markering bewaard, zodat het ook op andere toestellen verdwijnt.
+- **Geen bibliotheek**: gewone `fetch` naar de REST-API van Supabase (`js/cloud.js`), pure logica in
+  `js/logic/sync.js` (getest in `tests/sync.test.js`). Project-URL en publieke sleutel staan in `js/cloud-config.js`;
+  leeg betekent dat sync uit staat.
+- **Instellen**: zie [`supabase/README.md`](supabase/README.md). De tabel en de beveiliging per rij (RLS) staan in
+  [`supabase/schema.sql`](supabase/schema.sql).
+- Database naar versie 2: nieuwe stores `outbox` en `syncMeta` (niet in de back-up). Een teruggezette back-up gaat
+  ook naar de cloud.
 
 ## Nieuw in 0.6.0: diagrameditor
 
@@ -122,9 +141,12 @@ Huidige versie: zie `js/version.js` (nu 0.6.0; fase 1 was `0.1.x`).
 | `js/state.js` | Gedeelde toestand: instellingen, bibliotheek (seed + eigen), trainingen |
 | `js/db.js` | Promise-wrapper rond IndexedDB, migraties, export/import |
 | `js/backup.js` | Back-up en herstel als JSON-bestand, herinnering |
+| `js/cloud.js` | Cloud-sync met Supabase: inloggen met e-mailcode, wachtrij versturen, wijzigingen ophalen |
+| `js/cloud-config.js` | Project-URL en publieke sleutel van Supabase (leeg = sync uit) |
+| `supabase/` | `schema.sql` (tabel, trigger, RLS) en `README.md` (stappenplan om sync in te stellen) |
 | `js/ui.js` | Gedeelde UI-helpers (veilige HTML, toast, sheets, geluid, flits) |
 | `js/field.js` | Veldmodus en timer |
-| `js/logic/` | Pure logica zonder DOM: `constants`, `load` (belastingsregels, varianten), `generator` (trainingsvoorstel), `timer`, `session`, `library`, `backupFormat` |
+| `js/logic/` | Pure logica zonder DOM: `constants`, `load` (belastingsregels, varianten), `generator` (trainingsvoorstel), `timer`, `session`, `library`, `backupFormat`, `sync` |
 | `js/diagram/render.js` | Rendering van de veldtekeningen en legende (SVG) |
 | `data/exercises.json` | Seedbibliotheek met 250 oefeningen |
 | `icons/` | `icon-192.png`, `icon-512.png`, `icon-maskable-512.png`, `apple-touch-icon.png`, `favicon-64.png` |
@@ -132,7 +154,7 @@ Huidige versie: zie `js/version.js` (nu 0.6.0; fase 1 was `0.1.x`).
 | `tools/build-exercises.mjs`, `tools/exercises-extra.mjs`, `tools/senior-*.mjs` | Bron van `data/exercises.json` (geen onderdeel van de app) |
 | `package.json` | Enkel `"type": "module"` zodat node de ES-modules herkent; geen dependencies |
 
-## Datamodel (IndexedDB `keepercoach`, `DB_VERSION` 1)
+## Datamodel (IndexedDB `keepercoach`, `DB_VERSION` 2)
 
 - `sessions`: `id`, `title`, `date`, `parameters` (themes, mainTheme, intensity, age, level, keepers,
   trainers, time, materials, surface), `blocks[]` (`type`, `items[]` met `exerciseId`, `variant`,
@@ -142,6 +164,8 @@ Huidige versie: zie `js/version.js` (nu 0.6.0; fase 1 was `0.1.x`).
 - `keepers`: `id`, `name`, `age`, `level`, `note`, `archived`, `ratings[]` (`id`, `date`, `sessionId`, `scores` {thema: 1–5}, `note`).
 - `settings`: één record met sleutel `'me'` (geluid, thema, standaardparameters, favorieten, laatste back-up).
 - `fieldState`: één record `'active'` met training, oefening-index en timerstatus (tijdstempels).
+- `outbox` (sinds v2): wachtrij voor cloud-sync, sleutel `'<store>:<id>'` met `kind`, `id`, `updatedAt`, `deleted`.
+- `syncMeta` (sinds v2): login (`auth`), laatst opgehaald volgnummer (`cursor`), `lastSync`, `lastError`.
 - Diagram: `{ field, elements: [{ t, x, y, r?, label? }], lines: [{ t: 'loop'|'bal'|'dribbel', p: [[x,y],…], s }] }`
   met coördinaten 0–100.
 

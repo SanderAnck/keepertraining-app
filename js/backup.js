@@ -3,6 +3,7 @@ import * as db from './db.js';
 import { buildBackup, parseBackup, backupFileName, backupStats } from './logic/backupFormat.js';
 import state, { saveSettings, loadAll } from './state.js';
 import { toast } from './ui.js';
+import { queueAll, scheduleSync } from './cloud.js';
 
 const REMIND_DAYS = 14;
 
@@ -43,6 +44,9 @@ export async function importBackupFile(file) {
   const backup = parseBackup(text);
   await db.importAll(backup.data);
   await loadAll();
+  // Teruggezette gegevens gaan ook naar de cloud (records die in de cloud recenter gewijzigd zijn, blijven daar winnen).
+  await queueAll();
+  scheduleSync(0);
   return backupStats(backup.data);
 }
 

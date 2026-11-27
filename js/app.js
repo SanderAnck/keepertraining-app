@@ -4,6 +4,7 @@ import state from './state.js';
 import { requestPersistence } from './db.js';
 import { toast, unlockAudio, html, $ } from './ui.js';
 import { maybeRemind } from './backup.js';
+import { startSync } from './cloud.js';
 import * as trainingen from './views/trainingen.js';
 import * as training from './views/training.js';
 import * as oefeningen from './views/oefeningen.js';
@@ -146,6 +147,14 @@ async function boot() {
   window.addEventListener('hashchange', route);
   await route();
   registerSW();
+  // Nieuwe gegevens van een ander toestel: scherm vernieuwen, behalve als je net iets bewerkt of op het veld staat.
+  addEventListener('keeper:synced', (e) => {
+    if (!e.detail || !e.detail.changed) return;
+    const busy = document.querySelector('dialog') || /^#\/(veld\/|oefening\/[^/]+\/bewerk)/.test(location.hash);
+    if (!busy) { route(); return; }
+    if (!location.hash.startsWith('#/veld/')) toast('Nieuwe gegevens uit de cloud', { action: 'Vernieuwen', onAction: () => route(), duration: 6000 });
+  });
+  startSync();
   setTimeout(() => { if (!location.hash.startsWith('#/veld/')) maybeRemind(() => { location.hash = '#/instellingen'; }); }, 1500);
 }
 

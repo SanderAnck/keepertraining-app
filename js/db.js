@@ -2,7 +2,7 @@
 import { BACKUP_STORES } from './logic/backupFormat.js';
 
 export const DB_NAME = 'keepercoach';
-export const DB_VERSION = 1;
+export const DB_VERSION = 2;
 
 let dbPromise = null;
 
@@ -15,6 +15,11 @@ function upgrade(db, oldVersion) {
     db.createObjectStore('keepers', { keyPath: 'id' });
     db.createObjectStore('settings', { keyPath: 'key' });
     db.createObjectStore('fieldState', { keyPath: 'key' });
+  }
+  if (oldVersion < 2) {
+    // Cloud-sync: wachtrij met lokale wijzigingen die nog naar de server moeten, en sync-gegevens (login, volgnummer).
+    db.createObjectStore('outbox', { keyPath: 'key' });
+    db.createObjectStore('syncMeta', { keyPath: 'key' });
   }
 }
 
