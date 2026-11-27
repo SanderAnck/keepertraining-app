@@ -10,3 +10,4 @@ import './session.test.js';
 import './timer.test.js';
 import './keepers.test.js';
 import './diagramEdit.test.js';
+import './sync.test.js';

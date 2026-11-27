@@ -1,8 +1,11 @@
 // Gedeelde app-toestand: instellingen, oefeningenbibliotheek (seed + eigen) en trainingen, met opslag in IndexedDB.
+// Wijzigingen aan trainingen, oefeningen en keepers gaan ook in de wachtrij voor cloud-sync (zie js/cloud.js).
 import * as db from './db.js';
 import { DEFAULT_PARAMS } from './logic/constants.js';
 import { mergeExercises } from './logic/library.js';
 import { structuredCopy } from './logic/session.js';
+import { outboxEntry } from './logic/sync.js';
+import { SUPABASE_URL, SUPABASE_KEY } from './cloud-config.js';
 
 export const DEFAULT_SETTINGS = {
   key: 'me',
@@ -52,6 +55,13 @@ function rebuildLibrary() {
   for (const e of state.seed) if (!state.byId.has(e.id)) state.byId.set(e.id, e);
 }
 
+/** Zet een wijziging in de wachtrij voor cloud-sync (alleen als sync ingesteld is) en meldt ze aan cloud.js. */
+async function track(kind, id, rec) {
+  if (!SUPABASE_URL || !SUPABASE_KEY) return;
+  try { await db.put('outbox', outboxEntry(kind, id, rec)); } catch (e) { console.warn('Wachtrij voor sync niet bijgewerkt', e); }
+  globalThis.dispatchEvent?.(new CustomEvent('keeper:changed'));
+}
+
 export const getExercise = (id) => state.byId.get(id);
 export const isSeed = (id) => state.seed.some((e) => e.id === id);
 
@@ -66,6 +76,7 @@ export async function saveExercise(ex) {
   delete rec.origin;
   rec.updatedAt = Date.now();
   await db.put('exercises', rec);
+  await track('exercises', rec.id, rec);
   state.own = state.own.filter((e) => e.id !== rec.id).concat(rec);
   rebuildLibrary();
   return getExercise(rec.id);
@@ -74,6 +85,7 @@ export async function saveExercise(ex) {
 /** Eigen oefening wissen, of een aanpassing van een seedoefening ongedaan maken. */
 export async function deleteExercise(id) {
   await db.del('exercises', id);
+  await track('exercises', id, null);
   state.own = state.own.filter((e) => e.id !== id);
   rebuildLibrary();
 }
@@ -90,12 +102,14 @@ export const getSession = (id) => state.sessions.find((s) => s.id === id);
 export async function saveSession(session) {
   const rec = { ...structuredCopy(session), updatedAt: Date.now() };
   await db.put('sessions', rec);
+  await track('sessions', rec.id, rec);
   state.sessions = state.sessions.filter((s) => s.id !== rec.id).concat(rec);
   return rec;
 }
 
 export async function deleteSession(id) {
   await db.del('sessions', id);
+  await track('sessions', id, null);
   state.sessions = state.sessions.filter((s) => s.id !== id);
 }
 
@@ -104,12 +118,14 @@ export const getKeeper = (id) => state.keepers.find((k) => k.id === id);
 export async function saveKeeper(keeper) {
   const rec = { ...structuredCopy(keeper), updatedAt: Date.now() };
   await db.put('keepers', rec);
+  await track('keepers', rec.id, rec);
   state.keepers = state.keepers.filter((k) => k.id !== rec.id).concat(rec);
   return rec;
 }
 
 export async function deleteKeeper(id) {
   await db.del('keepers', id);
+  await track('keepers', id, null);
   state.keepers = state.keepers.filter((k) => k.id !== id);
 }
 
