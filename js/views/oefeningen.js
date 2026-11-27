@@ -1,4 +1,4 @@
-// Scherm "Oefeningen": bibliotheek met zoeken, filters (thema, leeftijd, niveau, intensiteit, materiaal) en favorieten.
+// Scherm "Oefeningen": bibliotheek met zoeken, filters (thema, leeftijd, niveau, intensiteit, materiaal), favorieten en eigen oefeningen.
 import state from '../state.js';
 import { html, raw, themeChip } from '../ui.js';
 import { setTop } from '../app.js';
@@ -8,7 +8,7 @@ import { renderDiagram } from '../diagram/render.js';
 import { saveExercise } from '../state.js';
 
 // Filters blijven bewaard zolang de app open is.
-const filters = { q: '', theme: '', age: '', level: '', intensity: '', materials: [], favorites: false };
+const filters = { q: '', theme: '', age: '', level: '', intensity: '', materials: [], favorites: false, own: false };
 
 const select = (name, label, list) => html`<label class="select"><span class="sr-only">${label}</span>
   <select name="${name}" aria-label="${label}"><option value="">${label}</option>${list.map((x) => html`<option value="${x.id}" ${filters[name] === x.id ? 'selected' : ''}>${x.label}</option>`)}</select></label>`;
@@ -20,7 +20,8 @@ export async function render(main) {
       <input type="search" name="q" value="${filters.q}" placeholder="Zoek op naam of coachingspunt" aria-label="Zoek oefening" autocomplete="off">
       <div class="chips scroll" role="group" aria-label="Thema">
         <button class="chip toggle${filters.favorites ? ' on' : ''}" data-fav>★ Favorieten</button>
-        ${THEMES.map((t) => html`<button class="chip toggle theme${filters.theme === t.id ? ' on' : ''}" style="--tc:${t.color}" data-theme="${t.id}">${t.short}</button>`)}
+        <button class="chip toggle${filters.own ? ' on' : ''}" data-own>Eigen</button>
+        ${THEMES.map((t) => html`<button class="chip toggle theme${filters.theme === t.id ? ' on' : ''}" style="--tc:${t.color}" data-th="${t.id}">${t.short}</button>`)}
       </div>
       <div class="selects">
         ${select('age', 'Leeftijd', AGE_GROUPS)}${select('level', 'Niveau', LEVELS)}${select('intensity', 'Intensiteit', INTENSITIES)}
@@ -54,10 +55,12 @@ export async function render(main) {
     fill();
   };
   main.onclick = (e) => {
-    const th = e.target.closest('[data-theme]');
+    // Eigen attribuut data-th: closest('[data-theme]') zou anders tot <html data-theme="auto"> klimmen (licht/donker)
+    // en bij elke klik elders (bv. het materiaalblok dichtklappen) een onzichtbare themafilter zetten.
+    const th = e.target.closest('[data-th]');
     if (th) {
-      filters.theme = filters.theme === th.dataset.theme ? '' : th.dataset.theme;
-      main.querySelectorAll('[data-theme]').forEach((c) => c.classList.toggle('on', c.dataset.theme === filters.theme));
+      filters.theme = filters.theme === th.dataset.th ? '' : th.dataset.th;
+      main.querySelectorAll('[data-th]').forEach((c) => c.classList.toggle('on', c.dataset.th === filters.theme));
       fill();
     }
     if (e.target.closest('[data-fav]')) {
@@ -65,8 +68,13 @@ export async function render(main) {
       e.target.closest('[data-fav]').classList.toggle('on', filters.favorites);
       fill();
     }
+    if (e.target.closest('[data-own]')) {
+      filters.own = !filters.own;
+      e.target.closest('[data-own]').classList.toggle('on', filters.own);
+      fill();
+    }
     if (e.target.closest('[data-act="reset"]')) {
-      Object.assign(filters, { q: '', theme: '', age: '', level: '', intensity: '', materials: [], favorites: false });
+      Object.assign(filters, { q: '', theme: '', age: '', level: '', intensity: '', materials: [], favorites: false, own: false });
       render(main);
     }
   };
